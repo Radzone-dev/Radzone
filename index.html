@@ -5,7 +5,7 @@
       RAD ZONE Webcreation Git
     </title>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <meta name="author" content="http://radservebeer.free.fr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -54,14 +54,15 @@
     .bt {
       font-size: 1rem;
       cursor: pointer;
-      text-align: center;
       background: #202020;
-      margin: 10px;
+      margin: 5px;
       width: 400px;
       border-radius: 10px;
       transition: all 1.2s ease-in-out;
       color: #D4D0C8;
       border: none;
+      font-weight: 500;
+      padding: 5px;
     }
     .bt:hover {
       background: rgba(0, 0, 0, .5);
@@ -85,13 +86,17 @@
             iudicia defendere. Scio enim esse quosdam, qui quavis lingua philosophari possint; Duo Reges: constructio
             interrete. Ego vero isti, inquam, permitto. A mene tu? Si qua in iis corrigere voluit, deteriora fecit.
           </p>
-          <ul class="exemple">
+          <p>
+            <input class="toggle-btn bt" name="Show/Hide" type="button" value="All Exemples">
+          </p>
+          <ul class="exemple" hidden="hidden">
             <li>
-              <input class="bt" src="Exemple%20ShowHide%20+SyntaxHighlighter/" name="Exemple off ShowHide in js" type=
-              "button" value="Exemple off ShowHide in js">
+              <input class="bt" onclick="window.location.href='Exemple%20ShowHide%20+SyntaxHighlighter/';" name=
+              "Exemple off Show/Hide in js" type="button" value="Exemple off Show / Hide in js">
             </li>
             <li>
-              <input class="bt" src="exercise_jQuery/JavaScript%20and%20jQuery%20Tutorials.html" name=
+              <input class="bt" onclick=
+              "window.location.href='exercise_jQuery/JavaScript%20and%20jQuery%20Tutorials.html';" name=
               "The Very First Base off jQuery" type="button" value="The Very First Base off jQuery">
             </li>
           </ul>
@@ -124,5 +129,14 @@
         item 3
       </div>
     </div>
+    <script src="js/jquery.js"></script>
+    <script>
+
+    $(document).ready(function(){
+    $(".toggle-btn").click(function(){
+        $("ul").slideToggle(2000);
+    });
+    });
+    </script>
   </body>
 </html>
