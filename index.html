@@ -10,7 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
     body {
-      background-color: #202020;
+      margin: 0;
+      /*background-color: #202020;  */
     }
     #contant > p {
       text-align: center;
@@ -19,9 +20,7 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      /* flex-flow: column; */
       flex-direction: column;
-      background: #202020;
       height: 100%;
       padding: 5px;
       gap: 5px;
@@ -30,24 +29,26 @@
       padding: 8px;
     }
     .item1 {
-      /* flex:0 1 auto; */
+      background: #202020;
+      margin-top: -8px;
+      flex:0 1 auto;
       align-self: auto;
+      text-align: center;
+      width: 100%;
     }
     .item2 {
-      border-radius: 10px;
       width: 80%;
-      background: #fff;
-      /* flex:0 1 auto; */
       align-self: auto;
     }
     .item3 {
-      color: #09c;
-      text-align: center;
+      color: #D4D0C8;
+       background: #202020;
+         width: 100%;
+      text-align: center; margin-bottom: -8px;
     }
     ul.exemple {
       list-style-type: none;
     }
-
     img.logo {
       border: 0;
     }
@@ -56,19 +57,20 @@
       cursor: pointer;
       background: #202020;
       margin: 5px;
-      width: 400px;
+      width: 300px;
       border-radius: 10px;
       transition: all 1.2s ease-in-out;
-      color: #D4D0C8;
+      color: #d4d0c8;
       border: none;
       font-weight: 500;
       padding: 5px;
     }
     .bt:hover {
-      background: rgba(0, 0, 0, .5);
+      background: rgba(0, 0, 0, .3);
       transition: all 1.2s ease-in-out;
       color: #000;
     }
+    hr {width: 100%; height: 1px}
     </style>
   </head>
   <body>
@@ -90,6 +92,7 @@
             <input class="toggle-btn bt" name="Show/Hide" type="button" value="All Exemples">
           </p>
           <ul class="exemple" hidden="hidden">
+            <hr>
             <li>
               <input class="bt" onclick="window.location.href='Exemple%20ShowHide%20+SyntaxHighlighter/';" name=
               "Exemple off Show/Hide in js" type="button" value="Exemple off Show / Hide in js">
@@ -98,6 +101,7 @@
               <input class="bt" onclick=
               "window.location.href='exercise_jQuery/JavaScript%20and%20jQuery%20Tutorials.html';" name=
               "The Very First Base off jQuery" type="button" value="The Very First Base off jQuery">
+              <hr>
             </li>
           </ul>
           <p>
@@ -107,14 +111,6 @@
             disserendi altera, vivendi tertia. Nisi autem rerum natura perspecta erit, nullo modo poterimus sensuum
             iudicia defendere. Scio enim esse quosdam, qui quavis lingua philosophari possint; Duo Reges: constructio
             interrete. Ego vero isti, inquam, permitto. A mene tu? Si qua in iis corrigere voluit, deteriora fecit.
-          </p>
-          <p>
-            Ergo, si semel tristior effectus est, hilara vita amissa est? Illis videtur, qui illud non dubitant bonum
-            dicere -; Hic, qui utrumque probat, ambobus debuit uti, sicut facit re, neque tamen dividit verbis.
-            Theophrastus mediocriterne delectat, cum tractat locos ab Aristotele ante tractatos? Partim cursu et
-            peragratione laetantur, congregatione aliae coetum quodam modo civitatis imitantur; Et non ex maxima parte
-            de tota iudicabis? Nunc haec primum fortasse audientis servire debemus. Quid est, quod ab ea absolvi et
-            perfici debeat?
           </p>
           <p>
             An tu me de L. Quod autem ratione actum est, id officium appellamus. Non pugnem cum homine, cur tantum
@@ -131,7 +127,6 @@
     </div>
     <script src="js/jquery.js"></script>
     <script>
-
     $(document).ready(function(){
     $(".toggle-btn").click(function(){
         $("ul").slideToggle(2000);
