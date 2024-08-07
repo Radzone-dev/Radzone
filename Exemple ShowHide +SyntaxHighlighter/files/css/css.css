@@ -12,6 +12,9 @@ h1 {
   text-align: center;
   background: #333333;
   color: #c8ccbc;
+   -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
 }
 ol, ul, li {
   padding: 0;
@@ -29,11 +32,14 @@ div#colonne2 {
   width: 200px;
   padding: 1px 0;
 }
-div#centre {
+div#centre {  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
   padding: 1px 20px;
   margin-left: 210px;
   margin-right: 210px;
-  background: #F0E68C;
+  background: #EEEEEE;
+
 }
 .strong {
   cursor:pointer;
@@ -52,11 +58,15 @@ img#zoom:hover {
           transform: scale(1.5);
 }
 #link {
-  color: #0bcc45;
+  color: #0985CC;
 }
 #link:hover {
   color: #f60;
 }
+iframe{
+  background: #FFF ;
+}
+
 /* START Show/Hide Possible mouse event button CSS */
 .button {
   text-align: center;

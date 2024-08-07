@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>
       Exemple Show/Hide avec js + Modal Pure CSS
     </title>
-    <link type="text/css" rel="stylesheet" href="SyntaxHighlighter.css" />
-    <link rel="stylesheet" type="text/css" href="css.css">
+    <link type="text/css" rel="stylesheet" href="files/css/SyntaxHighlighter.css" />
+    <link rel="stylesheet" type="text/css" href="files/css/css.css">
   </head>
   <body>
     <h1>
@@ -27,7 +27,7 @@
         </li>
         <li>
           Onclick img <br> + play Video<br><br>
-          <img src="rz.jpg" id="zoom" style="cursor:pointer; border: 0" alt="rz" onclick="play_video();displayElements('video2')">
+          <img src="files/images/rz.jpg" id="zoom" style="cursor:pointer; border: 0" alt="rz" onclick="play_video();displayElements('video2')">
         </li>
       </ul>
       <p style="font-style: italic">
@@ -75,11 +75,11 @@
           <strong> onmouseup</strong>:&nbsp;&nbsp;Mouse button is released over an element<br>
         </li>
       </ul>
-      <video id="video2" style="display: none" controlslist="nodownload" width="100%" height="100%">
-        <source src="rz_2.mp4" type="video/mp4">
+      <video id="video2" style="display: none" controlslist="nodownload" poster="files/images/rz.jpg" width="100%" height="100%">
+        <source src="files/media/rz_2.mp4" type="video/mp4">
         </video>
-      <video id="video" style="display: none" controls="" controlslist="nodownload" poster="Madagascar.jpg" width="100%" height="100%">
-        <source src="Madagascar.mp4" type="video/mp4">
+      <video id="video" style="display: none" controls="" controlslist="nodownload" poster="files/images/Madagascar.jpg" width="100%" height="100%">
+        <source src="files/media/Madagascar.mp4" type="video/mp4">
         </video><ol>
         <li>
           <h2>
@@ -105,7 +105,7 @@
               </blockquote>
               <div class="modal-area">
                 <p>
-                  <img src="img.jpg" width="432" height="324" style="border: 0" alt="momie">
+                  <img src="files/images/img.jpg" width="432" height="324" style="border: 0" alt="momie">
                 </p>
               </div>
             </div>
@@ -118,7 +118,7 @@
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. Suspendisse lectus tortor,<br>
           <strong class="strong" onmouseout="displayElements('MP3')">MP3 onmouseout</strong>
           <audio id="MP3" style="display: none;width:100%;height:20px; " controls controlslist="nodownload"  preload="auto">
-        <source src="Music.mp3">
+        <source src="files/media/Music.mp3">
         </audio><br>
           ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat.
           Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede
@@ -132,7 +132,7 @@
           Image de ma fille ( my daughter ) onmouseup
           </strong><br>
           je l'appelle ma "petite pomme" parce que j'ai toujours envie de croquer ses joues :-)
-          <img src="img_1488.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px"  id="Image" width="100%" height="100%" alt="ma fille"><br>
+          <img src="files/images/daughter.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px"  id="Image" width="100%" height="100%" alt="ma fille"><br>
           So cuuute,I call her my "little apple" because I always want to bite her cheeks :-)
         </li>
         </ol>
@@ -142,8 +142,8 @@
         </h2>
         <p>
           Lorem ipsum dolor sit amet,<br>
-          <strong class="strong" onmousedown="displayElements('Iframe')">Iframe onmousedown si iframe non bloquee !<br>
-          </strong> Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae
+          <strong class="strong" onmousedown="displayElements('Iframe')">Iframe onmousedown</strong> (<i>si html externe cible dans iframe non bloquée ou html cible perso comme ici !</i>)<br>
+           Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae
           ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas.
           <iframe style="display: none" id="Iframe" src="../index.html" name="IFrame" width="100%" height="400px">
           </iframe> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus,
@@ -286,7 +286,7 @@
           Image de ma fille onmouseup
           </strong><br>
           je l'appelle ma "petite pomme" parce que j'ai toujours envie de croquer ses joues :-)
-          <img src="img1.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="ma fille"><br>
+          <img src="daughter.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="ma fille"><br>
           So cuuute,I call her my "little apple" because I always want to bite her cheeks :-)
         </li>
       </ol>
@@ -299,7 +299,7 @@
           <strong class="strong" onmousedown="displayElements('Iframe')">Iframe onmousedown si iframe non bloquee !<br>
           </strong> Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus sapien eros vitae
           ligula. Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam. Integer quis metus vitae elit lobortis egestas.
-          <iframe style="display: none" id="Iframe" src="http://radservebeer.free.fr/outilswebmaster/index.html" name="IFrame" width="100%" height="400px">
+          <iframe style="display: none" id="Iframe" src="../index.html" name="IFrame" width="100%" height="400px">
           </iframe> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi vel erat non mauris convallis vehicula. Nulla et sapien. Integer tortor tellus, aliquam faucibus,
         </p>
         convallis id, congue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
@@ -649,12 +649,12 @@ a.modal-open:hover {
   </textarea>
       </p>
     </div>
-  <script src="JavaScript.js"></script>
-  <script src="shCore.js"></script>
+  <script src="files/js/JavaScript.js"></script>
+  <script src="files/js/shCore.js"></script>
   <!--les js a instaler en fonction des code a montrer ICI-->
-  <script src="shBrushCss.js"></script>
-  <script src="shBrushPhp.js"></script>
-  <script src="shBrushXml.js"></script>
+  <script src="files/js/shBrushCss.js"></script>
+  <script src="files/js/shBrushPhp.js"></script>
+  <script src="files/js/shBrushXml.js"></script>
   <!-- les js a instaler ICI obligatoirement-->
   <script>
     dp.SyntaxHighlighter.HighlightAll('code');
