@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="css.css" rel="stylesheet" type="text/css"> <style type="text/css">
-  a{
-    color: #FF6600;
-  }
-
-    </style>
-    <title>jQuery: jQuery HTML Manipulation</title>
+    <meta charset="utf-8">
+    <link href="css.css" rel="stylesheet" type="text/css">
+    <title>
+      jQuery: jQuery HTML Manipulation
+    </title>
+    <style type="text/css">
+    iframe.c5 {width:100%; height:270px}
+    iframe.c4 {width:100%; height:220px}
+    iframe.c3 {width:100%; height:250px}
+   </style>
   </head>
-
-  <body><div><a href="../../JavaScript and jQuery Tutorials.html"><h2>Back</h2></a></div>
+  <body>
+    <div class="c1">
+      <a href="../../JavaScript%20and%20jQuery%20Tutorials.html">
+      <h2>
+        <em>Back</em>
+      </h2></a>
+    </div>
     <div class="wholecontent optionset1a">
       <div class="content optionset1b">
         <div>
-          <h1>jQuery Tutorial</h1>
-          <h2 style="margin-bottom:50px">Part 7 - jQuery HTML Manipulation</h2>
-         
+          <h1>
+            jQuery Tutorial
+          </h1>
+          <h2 class="c1">
+            Part 7 - jQuery HTML Manipulation
+          </h2>
           <div>
-            <h2>HTML Code</h2>
+            <h2>
+              HTML Code
+            </h2>
             <pre class="samplecode">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
@@ -48,203 +59,326 @@
             <hr>
           </div>
           <div>
-            <h2>text() Replace text</h2>
-            <p>Replaces the text in the selected elements. Example: <strong>text("clicked")</strong> - Click on the heading text to change it.</p>
+            <h2>
+              text() Replace text
+            </h2>
+            <p>
+              Replaces the text in the selected elements. Example: <strong>text("clicked")</strong> - Click on the
+              heading text to change it.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $(this).text("clicked");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample1.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample1.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>text() Replace text</h2>
-            <p>Replaces the text in the selected elements. Example: <strong>text("new text")</strong> - Click on the heading text to change the text in the &lt;p&gt; elements.</p>
+            <h2>
+              text() Replace text
+            </h2>
+            <p>
+              Replaces the text in the selected elements. Example: <strong>text("new text")</strong> - Click on the
+              heading text to change the text in the &lt;p&gt; elements.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").text("new text");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample2.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample2.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>text() Replace text with HTML source</h2>
-            <p>Replaces the text in the selected elements. Example: <strong>text("new &lt;b&gt;text&lt;/b&gt;")</strong> - Click on the heading text to change the text in the &lt;p&gt; elements. The HTML markup will be shown.</p>
+            <h2>
+              text() Replace text with HTML source
+            </h2>
+            <p>
+              Replaces the text in the selected elements. Example: <strong>text("new &lt;b&gt;text&lt;/b&gt;")</strong>
+              - Click on the heading text to change the text in the &lt;p&gt; elements. The HTML markup will be shown.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").text("new &lt;b&gt;text&lt;/b&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample3.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample3.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>html() Replace with HTML markup</h2>
-            <p>Replaces the text with text and HTML markup. Example: <strong>html("new &lt;b&gt;text&lt;/b&gt;")</strong> - Click on the heading text to change the text in the &lt;p&gt; elements. The word "text" will be in bold.</p>
+            <h2>
+              html() Replace with HTML markup
+            </h2>
+            <p>
+              Replaces the text with text and HTML markup. Example: <strong>html("new
+              &lt;b&gt;text&lt;/b&gt;")</strong> - Click on the heading text to change the text in the &lt;p&gt;
+              elements. The word "text" will be in bold.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").html("new &lt;b&gt;text&lt;/b&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample4.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample4.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>html() Replace with HTML markup including attributes</h2>
-            <p>Replaces the text with text and HTML markup. Example: <strong>html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;')</strong> - Click on the heading text to change the text in the &lt;p&gt; elements. The word "text" will be red and bold.</p>
+            <h2>
+              html() Replace with HTML markup including attributes
+            </h2>
+            <p>
+              Replaces the text with text and HTML markup. Example: <strong>html('new &lt;b style="color:
+              red;"&gt;text&lt;/b&gt;')</strong> - Click on the heading text to change the text in the &lt;p&gt;
+              elements. The word "text" will be red and bold.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;');
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample5.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample5.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>html() Replaces whole content</h2>
-            <p>Replaces the text with text and HTML markup. Example: <strong>html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;')</strong> - Click on the heading text to change the whole content of the &lt;div&gt; element.</p>
+            <h2>
+              html() Replaces whole content
+            </h2>
+            <p>
+              Replaces the text with text and HTML markup. Example: <strong>html('new &lt;b style="color:
+              red;"&gt;text&lt;/b&gt;')</strong> - Click on the heading text to change the whole content of the
+              &lt;div&gt; element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;');
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample6.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample6.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>empty() Empty the contents</h2>
-            <p>Removes the content of the selected elements. Example: <strong>empty()</strong> - Click on the heading text to remove the contents of the &lt;div&gt; element.</p>
+            <h2>
+              empty() Empty the contents
+            </h2>
+            <p>
+              Removes the content of the selected elements. Example: <strong>empty()</strong> - Click on the heading
+              text to remove the contents of the &lt;div&gt; element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").empty();
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample7.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample7.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>append() Append text</h2>
-            <p>Append text at the end of the selected elements. Example: <strong>append(" More text.")</strong> - Click on the heading text to append text to the end of the &lt;p&gt; elements.</p>
+            <h2>
+              append() Append text
+            </h2>
+            <p>
+              Append text at the end of the selected elements. Example: <strong>append(" More text.")</strong> - Click
+              on the heading text to append text to the end of the &lt;p&gt; elements.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").append(" More text.");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample8.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample8.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>append() Append HTML markup</h2>
-            <p>Append HTML markup at the end of the selected elements. Example: <strong>append("&lt;p&gt;new text&lt;/p&gt;")</strong> - Click on the heading text to append a &lt;p&gt; element to the end of the &lt;div&gt; element.</p>
+            <h2>
+              append() Append HTML markup
+            </h2>
+            <p>
+              Append HTML markup at the end of the selected elements. Example: <strong>append("&lt;p&gt;new
+              text&lt;/p&gt;")</strong> - Click on the heading text to append a &lt;p&gt; element to the end of the
+              &lt;div&gt; element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").append("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample9.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample9.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>after() Add HTML markup after selection</h2>
-            <p>Add HTML markup after the selected elements. Example: <strong>after("&lt;p&gt;new text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element after the &lt;div&gt; element.</p>
+            <h2>
+              after() Add HTML markup after selection
+            </h2>
+            <p>
+              Add HTML markup after the selected elements. Example: <strong>after("&lt;p&gt;new
+              text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element after the &lt;div&gt;
+              element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").after("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample10.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample10.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>after() Add HTML markup after multiple selections</h2>
-            <p>Add HTML markup after the selected elements. Example: <strong>after("&lt;p&gt;new text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element after each of the two &lt;p&gt; elements.</p>
+            <h2>
+              after() Add HTML markup after multiple selections
+            </h2>
+            <p>
+              Add HTML markup after the selected elements. Example: <strong>after("&lt;p&gt;new
+              text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element after each of the two
+              &lt;p&gt; elements.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").after("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample11.html" title="sample" style="width:100%; height:250px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample11.html" title=
+            "sample" class="c3">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>prepend() Prepend HTML markup</h2>
-            <p>Prepend HTML markup at the start of the selected elements. Example: <strong>prepend("&lt;p&gt;new text&lt;/p&gt;")</strong> - Click on the heading text to prepend a &lt;p&gt; element to the start of the &lt;div&gt; element.</p>
+            <h2>
+              prepend() Prepend HTML markup
+            </h2>
+            <p>
+              Prepend HTML markup at the start of the selected elements. Example: <strong>prepend("&lt;p&gt;new
+              text&lt;/p&gt;")</strong> - Click on the heading text to prepend a &lt;p&gt; element to the start of the
+              &lt;div&gt; element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").prepend("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample12.html" title="sample" style="width:100%; height:220px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample12.html" title=
+            "sample" class="c4">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>before() Add HTML markup before selection</h2>
-            <p>Add HTML markup before the selected elements. Example: <strong>before("&lt;p&gt;new text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element before the &lt;div&gt; element.</p>
+            <h2>
+              before() Add HTML markup before selection
+            </h2>
+            <p>
+              Add HTML markup before the selected elements. Example: <strong>before("&lt;p&gt;new
+              text&lt;/p&gt;")</strong> - Click on the heading text to add a &lt;p&gt; element before the &lt;div&gt;
+              element.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("div").before("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample13.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample13.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>replaceWith() Replace HTML markup</h2>
-            <p>Replace the selected elements with new HTML markup. Example: <strong>replaceWith("&lt;h2&gt;new text&lt;/h2&gt;")</strong> - Click on the heading text to replace the &lt;p&gt; elements with &lt;h2&gt; elements.</p>
+            <h2>
+              replaceWith() Replace HTML markup
+            </h2>
+            <p>
+              Replace the selected elements with new HTML markup. Example: <strong>replaceWith("&lt;h2&gt;new
+              text&lt;/h2&gt;")</strong> - Click on the heading text to replace the &lt;p&gt; elements with &lt;h2&gt;
+              elements.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("p").replaceWith("&lt;h2&gt;new text&lt;/h2&gt;");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample14.html" title="sample" style="width:100%; height:200px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample14.html" title=
+            "sample" class="c2">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
           <div>
-            <h2>HTML Code</h2>
+            <h2>
+              HTML Code
+            </h2>
             <pre class="samplecode">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 &lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
@@ -268,25 +402,31 @@
 &lt;/body&gt;
 
 &lt;/html&gt;</pre>
-            <h2>attr() change attribute</h2>
-            <p>Changes attribute values. Example: <strong>attr("src", "floatingball.gif")</strong> - Click on the heading text to change the image.</p>
+            <h2>
+              attr() change attribute
+            </h2>
+            <p>
+              Changes attribute values. Example: <strong>attr("src", "floatingball.gif")</strong> - Click on the
+              heading text to change the image.
+            </p>
             <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("#picture").attr("src", "floatingball.gif");
   });
 });</pre>
-            <h3>Try it out.</h3>
-            <iframe src="JavaScript and jQuery_ jQuery HTML Manipulation7_files/sample15.html" title="sample" style="width:100%; height:270px">
-    <p>iframes are not supported by your browser.</p>
-    </iframe>
+            <h3>
+              Try it out.
+            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7_files/sample15.html" title=
+            "sample" class="c5">
+            <p>
+              iframes are not supported by your browser.
+            </p></iframe>
             <hr>
           </div>
         </div>
         <div class="clear"></div>
       </div>
     </div>
-    <div class="wholefooter">
-    </div>
+    <div class="wholefooter"></div>
   </body>
-
 </html>

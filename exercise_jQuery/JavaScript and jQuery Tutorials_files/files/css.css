@@ -1,5 +1,5 @@
 @charset 'utf-8';
-.optionset1b{background-color:#202020;color:#ff6f0f;}
+.optionset1b{background-color:#202020;color:#ff6f0f;-moz-border-radius:10px 10px;-webkit-border-radius:10px 10px;border-radius:10px 10px 10px 10px;}
 h2,h3{color:#06f;}
 h1{font-size:24px;line-height:30px;}
 h2{font-size:18px;line-height:20px;}
@@ -152,3 +152,7 @@ a,div,img,span{border:0;}
 .gimpimage{display:block;margin-left:0;clear:both;padding:0;min-width:720px;border:0;}
 .gimpbrushes{width:140px;float:left;margin-left:0;text-align:center;}
 .jqueryiframe{width:100%;height:350px;}
+ h2.c1 {margin-bottom:50px}
+ a{color: #FF6600;}
+ iframe.c2 {width:100%; height:200px}
+ div.c1 {margin-left: 10px}
