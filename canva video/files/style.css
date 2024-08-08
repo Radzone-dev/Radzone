@@ -1,0 +1,175 @@
+﻿@charset 'utf-8';@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Book-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Book-webfont.woff) format('woff'),url(fonts/Quicksand_Book-webfont.ttf) format('truetype'),url(fonts/Quicksand_Book-webfont.svg#webfontQvsv8Mp8) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Book_Oblique-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Book_Oblique-webfont.woff) format('woff'),url(fonts/Quicksand_Book_Oblique-webfont.ttf) format('truetype'),url(fonts/Quicksand_Book_Oblique-webfont.svg#webfontDkcdglAy) format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Bold-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Bold-webfont.woff) format('woff'),url(fonts/Quicksand_Bold-webfont.ttf) format('truetype'),url(fonts/Quicksand_Bold-webfont.svg#webfontA4fKbYnS) format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Bold_Oblique-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Bold_Oblique-webfont.woff) format('woff'),url(fonts/Quicksand_Bold_Oblique-webfont.ttf) format('truetype'),url(fonts/Quicksand_Bold_Oblique-webfont.svg#webfontijreB3Ak) format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+a, abbr, article, body, code, div, , h1, h2, header, html, p, pre, strong, var {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, , header, main {
+  display: block;
+}
+html {
+  margin-bottom: 1px;
+  min-height: 100%;
+}
+body {
+  background: #202020;
+  color: #444;
+  font-family: Georgia,serif;
+  font-size: 62.5%;
+}
+html > body {
+  font-size: 16px;
+}
+, p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+a, a:visited {
+  color: #0090d2;
+  text-decoration: none;
+}
+a:hover {
+  color: #0063a6;
+}
+a:active, a:focus {
+  color: #0063a6;
+  position: relative;
+  top: 1px;
+}
+h1, h2 {
+  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;
+  font-weight: 700;
+}
+h1 {
+  font-size: 2em;
+  line-height: 1;
+  letter-spacing: -2px;
+  word-spacing: 2px;
+}
+h2 {
+  font-size: 1.5em;
+  line-height: 1.25;
+  margin: 1.5833em 0 .6667em;
+}
+div {
+  position: relative;
+}
+strong {
+  font-weight: 700;
+}
+pre {
+  background: #FFDBFF ;
+  margin: 1.5em 0;
+  white-space: pre;
+  word-wrap: break-word;
+  white-space: -moz-pre-wrap;
+  white-space:   -o-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -hp-pre-wrap;
+  white-space:      pre-wrap;
+  white-space: pre-line;
+}
+code, pre {
+  font: .9375em 'andale mono','lucida console',monospace;
+  line-height: 1.6;
+}
+.inner {
+  margin: 0 auto;
+  position: relative;
+  width: 1020px;
+}
+header[role=banner] {
+  background: #202020;
+  height: 200px;
+  width: 100%;
+}
+
+.main {
+  border-right: 4px solid #f0f0f0;
+  float: left;
+  margin: 0 18px 0 0;
+  padding: 0 18px 0 0;
+  position: relative;
+  width: 685px;
+}
+
+header .logo h1 {
+  background: url(images/logo.png) no-repeat;
+  display: block;
+  height: 196px;
+  text-indent: -9999em;
+}
+.post {
+  padding: 0 0 0 20px;
+}
+.post header {
+  float: left;
+  margin: 0 0 20px;
+  padding: 0 0 10px 166px;
+  width: inherit;
+}
+.post h1 {
+  line-height: 1.3;
+}
+.post .entry {
+  float: right;
+  width: 500px;
+}
+p {
+  margin: 4px 0 1.5em;
+}
+.group:after {
+  content: '.';
+  display: block;
+  height: 0;
+  visibility: hidden;
+  clear: both;
+}
+h1, h2 {
+  -webkit-font-smoothing: antialiased;
+}
+#content {
+   background: #fff;
+  border-top: 45px solid #202020;
+  margin: -45px auto 0;
+  padding: 24px 0 0 0;
+  width: 1020px;
+     -moz-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 10px 30px rgba(0,0,0,.3);
+          box-shadow: 0 10px 30px rgba(0,0,0,.3);
+}
+
+/*body {
+  counter-reset: headings 0;
+}*/
