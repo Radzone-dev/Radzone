@@ -26,7 +26,7 @@
   font-weight: 700;
   font-style: italic;
 }
-a, abbr, article, body, code, div, , h1, h2, header, html, p, pre, strong, var {
+a, abbr, article, body, code, div, , h1, h2, header, html, p, pre.nobrush, strong, var {
   margin: 0;
   padding: 0;
   border: 0;
@@ -88,7 +88,7 @@ div {
 strong {
   font-weight: 700;
 }
-pre {
+pre.nobrush {
   background: #FFDBFF ;
   margin: 1.5em 0;
   white-space: pre;
@@ -100,7 +100,7 @@ pre {
   white-space:      pre-wrap;
   white-space: pre-line;
 }
-code, pre {
+code, pre.nobrush {
   font: .9375em 'andale mono','lucida console',monospace;
   line-height: 1.6;
 }
