@@ -10,342 +10,339 @@
   </head>
   <body>
     <div class="c1">
-      <a href="../../JavaScript%20and%20jQuery%20Tutorials.html">
-      <h2>
-        <em>Back</em>
-      </h2></a>
+      <img src="logo.png" alt="logo" id="logo">
     </div>
     <div class="wholecontent optionset1a">
       <div class="content optionset1b">
+        <h1>
+          jQuery Tutorial
+        </h1>
+        <h2 class="c1">
+          Part 4 - jQuery Effects
+        </h2>
         <div>
-          <h1>
-            jQuery Tutorial
-          </h1>
-          <h2 class="c1">
-            Part 4 - jQuery Effects
+          <h2>
+            HTML Code
           </h2>
-          <div>
-            <h2>
-              HTML Code
-            </h2>
-            <pre class="samplecode">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
-
-&lt;head&gt;
- &lt;title&gt;Demo&lt;/title&gt;
- &lt;meta http-equiv="content-type" content="text/html; charset=utf-8" /&gt;
- &lt;style type="text/css"&gt;h2 {background-color: orange;}&lt;/style&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
- &lt;h1&gt;Click Me&lt;/h1&gt;
- &lt;h2&gt;Heading two&lt;/h2&gt;
- &lt;h3&gt;Heading three&lt;/h3&gt;
-
-&lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt;
-&lt;script type="text/javascript" src="my_code.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</pre>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              hide() Effect
-            </h2>
-            <p>
-              Hides the elements by changing the height, width, and opacity. Example:
-              <strong>$("h2").hide(1000)</strong> - Click on the top heading element to hide the &lt;h2&gt; element
-              over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <pre class="samplecode">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head&gt;
+    &lt;title&gt;
+      Demo
+    &lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;style type="text/css"&gt;
+    h2 {background-color: orange;}
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;
+      Click Me
+    &lt;/h1&gt;
+    &lt;h2&gt;
+      Heading two
+    &lt;/h2&gt;
+    &lt;h3&gt;
+      Heading three
+    &lt;/h3&gt;
+    &lt;script src="jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="my_code.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            hide() Effect
+          </h2>
+          <p>
+            Hides the elements by changing the height, width, and opacity. Example: <strong>$("h2").hide(1000)</strong>
+            - Click on the top heading element to hide the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("h2").hide(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample1.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              show() Effect
-            </h2>
-            <p>
-              Shows the elements by changing the height, width, and opacity. Example:
-              <strong>$("h2").show(1000)</strong> - Click on the top heading element to show the &lt;h2&gt; element
-              over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample1.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            show() Effect
+          </h2>
+          <p>
+            Shows the elements by changing the height, width, and opacity. Example: <strong>$("h2").show(1000)</strong>
+            - Click on the top heading element to show the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").show(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample2.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              toggle() Effect
-            </h2>
-            <p>
-              Alternately shows or hides the elements by changing the height, width, and opacity. Example:
-              <strong>$("h2").toggle(1000)</strong> - Click on the top heading element to alternately show or hide the
-              &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample2.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            toggle() Effect
+          </h2>
+          <p>
+            Alternately shows or hides the elements by changing the height, width, and opacity. Example:
+            <strong>$("h2").toggle(1000)</strong> - Click on the top heading element to alternately show or hide the
+            &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").toggle(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample3.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              slideUp() Effect
-            </h2>
-            <p>
-              Hides the elements by changing the height. Example: <strong>$("h2").slideUp(1000)</strong> - Click on the
-              top heading element to hide the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample3.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            slideUp() Effect
+          </h2>
+          <p>
+            Hides the elements by changing the height. Example: <strong>$("h2").slideUp(1000)</strong> - Click on the
+            top heading element to hide the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   //$("h2").hide();
 
   $("h1").click(function() {
     $("h2").slideUp(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample4.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              slideDown() Effect
-            </h2>
-            <p>
-              Shows the elements by changing the height. Example: <strong>$("h2").slideDown(1000)</strong> - Click on
-              the top heading element to show the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample4.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            slideDown() Effect
+          </h2>
+          <p>
+            Shows the elements by changing the height. Example: <strong>$("h2").slideDown(1000)</strong> - Click on the
+            top heading element to show the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").slideDown(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample5.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              slideToggle() Effect
-            </h2>
-            <p>
-              Alternately shows or hides the elements by changing the height. Example:
-              <strong>$("h2").slideToggle(1000)</strong> - Click on the top heading element to alternately show or hide
-              the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample5.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            slideToggle() Effect
+          </h2>
+          <p>
+            Alternately shows or hides the elements by changing the height. Example:
+            <strong>$("h2").slideToggle(1000)</strong> - Click on the top heading element to alternately show or hide
+            the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").slideToggle(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample6.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              fadeOut() Effect
-            </h2>
-            <p>
-              Hides the elements by changing the opacity. Example: <strong>$("h2").fadeOut(1000)</strong> - Click on
-              the top heading element to hide the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample6.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            fadeOut() Effect
+          </h2>
+          <p>
+            Hides the elements by changing the opacity. Example: <strong>$("h2").fadeOut(1000)</strong> - Click on the
+            top heading element to hide the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   //$("h2").hide();
 
   $("h1").click(function() {
     $("h2").fadeOut(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample7.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              fadeIn() Effect
-            </h2>
-            <p>
-              Shows the elements by changing the opacity. Example: <strong>$("h2").fadeIn(1000)</strong> - Click on the
-              top heading element to show the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample7.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            fadeIn() Effect
+          </h2>
+          <p>
+            Shows the elements by changing the opacity. Example: <strong>$("h2").fadeIn(1000)</strong> - Click on the
+            top heading element to show the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").fadeIn(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample8.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              fadeToggle() Effect
-            </h2>
-            <p>
-              Alternately shows or hides the elements by changing the opacity. Example:
-              <strong>$("h2").fadeToggle(1000)</strong> - Click on the top heading element to alternately show or hide
-              the &lt;h2&gt; element over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample8.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            fadeToggle() Effect
+          </h2>
+          <p>
+            Alternately shows or hides the elements by changing the opacity. Example:
+            <strong>$("h2").fadeToggle(1000)</strong> - Click on the top heading element to alternately show or hide
+            the &lt;h2&gt; element over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h2").hide();
 
   $("h1").click(function() {
     $("h2").fadeToggle(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample9.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              fadeTo() Effect
-            </h2>
-            <p>
-              Changes the opacity until the specified opacity is reached. Example: <strong>$("h2").fadeTo(1000,
-              0.3)</strong> - Click on the top heading element to change the opacity of the &lt;h2&gt; element to 30%
-              over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample9.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            fadeTo() Effect
+          </h2>
+          <p>
+            Changes the opacity until the specified opacity is reached. Example: <strong>$("h2").fadeTo(1000,
+            0.3)</strong> - Click on the top heading element to change the opacity of the &lt;h2&gt; element to 30%
+            over a period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("h2").fadeTo(1000, 0.3);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample10.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              delay() an Effect
-            </h2>
-            <p>
-              Delays the effect that follows it. Example: <strong>$("h2").delay(2000).fadeToggle(1000)</strong> - Click
-              on the top heading element to alternately show or hide the &lt;h2&gt; element, over a period of 1 second,
-              after a delay of 2 seconds.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample10.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            delay() an Effect
+          </h2>
+          <p>
+            Delays the effect that follows it. Example: <strong>$("h2").delay(2000).fadeToggle(1000)</strong> - Click
+            on the top heading element to alternately show or hide the &lt;h2&gt; element, over a period of 1 second,
+            after a delay of 2 seconds.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("h2").delay(2000).fadeToggle(1000);
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample11.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
-          <div>
-            <h2>
-              Callback Function
-            </h2>
-            <p>
-              The callback function, passed as the second argument to the effect method, will be executed at the
-              completion of the effect. Example: <strong>$("h2").hide(1000, function()
-              {$("h3").fadeOut(1000);});</strong> - Click on the top heading element to hide the &lt;h2&gt; element,
-              over a period of 1 second. After the &lt;h2&gt; finishes hiding, the &lt;h3&gt; element will fade out
-              over a period of 1 second.
-            </p>
-            <pre class="samplecode">$(document).ready(function() {
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample11.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
+        </div>
+        <div>
+          <h2>
+            Callback Function
+          </h2>
+          <p>
+            The callback function, passed as the second argument to the effect method, will be executed at the
+            completion of the effect. Example: <strong>$("h2").hide(1000, function()
+            {$("h3").fadeOut(1000);});</strong> - Click on the top heading element to hide the &lt;h2&gt; element, over
+            a period of 1 second. After the &lt;h2&gt; finishes hiding, the &lt;h3&gt; element will fade out over a
+            period of 1 second.
+          </p>
+          <pre class="samplecode">$(document).ready(function() {
   $("h1").click(function() {
     $("h2").hide(1000, function() {
       $("h3").fadeOut(1000);
     });
   });
 });</pre>
-            <h3>
-              Try it out.
-            </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample12.html" title="sample" class=
-            "c2">
-            <p>
-              iframes are not supported by your browser.
-            </p></iframe>
-            <hr>
-          </div>
+          <h3>
+            Try it out.
+          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Effects_files/sample12.html" title="sample" class=
+          "c2">
+          <p>
+            iframes are not supported by your browser.
+          </p></iframe>
+          <hr>
         </div>
-        <div class="clear"></div>
       </div>
     </div>
-    <div class="wholefooter"></div>
   </body>
 </html>
