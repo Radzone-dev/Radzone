@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="en-fr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="http://radservebeer.free.fr">
+   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <title>
+      load demo
+    </title>
+    <style type="text/css">
+      body {
+        text-align: center;
+        margin: 0px;
+      }
+
+      div {
+        margin: auto;
+        margin-top: 20px;
+      }
+
+      button {
+        margin-right: 10px;
+      }
+
+      #header {
+        margin: 0px;
+        background: #202020;
+      }
+
+      .pre {
+        width: 600px;
+        margin: auto;
+      }
+      hr{
+        width: 100%;
+        height: 5px;
+        background-color: #000;
+      }
+
+    </style>
+    <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="files/Styles/shThemeRDark.css" id="theme">
+  </head>
+
+  <body>
+    <div id="header">
+      <img class="logo" src="" alt="logo">
+      </div>
+    <div class="pre">
+      <h3>The image in the header was olso call by jQuery
+        méthode .attr() <i>( not ajax )</i>
+      </h3>
+    <h4>CODE HTML</h4>
+      <pre class="brush: html;collapse: false">
+        &lt;div id="header"&gt; &lt;img class="logo" src="" alt="logo"&gt;  &lt;/div&gt;
+        </pre>
+    </div>
+    <div class="pre">
+      <h4>CODE JQUERY</h4>
+      <pre class="brush: js;collapse: false">
+      $(document).ready(function() {
+       $(".logo").attr("src", "images/logo.png");
+        });
+        </pre>
+      <hr>
+    </div><h3>
+        video insertion by méthode .html() <i>( DOM Manipulation not ajax )</i>
+      </h3>
+    <div id="videohtml"></div>
+    <div class="pre">
+
+      <h4>CODE HTML</h4>
+      <pre class="brush: html;collapse: false">&lt;div id="videohtml"&gt;  &lt;/div&gt;</pre>
+    </div>
+    <div class="pre">
+      <h4>CODE JQUERY</h4>
+      <pre class="brush: js;collapse: false">
+      $(document).ready(function() {
+       $("#videohtml").html('&lt;video id="Radzone" width="400" loop&gt;
+       &lt;source src="video/Radzone.mp4"/&gt;
+       &lt;/video&gt;');
+        $('#Radzone')[0].play();<!-- For autoplay -->
+        });
+        </pre>
+      <hr> </div>
+    <div>
+      <h2>AJAX jQuery</h2>
+    </div>
+    <div id="button">
+      <h3>
+        méthode .ajax()
+      </h3><button class="appelvideo">Get Video</button><button class="appelimg">Get img</button><button class="appeltable">Get table</button>
+    </div>
+    <div id="objet1"></div>
+    <div class="pre">
+      <h4>CODE HTML</h4>
+      <pre class="brush: html;collapse: false">
+      &lt;button class="appelvideo"&gt; Get Video&lt;/button&gt;
+      &lt;button class="appelimg"&gt; Get img&lt;/button&gt;
+      &lt;button class="appeltable"&gt; Get table&lt;/button&gt;
+
+    &lt;div id="objet1"&gt; &lt/div&gt;</pre>
+    </div>
+    <div class="pre">
+      <h4>CODE JQUERY</h4>
+      <pre class="brush: js;">
+      $(document).ready(function() {
+       $("button.appelvideo").click(function() {
+          $.ajax({
+            url: "files/video.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        $("button.appelimg").click(function() {
+          $.ajax({
+            url: "files/img.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        $("button.appeltable").click(function() {
+          $.ajax({
+            url: "files/XLS.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        });</pre>
+      <hr> </div>
+    <div id="button2">
+      <h3>
+        méthode .load() <br><span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xlm ..ect )</i></span>
+      </h3><button class="appevid1">Madagascar</button><button class="appevid2">bigbunny</button><button class="appevid3">Radzone</button>
+    </div>
+    <div id="video"></div>
+    <div class="pre">
+      <h4>CODE HTML</h4>
+      <pre class="brush: html;collapse: false">
+      &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
+      &lt;button class="appevid2"&gt; bigbunny&lt;/button&gt;
+      &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
+
+    &lt;div id="video"&gt; &lt/div&gt;
+    </pre>
+    </div>
+    <div class="pre">
+      <h4>CODE JQUERY</h4>
+      <pre class="brush: js;">
+      $(document).ready(function() {
+       $("button.appevid1").click(function() {
+          $("#video").load("files/liste.txt #Madagascar");
+
+        });
+
+        $("button.appevid2").click(function() {
+          $("#video").load("files/liste.txt #bigbunny");
+
+        });
+
+        $("button.appevid3").click(function() {
+          $("#video").load("files/liste.txt #Radzone");
+
+        });
+        });
+        </pre>
+        <div class="pre">
+      <h4>CODE texte for Page liste.txt</h4>
+      <pre class="brush: plain;">
+       &lt;video id="Madagascar" controls autoplay width="556"&gt;
+        &lt;source src="../video/Madagascar.mp4" type= "video/mp4"&gt;
+      &lt;/video&gt;
+
+      &lt;video id="bigbunny" controls autoplay width="556"&gt;
+        &lt;source src="../video/mov_bbb.mp4" type="video/mp4"&gt;
+      &lt;/video&gt;
+
+      &lt;video id="Radzone" autoplay mute width="556"&gt;
+        &lt;source src="../video/Radzone.mp4" type="video/mp4"&gt;
+      &lt;/video&gt;
+      </pre>
+    </div>
+      <hr> </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("button.appelvideo").click(function() {
+          $.ajax({
+            url: "files/video.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        $("button.appelimg").click(function() {
+          $.ajax({
+            url: "files/img.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        $("button.appeltable").click(function() {
+          $.ajax({
+            url: "files/XLS.html",
+            success: function(result) {
+              $("#objet1").html(result);
+            }
+          });
+        });
+        $("button.appevid1").click(function() {
+          $("#video").load("files/liste.txt #Madagascar");
+
+
+        });
+
+        $("button.appevid2").click(function() {
+          $("#video").load("files/liste.txt #bigbunny");
+
+        });
+
+        $("button.appevid3").click(function() {
+          $("#video").load("files/liste.txt #Radzone");
+
+         $('#Radzone')[0].play();
+
+        });
+
+
+
+        $("#videohtml").html('<video id="Radzone" width="400" loop><source src="video/Radzone.mp4"/></video>');
+        $('#Radzone')[0].play();
+
+        $(".logo").attr("src", "images/logo.png");
+
+      });
+    </script>
+    <script type="text/javascript" src="files/Scripts/shCore.js"></script>
+    <script type="text/javascript" src="files/Scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="files/Scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="files/Scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="files/Scripts/shBrushPlain.js"></script>
+    <script>
+      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+      SyntaxHighlighter.config.stripBrs = true;
+      SyntaxHighlighter.all();
+    </script>
+  </body>
+
+</html>
