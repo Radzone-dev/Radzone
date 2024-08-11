@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="author" content="http://radservebeer.free.fr">
-   <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
     <title>
       jQuery Ajax demo
     </title>
     <style type="text/css">
       body {
+        background-color: #444444;
         text-align: center;
         margin: 0px;
       }
 
       div {
+        background-color: #FFF;
         margin: auto;
         margin-top: 20px;
       }
@@ -28,22 +30,23 @@
       }
 
       .pre {
-        width: 600px;
+        max-width: 600px;
         margin: auto;
       }
+
       .content {
-        width: 700px;
+        max-width: 700px;
         margin: auto;
         margin-top: 10px;
         border: solid 1px;
         border-radius: 20px;
       }
-      hr{
+
+      hr {
         width: 100%;
         height: 5px;
         background-color: #000;
       }
-
     </style>
     <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
     <link type="text/css" rel="Stylesheet" href="files/Styles/shThemeRDark.css" id="theme">
@@ -51,37 +54,50 @@
   <body>
     <div id="header">
       <img class="logo" src="" alt="logo">
-      </div><div class="content"><div class="pre"><i><h3><p>All jQuery code you saw here can be optimized !<br>
-       I didn't use "var" or "array"... ect,<br> Because this exemples was made for beginners <br>And i don't want confuse them with lots of code !<br>For more go to <a href="https://learn.jquery.com/" target="_blank" title="learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank" title="w3school">www.w3schools.com</a> </p></h3></i><hr></div>
-    <div class="pre">
-      <h3>The image in the header was olso call by jQuery
-        méthode .attr() <i>( not ajax )</i>
-      </h3>
-    <h4>CODE HTML</h4>
-      <pre class="brush: html;collapse: false">
+    </div>
+    <div class="content">
+      <div class="pre">
+        <i>
+          <h3>
+            <p>All jQuery code you saw here can be optimized !<br>
+       I didn't use "var" or "array"... ect,<br> Because this exemples was made for beginners <br>
+       And i don't want confuse them with lots of code !<br>
+       For more go to <a href="https://learn.jquery.com/" target="_blank" title="learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank" title="w3school">www.w3schools.com</a>
+            </p>
+        </h3>
+       </i>
+        <hr>
+      </div>
+      <div class="pre">
+        <h3>The image in the header was olso call by jQuery méthode .attr() <i>( not ajax )</i>
+        </h3>
+        <h4>CODE HTML</h4>
+        <pre class="brush: html;collapse: false">
         &lt;div id="header"&gt; &lt;img class="logo" src="" alt="logo"&gt;  &lt;/div&gt;
         </pre>
-    </div>
-    <div class="pre">
-      <h4>CODE JQUERY</h4>
-      <pre class="brush: js;collapse: false">
+      </div>
+      <div class="pre">
+        <h4>CODE JQUERY</h4>
+        <pre class="brush: js;collapse: false">
       $(document).ready(function() {
        $(".logo").attr("src", "images/logo.png");
         });
         </pre>
-      <hr>
-    </div><h3>
+        <hr>
+      </div>
+      <h3>
         video insertion by méthode .html() <i>( DOM Manipulation not ajax )</i>
       </h3>
-    <div id="videohtml"></div>
-    <div class="pre">
-
-      <h4>CODE HTML</h4>
-      <pre class="brush: html;collapse: false">&lt;div id="videohtml"&gt;  &lt;/div&gt;</pre>
-    </div>
-    <div class="pre">
-      <h4>CODE JQUERY</h4>
-      <pre class="brush: js;collapse: false">
+      <div id="videohtml"></div>
+      <div class="pre">
+        <h4>CODE HTML</h4>
+        <pre class="brush: html;collapse: false">
+          &lt;div id="videohtml"&gt;  &lt;/div&gt;
+        </pre>
+      </div>
+      <div class="pre">
+        <h4>CODE JQUERY</h4>
+        <pre class="brush: js;collapse: false">
       $(document).ready(function() {
        $("#videohtml").html('&lt;video autoplay mute loop id="Radzone" width="400"&gt;
        &lt;source src="video/Radzone.mp4"/&gt;
@@ -89,28 +105,31 @@
         $('#Radzone')[0].play();<!-- For autoplay -->
         });
         </pre>
-      <hr> </div>
-    <div>
-      <h2>AJAX jQuery</h2>
-    </div>
-    <div id="button">
-      <h3>
-        méthode .ajax()
-      </h3><button class="appelvideo">Get Video</button><button class="appelimg">Get img</button><button class="appeltable">Get table</button>
-    </div>
-    <div id="objet1"></div>
-    <div class="pre">
-      <h4>CODE HTML</h4>
-      <pre class="brush: html;collapse: false">
+        <hr>
+       </div>
+      <div>
+        <h2>AJAX jQuery</h2>
+      </div>
+      <div id="button">
+        <h3>
+          méthode .ajax()
+        </h3><button class="appelvideo">Get Video</button>
+        <button class="appelimg">Get img</button>
+        <button class="appeltable">Get table</button>
+      </div>
+      <div id="objet1"></div>
+      <div class="pre">
+        <h4>CODE HTML</h4>
+        <pre class="brush: html;collapse: false">
       &lt;button class="appelvideo"&gt; Get Video&lt;/button&gt;
       &lt;button class="appelimg"&gt; Get img&lt;/button&gt;
       &lt;button class="appeltable"&gt; Get table&lt;/button&gt;
 
     &lt;div id="objet1"&gt; &lt/div&gt;</pre>
-    </div>
-    <div class="pre">
-      <h4>CODE JQUERY</h4>
-      <pre class="brush: js;">
+      </div>
+      <div class="pre">
+        <h4>CODE JQUERY</h4>
+        <pre class="brush: js;">
       $(document).ready(function() {
        $("button.appelvideo").click(function() {
           $.ajax({
@@ -137,26 +156,30 @@
           });
         });
         });</pre>
-      <hr> </div>
-    <div id="button2">
-      <h3>
-        méthode .load() <br><span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xlm ..ect )</i></span>
-      </h3><button class="appevid1">Madagascar</button><button class="appevid2">bigbunny</button><button class="appevid3">Radzone</button>
-    </div>
-    <div id="video"></div>
-    <div class="pre">
-      <h4>CODE HTML</h4>
-      <pre class="brush: html;collapse: false">
+        <hr> </div>
+      <div id="button2">
+        <h3>
+          méthode .load() <br>
+          <span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xlm ..ect )</i></span>
+        </h3>
+        <button class="appevid1">Madagascar</button>
+        <button class="appevid2">bigbunny</button>
+        <button class="appevid3">Radzone</button>
+      </div>
+      <div id="video"></div>
+      <div class="pre">
+        <h4>CODE HTML</h4>
+        <pre class="brush: html;collapse: false">
       &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
       &lt;button class="appevid2"&gt; bigbunny&lt;/button&gt;
       &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
 
     &lt;div id="video"&gt; &lt/div&gt;
     </pre>
-    </div>
-    <div class="pre">
-      <h4>CODE JQUERY</h4>
-      <pre class="brush: js;">
+      </div>
+      <div class="pre">
+        <h4>CODE JQUERY</h4>
+        <pre class="brush: js;">
       $(document).ready(function() {
        $("button.appevid1").click(function() {
           $("#video").load("files/liste.txt #Madagascar");
@@ -175,8 +198,8 @@
         });
         </pre>
         <div class="pre">
-      <h4>CODE texte for Page liste.txt</h4>
-      <pre class="brush: plain;">
+          <h4>CODE texte for Page liste.txt</h4>
+          <pre class="brush: plain;">
        &lt;video id="Madagascar" controls autoplay width="556"&gt;
         &lt;source src="video/Madagascar.mp4" type= "video/mp4"&gt;
       &lt;/video&gt;
@@ -189,9 +212,10 @@
         &lt;source src="video/Radzone.mp4" type="video/mp4"&gt;
       &lt;/video&gt;
       </pre>
+        </div>
+        <hr>
+      </div>
     </div>
-      <hr> </div> </div>
-
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
       $(document).ready(function() {
@@ -233,7 +257,7 @@
         $("button.appevid3").click(function() {
           $("#video").load("files/liste.txt #Radzone");
 
-         $('#Radzone')[0].play();
+          $('#Radzone')[0].play();
 
         });
 
