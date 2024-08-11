@@ -46,6 +46,11 @@
         height: 5px;
         background-color: #000;
       }
+      .list-item{
+       text-align: left;
+        float: left;
+      }
+
     </style>
     <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
     <link type="text/css" rel="Stylesheet" href="files/Styles/shThemeRDark.css" id="theme">
@@ -59,7 +64,7 @@
         <i>
           <h3>
             <p>All jQuery code you saw here can be optimized !
-       I didn't use "var" or "array"... ect, Because this exemples was made for beginners 
+       I didn't use "var" or "array"... ect, Because this exemples was made for beginners
        And i don't want confuse them with lots of code !<br>
        For more go to <a href="https://learn.jquery.com/" target="_blank" title="learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank" title="w3school">www.w3schools.com</a>
             </p>
@@ -68,7 +73,7 @@
         <hr>
       </div>
       <div class="pre">
-        <h3>The image in the header was olso call by jQuery méthode .attr() <i>( not ajax )</i>
+        <h3>The image in the header was olso call by jQuery method .attr() <i>( not ajax )</i>
         </h3>
         <h4>CODE HTML</h4>
         <pre class="brush: html;collapse: false">
@@ -85,7 +90,7 @@
         <hr>
       </div>
       <h3>
-        video insertion by méthode .html() <i>( DOM Manipulation not ajax )</i>
+        video insertion by method .html() <i>( DOM Manipulation not ajax )</i>
       </h3>
       <div id="videohtml"></div>
       <div class="pre">
@@ -106,12 +111,57 @@
         </pre>
         <hr>
        </div>
-      <div>
+      <div> <h3>
+        video insertion method .attr() data-video <i>( Not ajax but can be useful )</i>
+      </h3>
+      <div class="pre">
+        <div class="list-item">
+     <ul>
+         <li class="item" data-video ="video/Radzone.mp4"><a href="javascript:void(0)">Radzone</a></li>
+         <li class="item" data-video ="video/Madagascar.mp4"><a href="javascript:void(0)">Madagascar</a></li>
+          <li class="item" data-video ="video/mov_bbb.mp4"><a href="javascript:void(0)">Big Bunny</a></li>
+     </ul>
+</div>
+<video id="videoclip" poster= "images/rz.jpg" controls="controls" width="400" title="Video title">
+    <source id="mp4video" src="video/Radzone.mp4" type="video/mp4"/>
+</video><div class="pre">
+        <h4>CODE HTML</h4>
+        <pre class="brush: html;">
+&lt;video id="videoclip" poster= "images/Radzone.jpg" controls="controls" title="Video title"&gt;
+    &lt;source id="mp4video" src="video/Radzone.mp4" type="video/mp4"/&gt;
+&lt;/video&gt;
+&lt;div class="list-item"&gt;
+ &lt;ul&gt;
+    &lt;li class="item" data-video ="video/Radzone.mp4"&gt;&lt;a href="javascript:void(0)"&gt;Radzone&lt;/a&gt;&lt;/li&gt;
+   &lt;li class="item" data-video ="video/Madagascar.mp4"&gt;&lt;a href="javascript:void(0)"&gt;Madagascar&lt;/a&gt;&lt;/li&gt;
+     &lt;li class="item" data-video ="video/mov_bbb.mp4"&gt;&lt;a href="javascript:void(0)"&gt;Big Bunny&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+        </pre>
+      </div><div class="pre">
+        <h4>CODE JQUERY</h4>
+        <pre class="brush: js;">
+   $(document).ready(function() {
+     $(".list-item").find(".item").on("click", function() {
+        videoData = $(this).data("video");
+        videoSource = $("#videoclip").find("#mp4video");
+        videoSource.attr("src", videoData);
+        autoplayVideo = $("#videoclip").get(0);
+        autoplayVideo.load();
+        autoplayVideo.play();
+    });
+    });
+        </pre>
+        <hr>
+       </div></div>
+       <div class="pre">
         <h2>AJAX jQuery</h2>
+        <hr>
+        </div>
       </div>
       <div id="button">
         <h3>
-          méthode .ajax()
+          AJAX method .ajax()
         </h3><button class="appelvideo">Get Video</button>
         <button class="appelimg">Get img</button>
         <button class="appeltable">Get table</button>
@@ -154,15 +204,20 @@
             }
           });
         });
-        });</pre>
-        <hr> </div>
+        });</pre> <h4>CODE HTML for img.html<br> </h4>
+        <pre class="brush: html;collapse: false">
+        &lt;img id="img" src="images/logo.png" alt="img&gt;
+        </pre>
+        <h4><i>( In these 3 examples all elements present in the called HTML will be inserted ! )</i> </h4>
+        <hr>
+        </div>
       <div id="button2">
         <h3>
-          méthode .load() <br>
-          <span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xlm ..ect )</i></span>
+          AJAX method .load() <br>
+          <span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xml ..ect )</i></span>
         </h3>
         <button class="appevid1">Madagascar</button>
-        <button class="appevid2">bigbunny</button>
+        <button class="appevid2">Big Bunny</button>
         <button class="appevid3">Radzone</button>
       </div>
       <div id="video"></div>
@@ -170,7 +225,7 @@
         <h4>CODE HTML</h4>
         <pre class="brush: html;collapse: false">
       &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
-      &lt;button class="appevid2"&gt; bigbunny&lt;/button&gt;
+      &lt;button class="appevid2"&gt; Big Bunny&lt;/button&gt;
       &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
 
     &lt;div id="video"&gt; &lt/div&gt;
@@ -199,15 +254,15 @@
         <div class="pre">
           <h4>CODE texte for Page liste.txt</h4>
           <pre class="brush: plain;">
-       &lt;video id="Madagascar" controls autoplay width="556"&gt;
+       &lt;video id="Madagascar" controls autoplay width="550"&gt;
         &lt;source src="video/Madagascar.mp4" type= "video/mp4"&gt;
       &lt;/video&gt;
 
-      &lt;video id="bigbunny" controls autoplay width="556"&gt;
+      &lt;video id="bigbunny" controls autoplay width="550"&gt;
         &lt;source src="video/mov_bbb.mp4" type="video/mp4"&gt;
       &lt;/video&gt;
 
-      &lt;video id="Radzone" autoplay mute width="556"&gt;
+      &lt;video id="Radzone" autoplay mute width="550"&gt;
         &lt;source src="video/Radzone.mp4" type="video/mp4"&gt;
       &lt;/video&gt;
       </pre>
@@ -264,10 +319,23 @@
 
         $("#videohtml").html('<video id="Radzone" loop width="400" ><source src="video/Radzone.mp4"/></video>');
         $('#Radzone')[0].play();
+        /*autoplayVideo = $("#Radzone").get(0);
+        autoplayVideo.load();
+        autoplayVideo.play();*/
 
         $(".logo").attr("src", "images/logo.png");
 
+         $(".list-item").find(".item").on("click", function() {
+ /*let */videoData = $(this).data("video");
+/* let */videoSource = $("#videoclip").find("#mp4video");
+            videoSource.attr("src", videoData);
+/*let */autoplayVideo = $("#videoclip").get(0);
+        autoplayVideo.load();
+        autoplayVideo.play();
+    });
+
       });
+
     </script>
     <script type="text/javascript" src="files/Scripts/shCore.js"></script>
     <script type="text/javascript" src="files/Scripts/shBrushCss.js"></script>
