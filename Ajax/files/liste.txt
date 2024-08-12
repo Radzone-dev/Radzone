@@ -1,12 +1,12 @@
-<video poster="images/Madagascar.jpg" id="Madagascar" controls="" autoplay="" width="550">
+<video poster="images/Madagascar.jpg" id="Madagascar" controls="" autoplay="" width="80%">
         <source src="video/Madagascar.mp4" type= "video/mp4">
       </video>
 
-      <video id="bigbunny" controls="" autoplay="" width="550">
+      <video id="bigbunny" controls="" autoplay="" width="80%">
         <source src="video/mov_bbb.mp4" type="video/mp4">
       </video>
 
-      <video id="Radzone" autoplay="" width="550">
+      <video id="Radzone" autoplay="" width="80%">
         <source src="video/Radzone.mp4" type="video/mp4">
       </video>
 
