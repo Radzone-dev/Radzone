@@ -1,0 +1,94 @@
+
+@charset 'utf-8';@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Book-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Book-webfont.woff) format('woff'),url(fonts/Quicksand_Book-webfont.ttf) format('truetype'),url(fonts/Quicksand_Book-webfont.svg#webfontQvsv8Mp8) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Book_Oblique-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Book_Oblique-webfont.woff) format('woff'),url(fonts/Quicksand_Book_Oblique-webfont.ttf) format('truetype'),url(fonts/Quicksand_Book_Oblique-webfont.svg#webfontDkcdglAy) format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Bold-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Bold-webfont.woff) format('woff'),url(fonts/Quicksand_Bold-webfont.ttf) format('truetype'),url(fonts/Quicksand_Bold-webfont.svg#webfontA4fKbYnS) format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(fonts/Quicksand_Bold_Oblique-webfont.eot);
+  src: local('☺'),url(fonts/Quicksand_Bold_Oblique-webfont.woff) format('woff'),url(fonts/Quicksand_Bold_Oblique-webfont.ttf) format('truetype'),url(fonts/Quicksand_Bold_Oblique-webfont.svg#webfontijreB3Ak) format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+* {
+  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif; font-size: 1em;
+
+}
+
+    body {
+      margin: 0;
+      /*background-color: #202020;  */
+    }
+    #contant > p {
+      text-align: center;
+    }
+    .flex-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: column;
+      height: 100%;
+      padding: 5px;
+      gap: 5px;
+    }
+    .flex-container > div {
+      padding: 8px;
+    }
+    .item1 {
+      background: #202020;
+      margin-top: -8px;
+      flex:0 1 auto;
+      align-self: auto;
+      text-align: center;
+      width: 100%;
+    }
+    .item2 {
+      width: 80%;
+      align-self: auto;
+    }
+    .item3 {
+      width: 100%;
+      text-align: center;
+    }
+    ul.exemple {
+      list-style-type: none;
+    }
+    img.logo {
+      border: 0;
+    }
+    .bt {
+      font-size: 1rem;
+      cursor: pointer;
+      background: #202020;
+      margin: 5px;
+      width: 300px;
+      border-radius: 10px;
+      transition: all 1.2s ease-in-out;
+      color: #d4d0c8;
+      border: none;
+      font-weight: 500;
+      padding: 5px;
+    }
+    .bt:hover {
+      background: rgba(0, 0, 0, .3);
+      transition: all 1.2s ease-in-out;
+      color: #000;
+    }
+    hr {width: 100%; height: 1px}
