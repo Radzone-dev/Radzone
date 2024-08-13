@@ -1,4 +1,40 @@
 @charset 'utf-8';
+    @charset 'utf-8';@font-face {
+  font-family: Quicksand;
+  src: url( url(../../../fonts/Quicksand_Bold-webfont.eot));
+  src: local('?'),url(../../../fonts/Quicksand_Book-webfont.woff) format('woff'),url(../../../fonts/Quicksand_Book-webfont.ttf) format('truetype'),url(../../../fonts/Quicksand_Book-webfont.svg#webfontQvsv8Mp8) format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(../../../fonts/Quicksand_Book_Oblique-webfont.eot);
+  src: local('?'),url(../../../fonts/Quicksand_Book_Oblique-webfont.woff) format('woff'),url(../../../fonts/Quicksand_Book_Oblique-webfont.ttf) format('truetype'),url(../../../fonts/Quicksand_Book_Oblique-webfont.svg#webfontDkcdglAy) format('svg');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(../../../fonts/Quicksand_Bold-webfont.eot);
+  src: local(url(../../../fonts/Quicksand_Bold-webfont.woff)),url( ) format('woff'),url(../../../fonts/Quicksand_Bold-webfont.ttf) format('truetype'),url(../../../fonts/Quicksand_Bold-webfont.svg#webfontA4fKbYnS) format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: Quicksand;
+  src: url(../../../fonts/Quicksand_Bold_Oblique-webfont.eot);
+  src: local('?'),url(../../../fonts/Quicksand_Bold_Oblique-webfont.woff) format('woff'),url(../../../fonts/Quicksand_Bold_Oblique-webfont.ttf) format('truetype'),url(../../../fonts/Quicksand_Bold_Oblique-webfont.svg#webfontijreB3Ak) format('svg');
+  font-weight: 700;
+  font-style: italic;
+}
+* {
+  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;  font-size: 1em;
+
+}
+a{
+  text-decoration: none;
+}
+
 .optionset1b {
   background-color: #202020;
   color: #FF822E;

@@ -1,4 +1,9 @@
- body{margin:0;}
+ * {
+  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;  font-size: 1em;
+
+}
+
+body{margin:0;}
     #contant>p{text-align:center;}
     .flex-container{display:flex;justify-content:flex-start;align-items:center;flex-direction:column;height:100%;padding:5px;gap:5px;}
     .flex-container>div{padding:8px;}
@@ -19,3 +24,6 @@
     .list-item{text-align:left;float:left;margin:auto;}
     div #output{background-color:#202020;color:#ddd;}
     #pre{max-width:600px;min-width:420px;}
+    a{
+      text-decoration: none;
+    }

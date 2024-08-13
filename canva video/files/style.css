@@ -25,6 +25,9 @@
   src: local('☺'),url(fonts/Quicksand_Bold_Oblique-webfont.woff) format('woff'),url(fonts/Quicksand_Bold_Oblique-webfont.ttf) format('truetype'),url(fonts/Quicksand_Bold_Oblique-webfont.svg#webfontijreB3Ak) format('svg');
   font-weight: 700;
   font-style: italic;
+} * {
+  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;  font-size: 1em;
+
 }
 a, abbr, article, body, code, div, , h1, h2, header, html, p, pre.nobrush, strong, var {
   margin: 0;
