@@ -567,7 +567,8 @@ $(document).ready(function() {
         $("#videohtml").html('<video id="Radzone" loop width="80%" ><source src="video/Radzone.mp4"/></video>');
         $('#Radzone')[0].play();
 
-        $('#btnxml').clickToggle(function () {
+        $('#btnxml').click(function () {
+           $("#tableBody").toggle();
     $('#tableBody').empty();       // Clear the table body.
     $.ajax({
         type: 'GET',
