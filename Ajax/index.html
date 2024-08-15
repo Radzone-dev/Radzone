@@ -469,7 +469,7 @@ $(document).ready(function() {
       success: function(result) {
       console.log(result);
  var output =
- "&lt;table&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
+ "&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
       for (var i in result) {
         output +=
         "&lt;tr&gt;&lt;td&gt;" +
@@ -487,7 +487,7 @@ $(document).ready(function() {
       output += "&lt;/tbody&gt;&lt;/table&gt;";
 
       displayResources.html(output);
-        $("table").addClass("table_book_json"); /* Insert a class to the table */
+       /* $("table").addClass("table_book_json");  Insert a class to all the tables in the page */
             }
           });
         });
@@ -535,18 +535,6 @@ $(document).ready(function() {
   }
 ]
 </pre>
- <h4>
- CODE CSS<br>
- <i>( I can customize the table directly in the page css because i ad a class in jquery&nbsp;&nbsp; "$("table").addClass("table_book_json");"&nbsp;   )</i>
- </h4>
- <pre class="brush: css;collapse: false">
-.table_book_json {
-  margin-top: 10px;
-  background-color: #202020;
-  color: #fff;
-  border-radius: 20px
-
-}</pre>
 </div>
    <hr>
     </div>
@@ -689,7 +677,7 @@ $(document).ready(function() {
             success: function(result) {
               console.log(result);
               var output =
-                "<table id=tjason><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
+                "<table id=table_jason><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
               for (var i in result) {
                 output +=
                   "<tr><td>" +
@@ -707,7 +695,7 @@ $(document).ready(function() {
               output += "</tbody></table>";
 
               displayResources.html(output);
-              $("#tjason").addClass("table_book_json"); /* Insert a class to the table */
+              $("#table_jason").addClass("table_book_json"); /* Insert a class to the table */
             }
           });
         });
