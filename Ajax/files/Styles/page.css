@@ -30,11 +30,11 @@ body{margin:0;}
     }
     span.c2 {font-size: smaller}
     span.c1 {font-size: larger}
-    .table_book_json td, th {
+    #table_book_json td, th {
    padding: 5px;
 
 }
-  .table_book_json {
+  #table_book_json {
     margin-top: 10px;
    background-color: #202020;
    color: #fff;
