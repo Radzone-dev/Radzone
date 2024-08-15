@@ -689,7 +689,7 @@ $(document).ready(function() {
             success: function(result) {
               console.log(result);
               var output =
-                "<table><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
+                "<table id=&quot;&quot;&quot;><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
               for (var i in result) {
                 output +=
                   "<tr><td>" +
@@ -707,7 +707,7 @@ $(document).ready(function() {
               output += "</tbody></table>";
 
               displayResources.html(output);
-              $("table").addId("table_book_json"); /* Insert a class to the table */
+              $("table #&quot;").addClass("table_book_json"); /* Insert a class to the table */
             }
           });
         });
