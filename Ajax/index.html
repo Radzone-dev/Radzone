@@ -313,40 +313,36 @@ $(document).ready(function() {
     &lt;author&gt;Gambardella, Matthew&lt;/author&gt;
     &lt;title&gt;XML Developer's Guide&lt;/title&gt;
     &lt;genre&gt;Computer&lt;/genre&gt;
-    &lt;price&gt;44.95&lt;/price&gt;
-    &lt;description&gt;An in-depth look at creating applications
-    with XML.&lt;/description&gt;
+    &lt;price&gt;9.95&lt;/price&gt;
+    &lt;description&gt;An in-depth look at creating applications.&lt;/description&gt;
   &lt;/book&gt;
   &lt;book&gt;
     &lt;author&gt;Ralls, Kim&lt;/author&gt;
     &lt;title&gt;Midnight Rain&lt;/title&gt;
     &lt;genre&gt;Fantasy&lt;/genre&gt;
-    &lt;price&gt;5.95&lt;/price&gt;
+    &lt;price&gt;7.95&lt;/price&gt;
     &lt;description&gt;A former architect battles zombies.&lt;/description&gt;
   &lt;/book&gt;
   &lt;book&gt;
     &lt;author&gt;Corets, Eva&lt;/author&gt;
     &lt;title&gt;Maeve Ascendant&lt;/title&gt;
     &lt;genre&gt;Fantasy&lt;/genre&gt;
-    &lt;price&gt;5.95&lt;/price&gt;
-    &lt;description&gt;After the collapse of a nanotechnology
-    society in England.&lt;/description&gt;
+    &lt;price&gt;6.50&lt;/price&gt;
+    &lt;description&gt;After the collapse of a nanotechnology society in England.&lt;/description&gt;
   &lt;/book&gt;
   &lt;book&gt;
     &lt;author&gt;Corets, Eva&lt;/author&gt;
     &lt;title&gt;Oberon's Legacy&lt;/title&gt;
     &lt;genre&gt;Fantasy&lt;/genre&gt;
-    &lt;price&gt;5.95&lt;/price&gt;
-    &lt;description&gt;In post-apocalypse England. Sequel to Maeve
-    Ascendant.&lt;/description&gt;
+    &lt;price&gt;8.95&lt;/price&gt;
+    &lt;description&gt;In post-apocalypse England. Sequel to Maeve Ascendant.&lt;/description&gt;
   &lt;/book&gt;
   &lt;book&gt;
     &lt;author&gt;Corets, Eva&lt;/author&gt;
     &lt;title&gt;The Sundered Grail&lt;/title&gt;
     &lt;genre&gt;Fantasy&lt;/genre&gt;
-    &lt;price&gt;5.95&lt;/price&gt;
-    &lt;description&gt;The two daughters of Maeve. Sequel to
-    Oberon's Legacy.&lt;/description&gt;
+    &lt;price&gt;9.70&lt;/price&gt;
+    &lt;description&gt;The two daughters of Maeve. Sequel to Oberon's Legacy.&lt;/description&gt;
   &lt;/book&gt;
 &lt;/catalog&gt;
      </pre>
@@ -427,15 +423,16 @@ $(document).ready(function() {
                 CODE JQUERY
               </h4>
               <pre class="brush: js;">
-$(document).ready(function(){
- $("#btn").click(function(event) {
-  $.getJSON("files/user.json", function(user) {
-   $("#output").html("<br> Name: " + user.name + "");
-   $("#output").append("<br>Gender: " + user.gender + "");
-   $("#output").append("<br>Salary: " + user.salary + "");
-   });
-  });
- });
+$("#btn").click(function(event) {
+ $.getJSON("files/user.json", function(user) {
+  $("#output").html("&lt;p&gt; Name: " +
+     user.name + "&lt;/p&gt;");
+  $("#output").append("&lt;p&gt;Gender: " +
+     user.gender + "&lt;/p&gt;");
+  $("#output").append("&lt;p&gt;Salary: " +
+     user.salary + "&lt;/p&gt;");
+    });
+});
 </pre>
               <h4>
                 CODE for user.json
@@ -446,11 +443,114 @@ $(document).ready(function(){
   "gender": "Male",
   "salary": "10 000000 €"
 }
-      </pre>
-            </div>
-            <hr>
-          </div>
-        </div>
+      </pre><hr> <h3>
+              AJAX method .getJSON() <i>( Same as the book.xml but xml converted in json ) </i>
+            </h3><input type="button" id="btnjson" value="Get book.Json Data">
+ <div id="output2"></div> <h4>
+                CODE HTML
+              </h4>
+              <pre class="brush: html;collapse: false">
+ &lt;input type="button" id="btnjson" value="Get Json Data"&gt;
+ &lt;div id="output2"&gt;&lt;/div&gt;
+</pre>
+              <h4>
+                CODE JQUERY
+              </h4>
+              <pre class="brush: js;">
+$(document).ready(function() {
+  $("#btnjson").click(function() {
+    var displayResources = $("#output2");
+
+ /* displayResources.text("Loading data from JSON source..."); wait message if the json very big */
+
+    $.ajax({
+      type: "GET",
+      url: "files/book.json",
+      success: function(result) {
+      console.log(result);
+ var output =
+ "&lt;table&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
+      for (var i in result) {
+        output +=
+        "&lt;tr&gt;&lt;td&gt;" +
+        result[i].author +
+        "&lt;/td&gt;&lt;td&gt;" +
+        result[i].price +
+        "&lt;/td&gt;&lt;td&gt;" +
+        result[i].genre +
+        "&lt;/td&gt;&lt;td&gt;" +
+        result[i].title +
+        "&lt;/td&gt;&lt;td&gt;" +
+        result[i].description +
+        "&lt;/td&gt;&lt;/tr&gt;";
+              }
+      output += "&lt;/tbody&gt;&lt;/table&gt;";
+
+      displayResources.html(output);
+        $("table").addClass("table_book_json"); /* Insert a class to the table */
+            }
+          });
+        });
+      });
+</pre>
+              <h4>
+                CODE for book.json
+              </h4>
+              <pre class="brush: plain;">
+[
+  {
+    "author": "Doe, John",
+    "price": "9.95 €",
+    "genre": "Computer",
+    "description": "An in-depth look at creating applications",
+    "title": "Developer's Guide"
+  },
+  {
+    "author": "Ralls, Kim",
+    "price": "7.95 €",
+    "genre": "Fantasy",
+    "description": "A former architect battles zombies.",
+    "title": "Midnight Rain"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "6.50 €",
+    "genre": "Fantasy",
+    "description": "After the collapse of a nanotechnology society in England.",
+    "title": "Maeve Ascendant"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "8.95 €",
+    "genre": "Fantasy",
+    "description": "In post-apocalypse England. Sequel to Maeve Ascendant.",
+    "title": "Oberon's Legacy"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "9.70 €",
+    "genre": "Fantasy",
+    "description": "The two daughters of Maeve. Sequel to Oberon's Legacy.",
+    "title": "The Sundered Grail"
+  }
+]
+</pre>
+ <h4>
+ CODE CSS<br>
+ <i>( I can customize the table directly in the page css because i ad a class in jquery&nbsp;&nbsp; "$("table").addClass("table_book_json");"&nbsp;   )</i>
+ </h4>
+ <pre class="brush: css;collapse: false">
+.table_book_json {
+  margin-top: 10px;
+  background-color: #202020;
+  color: #fff;
+  border-radius: 20px
+
+}</pre>
+</div>
+   <hr>
+    </div>
+     </div>
       </div>
       <div class="item3"></div>
     </div>
@@ -575,6 +675,40 @@ $(document).ready(function(){
               user.gender + "</p>");
             $("#output").append("<p>Salary: " +
               user.salary + "</p>");
+          });
+        });
+           /* AJAX method .getJSON() Book.json*/
+        $("#btnjson").click(function() {
+          var displayResources = $("#output2");
+
+         /* displayResources.text("Loading data from JSON source..."); wait message if the json very big */
+
+          $.ajax({
+            type: "GET",
+            url: "files/book.json",
+            success: function(result) {
+              console.log(result);
+              var output =
+                "<table><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
+              for (var i in result) {
+                output +=
+                  "<tr><td>" +
+                  result[i].author +
+                  "</td><td>" +
+                  result[i].price +
+                  "</td><td>" +
+                  result[i].genre +
+                  "</td><td>" +
+                  result[i].title +
+                  "</td><td>" +
+                  result[i].description +
+                  "</td></tr>";
+              }
+              output += "</tbody></table>";
+
+              displayResources.html(output);
+              $("table").addClass("table_book_json"); /* Insert a class to the table */
+            }
           });
         });
 

@@ -4,39 +4,35 @@
       <author>Gambardella, Matthew</author>
       <title>XML Developer's Guide</title>
       <genre>Computer</genre>
-      <price>44.95</price>
-      <description>An in-depth look at creating applications 
-      with XML.</description>
+      <price>9.95</price>
+      <description>An in-depth look at creating applications.</description>
    </book>
    <book>
       <author>Ralls, Kim</author>
       <title>Midnight Rain</title>
       <genre>Fantasy</genre>
-      <price>5.95</price>
+      <price>7.95</price>
       <description>A former architect battles zombies.</description>
    </book>
    <book>
       <author>Corets, Eva</author>
       <title>Maeve Ascendant</title>
       <genre>Fantasy</genre>
-      <price>5.95</price>
-      <description>After the collapse of a nanotechnology 
-      society in England.</description>
+      <price>6.50</price>
+      <description>After the collapse of a nanotechnology society in England.</description>
    </book>
    <book>
       <author>Corets, Eva</author>
       <title>Oberon's Legacy</title>
       <genre>Fantasy</genre>
-      <price>5.95</price>
-      <description>In post-apocalypse England. Sequel to Maeve
-      Ascendant.</description>
+      <price>8.95</price>
+      <description>In post-apocalypse England. Sequel to Maeve Ascendant.</description>
    </book>
    <book>
       <author>Corets, Eva</author>
       <title>The Sundered Grail</title>
       <genre>Fantasy</genre>
-      <price>5.95</price>
-      <description>The two daughters of Maeve. Sequel to
-      Oberon's Legacy.</description>
+      <price>9.70</price>
+      <description>The two daughters of Maeve. Sequel to Oberon's Legacy.</description>
    </book>
 </catalog>

@@ -1,0 +1,37 @@
+[
+  {
+    "author": "Doe, John",
+    "price": "9.95 €",
+    "genre": "Computer",
+    "description": "An in-depth look at creating applications",
+    "title": "Developer's Guide"
+  },
+  {
+    "author": "Ralls, Kim",
+    "price": "7.95 €",
+    "genre": "Fantasy",
+    "description": "A former architect battles zombies.",
+    "title": "Midnight Rain"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "6.50 €",
+    "genre": "Fantasy",
+    "description": "After the collapse of a nanotechnology society in England.",
+    "title": "Maeve Ascendant"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "8.95 €",
+    "genre": "Fantasy",
+    "description": "In post-apocalypse England. Sequel to Maeve Ascendant.",
+    "title": "Oberon's Legacy"
+  },
+  {
+    "author": "Corets, Eva",
+    "price": "9.70 €",
+    "genre": "Fantasy",
+    "description": "The two daughters of Maeve. Sequel to Oberon's Legacy.",
+    "title": "The Sundered Grail"
+  }
+]
