@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>
       jQuery Ajax demo
@@ -7,6 +7,7 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <meta name="author" content="http://radservebeer.free.fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="files/Styles/page.css">
     <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
@@ -21,26 +22,38 @@
         <div class="content">
           <div class="method">
             <h3>
-              <i>All jQuery code you saw here can be optimized ! I didn't use "var" or "array"... ect, Because this
-              exemples was made for beginners And i don't want confuse them with lots of code !</i>
+              <em>All jQuery code you saw here can be optimized ! I didn't use "var" or "array"... ect, Because this
+              exemples was made for beginners And i don't want confuse them with lots of code !</em>
             </h3>
             <h3>
-              <i>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
+              <em>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
               "learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank"
-              title="w3school">www.w3schools.com</a></i>
+              title="w3school">www.w3schools.com</a></em>
             </h3>
-              <h3>Warning ! All the width you see in the code are in % !<br> <i><span style="font-size: smaller">&lt;video id="Radzone" width="80%"&gt;</span> </i><br>
-              This is adapted for this Responsive page, adapt it for you !</h3>
+            <h3>
+              <span class="c1">Warning !</span>
+              <br>
+              1 : All the width you see in the code are in % !
+              <br>
+              <em><span class="c2">&lt;video id="Radzone" width="80%"&gt;</span></em>
+              <br>
+              This is adapted for this Responsive page, adapt it for you !
+            </h3>
+            <h2>
+              2 :<span class="c1">All links on called files <i>(html ,texte)</i> must be granted to the receiving page !</span>
+            </h2>
             <hr>
             <h3>
-              The image in the header was olso call by jQuery method .attr() <i>( not ajax )</i>
+              The image in the header was olso call by jQuery method .attr() <em>( not ajax )</em>
             </h3>
             <div id="pre">
               <h4>
                 CODE HTML
               </h4>
               <pre class="brush: html;collapse: false">
-        &lt;div id="header"&gt; &lt;img class="logo" src="" alt="logo"&gt;  &lt;/div&gt;
+        &lt;div id="header"&gt;
+         &lt;img class="logo" src="" alt="logo"&gt;
+        &lt;/div&gt;
         </pre>
               <h4>
                 CODE JQUERY
@@ -53,7 +66,7 @@
             </div>
             <hr>
             <h3>
-              video insertion by method .html() <i>( DOM Manipulation not ajax )</i>
+              video insertion by method .html() <em>( DOM Manipulation not ajax )</em>
             </h3>
             <div id="videohtml"></div>
             <div id="pre">
@@ -77,7 +90,7 @@
             </div>
             <hr>
             <h3>
-              video insertion method .attr() data-video <i>( Not ajax but can be useful )</i>
+              video insertion method .attr() data-video <em>( Not ajax but can be useful )</em>
             </h3>
             <div class="list-item">
               <ul>
@@ -91,8 +104,8 @@
                   <a href="javascript:void(0)">Big Bunny</a>
                 </li>
               </ul>
-            </div><video id="videoclip" poster="images/rz.jpg" controls width="80%" title=
-            "Video title"><source id="mp4video" src="video/Radzone.mp4" type="video/mp4"></video>
+            </div><video id="videoclip" poster="images/rz.jpg" controls="" width="80%" title="Video title"><source id=
+            "mp4video" src="video/Radzone.mp4" type="video/mp4"></video>
             <div id="pre">
               <h4>
                 CODE HTML
@@ -154,48 +167,196 @@
                 CODE JQUERY
               </h4>
               <pre class="brush: js;">
-      $(document).ready(function() {
-       $("button.appelvideo").click(function() {
-          $.ajax({
-            url: "files/video.html",
-            success: function(result) {
-              $("#objet1").html(result);
+$(document).ready(function() {
+ $("button.appelvideo").click(function() {
+  $.ajax({
+   url: "files/video.html",
+    success: function(result) {
+     $("#objet1").html(result);
+     }
+          });
+        });
+    $("button.appelimg").click(function() {
+     $.ajax({
+      url: "files/img.html",
+       success: function(result) {
+        $("#objet1").html(result);
             }
           });
         });
-        $("button.appelimg").click(function() {
-          $.ajax({
-            url: "files/img.html",
-            success: function(result) {
-              $("#objet1").html(result);
+    $("button.appeltable").click(function() {
+     $.ajax({
+      url: "files/XLS.html",
+       success: function(result) {
+        $("#objet1").html(result);
             }
           });
-        });
-        $("button.appeltable").click(function() {
-          $.ajax({
-            url: "files/XLS.html",
-            success: function(result) {
-              $("#objet1").html(result);
-            }
-          });
-        });
-        });</pre>
+    });
+   });</pre>
               <h4>
-                CODE HTML for img.html<br>
+                CODE HTML for img.html
+                <br>
               </h4>
               <pre class="brush: html;collapse: false">
-        &lt;img id="img" src="images/logo.png" width="70%" alt="img&gt;
+&lt;img id="img" src="images/logo.png" width="70%" alt="img"&gt;
         </pre>
             </div>
             <h4>
-              <i>( In these 3 examples all elements present in the called HTML will be inserted ! )</i>
+              <em>( In these 3 basic examples all the elements present in the called HTML will be inserted ! )</em>
             </h4>
+            <h4>
+              Exemple ,If i make this in the called html
+              <br>
+            </h4>
+         <div id="pre">
+        <pre class="brush: html;collapse: false">
+ &lt;img id="img" src="images/logo.png" width="70%" alt="img"&gt;
+
+ &lt;img id="img2" src="images/rz.jpg" width="70%" alt="img2"&gt;
+        </pre><button class="appelmulti">I get this</button>
+            <div id="multi"></div>
+            <h4>
+              <em>( You can chose what you want call with .find() for exemple ! )</em>
+            </h4>
+        </div>
+            <hr>
+            <h3>
+              AJAX method .ajax() for .XML
+              <br>
+            </h3>
+            <div id="xml">
+              <input type="button" value="Read XML" id="btnxml">
+              <table>
+                <thead>
+                  <tr>
+                    <th>
+                      Author
+                    </th>
+                    <th>
+                      Title
+                    </th>
+                    <th>
+                      Genre
+                    </th>
+                    <th>
+                      Price
+                    </th>
+                    <th>
+                      Description
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+            </div>
+            <div id="pre">
+              <h4>
+                CODE HTML
+              </h4>
+              <pre class="brush: html;">
+    &lt;input type="button" value="Read XML" id="btnxml" /&gt;
+    &lt;table&gt;
+      &lt;thead&gt;
+        &lt;tr&gt;
+          &lt;th&gt;Author&lt;/th&gt;
+          &lt;th&gt;Title&lt;/th&gt;
+          &lt;th&gt;Genre&lt;/th&gt;
+          &lt;th&gt;Price&lt;/th&gt;
+          &lt;th&gt;Description&lt;/th&gt;
+        &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody id="tableBody"&gt;
+
+      &lt;/tbody&gt;
+
+    &lt;/table&gt;
+    </pre>
+              <h4>
+                CODE JQUERY
+              </h4>
+              <pre class="brush: js;">
+$(document).ready(function() {
+ $('#btnxml').click(function () {
+  $('#tableBody').empty();  // Clear the table body.
+  $.ajax({
+    type: 'GET',
+    url: 'files/book.xml',    // The file path.
+    dataType: 'xml',
+    success: function(xml) {
+     $(xml).find('book').each(function() {
+      $('#tableBody').append(
+        '&lt;tr&gt;' +
+        '&lt;td&gt;' +
+        $(this).find('author').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('title').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('genre').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('price').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('description').text() + '&lt;/td&gt; ' +
+        '&lt;/tr&gt;');
+       });
+        }
+     });
+  });
+});
+   </pre>
+              <h4>
+                CODE for book.xml
+              </h4>
+              <pre class="brush: xml;">
+ &lt;?xml version="1.0"?&gt;
+&lt;catalog&gt;
+  &lt;book&gt;
+    &lt;author&gt;Gambardella, Matthew&lt;/author&gt;
+    &lt;title&gt;XML Developer's Guide&lt;/title&gt;
+    &lt;genre&gt;Computer&lt;/genre&gt;
+    &lt;price&gt;44.95&lt;/price&gt;
+    &lt;description&gt;An in-depth look at creating applications
+    with XML.&lt;/description&gt;
+  &lt;/book&gt;
+  &lt;book&gt;
+    &lt;author&gt;Ralls, Kim&lt;/author&gt;
+    &lt;title&gt;Midnight Rain&lt;/title&gt;
+    &lt;genre&gt;Fantasy&lt;/genre&gt;
+    &lt;price&gt;5.95&lt;/price&gt;
+    &lt;description&gt;A former architect battles zombies.&lt;/description&gt;
+  &lt;/book&gt;
+  &lt;book&gt;
+    &lt;author&gt;Corets, Eva&lt;/author&gt;
+    &lt;title&gt;Maeve Ascendant&lt;/title&gt;
+    &lt;genre&gt;Fantasy&lt;/genre&gt;
+    &lt;price&gt;5.95&lt;/price&gt;
+    &lt;description&gt;After the collapse of a nanotechnology
+    society in England.&lt;/description&gt;
+  &lt;/book&gt;
+  &lt;book&gt;
+    &lt;author&gt;Corets, Eva&lt;/author&gt;
+    &lt;title&gt;Oberon's Legacy&lt;/title&gt;
+    &lt;genre&gt;Fantasy&lt;/genre&gt;
+    &lt;price&gt;5.95&lt;/price&gt;
+    &lt;description&gt;In post-apocalypse England. Sequel to Maeve
+    Ascendant.&lt;/description&gt;
+  &lt;/book&gt;
+  &lt;book&gt;
+    &lt;author&gt;Corets, Eva&lt;/author&gt;
+    &lt;title&gt;The Sundered Grail&lt;/title&gt;
+    &lt;genre&gt;Fantasy&lt;/genre&gt;
+    &lt;price&gt;5.95&lt;/price&gt;
+    &lt;description&gt;The two daughters of Maeve. Sequel to
+    Oberon's Legacy.&lt;/description&gt;
+  &lt;/book&gt;
+&lt;/catalog&gt;
+     </pre>
+            </div>
             <hr>
             <div id="button2">
               <h3>
-                AJAX method .load()<br>
-                <span style="font-size: smaller"><i>( on .txt file here but can be on what you want .html .xml or .json
-                )</i></span>
+                AJAX method .load()
+                <br>
+                <span class="c2"><em>( on .txt file in this exemple )</em></span>
               </h3><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
               <button class="appevid3">Radzone</button>
             </div>
@@ -265,13 +426,13 @@
               <h4>
                 CODE JQUERY
               </h4>
- <pre class="brush: js;">
+              <pre class="brush: js;">
 $(document).ready(function(){
  $("#btn").click(function(event) {
   $.getJSON("files/user.json", function(user) {
-   $("#output").html("<p> Name: " + user.name + "</p>");
-   $("#output").append("<p>Gender: " + user.gender + "</p>");
-   $("#output").append("<p>Salary: " + user.salary + "</p>");
+   $("#output").html("<br> Name: " + user.name + "");
+   $("#output").append("<br>Gender: " + user.gender + "");
+   $("#output").append("<br>Salary: " + user.salary + "");
    });
   });
  });
@@ -291,13 +452,10 @@ $(document).ready(function(){
           </div>
         </div>
       </div>
-      <div class="item3">
-        ©<i>Radzone Webcreation 2024</i>
-      </div>
+      <div class="item3"></div>
     </div>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-
       $(document).ready(function() {
         /*  image in the header was olso call by jQuery method .attr() */
 
@@ -309,7 +467,32 @@ $(document).ready(function(){
         $("#videohtml").html('<video id="Radzone" loop width="80%" ><source src="video/Radzone.mp4"/></video>');
         $('#Radzone')[0].play();
 
+        $('#btnxml').click(function () {
+    $('#tableBody').empty();       // Clear the table body.
+    $.ajax({
+        type: 'GET',
+        url: 'files/book.xml',           // The file path.
+        dataType: 'xml',
+        success: function(xml) {
+            $(xml).find('book').each(function() {
+                $('#tableBody').append(
+                    '<tr>' +
 
+                    '<td>' +
+                            $(this).find('author').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('title').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('genre').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('price').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('description').text() + '</td> ' +
+                    '</tr>');
+            });
+        }
+    });
+    });
         /* video insertion method .attr() data-video  */
 
         $(".list-item").find(".item").on("click", function() {
@@ -352,6 +535,14 @@ $(document).ready(function(){
           });
         });
 
+         $("button.appelmulti").click(function() {
+          $.ajax({
+            url: "files/multi.html",
+            success: function(result) {
+              $("#multi").html(result);
+            }
+          });
+        });
 
         /* AJAX method .load()*/
 

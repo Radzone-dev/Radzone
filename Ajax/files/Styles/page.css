@@ -24,6 +24,9 @@ body{margin:0;}
     .list-item{text-align:left;float:left;margin:auto;}
     div #output{background-color:#202020;color:#ddd;}
     #pre{max-width:600px;min-width:420px;}
-    a{
-      text-decoration: none;
+    a{text-decoration: none;}
+    div #xml{
+      width:80%;margin:auto;
     }
+    span.c2 {font-size: smaller}
+    span.c1 {font-size: larger}
