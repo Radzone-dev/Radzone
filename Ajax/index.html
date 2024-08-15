@@ -636,7 +636,7 @@ $(document).ready(function() {
           });
         });
 
-         $("button.appelmulti").click(function() {
+         $("button.appelmulti").click(function() {  $("#multi").toggle();
           $.ajax({
             url: "files/multi.html",
             success: function(result) {
@@ -668,7 +668,7 @@ $(document).ready(function() {
 
         /* AJAX method .getJSON() */
 
-        $("#btn").click(function(event) {
+        $("#btn").click(function(event) {  $("#output").toggle();
           $.getJSON("files/user.json", function(user) {
             $("#output").html("<p> Name: " +
               user.name + "</p>");
