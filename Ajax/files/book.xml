@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <catalog>
    <book>
-      <author>Gambardella, Matthew</author>
-      <title>XML Developer's Guide</title>
+      <author>Doe, John</author>
+      <title>Developer's Guide</title>
       <genre>Computer</genre>
       <price>9.95</price>
       <description>An in-depth look at creating applications.</description>

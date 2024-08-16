@@ -7,7 +7,7 @@
     </title>
     <meta name="author" content="http://radservebeer.free.fr">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="files/style.css" media="screen"><!--[if IE]>
+    <link rel="stylesheet" href="files/Styles/style.css" media="screen"><!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <script type="text/javascript" src="files/Scripts/shCore.js"></script>
@@ -34,7 +34,7 @@
         <article class="post group">
           <header class=" post type-post">
             <h1>
-              video + canvas = magic
+              Video + Canvas = magie
             </h1>
           </header>
           <div class="entry">
@@ -57,7 +57,7 @@
               Code HTML
             </h4>
             <pre class="brush: html;">
-    &lt;video id="v" controls="" loop=""&gt;
+    &lt;video id="v" controls loop&gt;
       &lt;source src="video.mp4" type="video/mp4"&gt;
       &lt;source src="video.webm" type="video/webm"&gt;
       &lt;source src="video.ogv" type="video/ogg"&gt;
@@ -108,10 +108,10 @@
   &lt;body&gt;
     &lt;canvas id="c"&gt;
     &lt;/canvas&gt;
-    &lt;video id="v" controls="" loop=""&gt;
+    &lt;video id="v" controls loop&gt;
+      &lt;source src="video.mp4" type="video/mp4"&gt;
       &lt;source src="video.webm" type="video/webm"&gt;
       &lt;source src="video.ogg" type="video/ogg"&gt;
-     &lt;source src="video.mp4" type="video/mp4"&gt;
     &lt;/video&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -269,7 +269,7 @@ canvas.width = cw; canvas.height = ch;
               Le code HTML de la page est fondamentalement identique :
             </p>
             <pre class=
-            "nobrush"><code>&lt;video id="v" controls loop&gt;<br>&nbsp; &lt;source src="video.webm" type="video/webm"&gt; <br>&nbsp; &lt;source src="video.ogg" type="video/ogg"&gt; <br>&nbsp; &lt;source src="video.mp4" type="video/mp4"&gt; <br>&lt;/video&gt;<br>&nbsp; &lt;canvas id="c"&gt;<br>&nbsp; &lt;/canvas&gt; </code></pre>
+            "nobrush"><code>&lt;video id="v" controls loop&gt;<br>&nbsp; &lt;source src="video.mp4" type="video/mp4"&gt; <br>&nbsp; &lt;source src="video.webm" type="video/webm"&gt; <br>&nbsp; &lt;source src="video.ogg" type="video/ogg"&gt; <br>&lt;/video&gt;<br>&nbsp; &lt;canvas id="c"&gt;<br>&nbsp; &lt;/canvas&gt; </code></pre>
             <p>
               Rien de nouveau ici, passons donc au script.
             </p>
@@ -299,28 +299,24 @@ document.addEventListener('DOMContentLoaded', function(){
 
     },false);
 
-    function draw(v,c,bc,w,h) {
-    if(v.paused || v.ended)   return false;
-    // Tout d'abord, dessine-le dans le support canvas
-    bc.drawImage(v,0,0,w,h);
-    //Récupére les données de pixels à partir du support canvas
-    var idata = bc.getImageData(0,0,w,h);
+    document.a function draw(v,c,bc,cw,ch) {
+    if(v.paused || v.ended) return false;
+   /* Tout d'abord, dessine dans le support canvas */
+    bc.drawImage(v,0,0,cw,ch);
+    /*Récupére les données de pixels à partir du support canvas */
+    var idata = bc.getImageData(0,0,cw,ch);
     var data = idata.data;
-    // Parcourez les pixels en les transformant en niveaux de gris
-    for(var i = 0; i &lt; data.length; i+=4) {
-    var r = data[i];
-    var g = data[i+1];
-    var b = data[i+2];
-    var brightness = (3*r+4*g+b)&gt;&gt;&gt;3;
-    data[i] = brightness;
-    data[i+1] = brightness;
-    data[i+2] = brightness;
+    var w = idata.width;
+    var limit = data.length
+   /*Parcoure les sous-pixels en convolutant chacun d'eux à l'aide d'une matrice de détection des contours.*/
+    for(var i = 0; i &lt; limit; i++) {
+        if( i%4 == 3 ) continue;
+        data[i] = 127 + 2*data[i] - data[i + 4] - data[i + w*4];
     }
-    idata.data = data;
-    // Dessinez les pixels sur le canvas visible
+   /*Dessine les pixels sur le canvas visible */
     c.putImageData(idata,0,0);
-    // Start over!
-    setTimeout(draw,20,v,c,bc,w,h);
+    /* Start over!*/
+    setTimeout(draw,20,v,c,bc,cw,ch);
     }
 </pre>
             <p></p>
@@ -461,21 +457,21 @@ document.addEventListener('DOMContentLoaded', function(){
             <pre class="brush: js;">
 document.a function draw(v,c,bc,cw,ch) {
     if(v.paused || v.ended) return false;
-    // Tout d'abord, dessine dans le support canvas
+    /* Tout d'abord, dessine dans le support canvas */
     bc.drawImage(v,0,0,cw,ch);
-    //Récupére les données de pixels à partir du support canvas
+    /*Récupére les données de pixels à partir du support canvas */
     var idata = bc.getImageData(0,0,cw,ch);
     var data = idata.data;
     var w = idata.width;
     var limit = data.length
-    // Parcourez les sous-pixels en convolutant chacun d'eux à l'aide d'une matrice de détection des contours.
+    /* Parcoure les sous-pixels en convolutant chacun d'eux à l'aide d'une matrice de détection des contours. */
     for(var i = 0; i &lt; limit; i++) {
         if( i%4 == 3 ) continue;
         data[i] = 127 + 2*data[i] - data[i + 4] - data[i + w*4];
     }
-    // Dessinez les pixels sur le canvas visible
+    /* Dessinez les pixels sur le canvas visible */
     c.putImageData(idata,0,0);
-    // Start over!
+    /* Start over! */
     setTimeout(draw,20,v,c,bc,cw,ch);
     }
 
@@ -485,7 +481,11 @@ document.a function draw(v,c,bc,cw,ch) {
               Passons maintenant en revue tout cela.
             </p>
             <pre class=
-            "nobrush"><code>function draw(v,c,bc,cw,ch) { if(v.paused || v.ended) return false; // Tout d'abord, dessine-le dans le support canvas bc.drawImage(v,0,0,cw,ch); //Récupére les données de pixels à partir du support canvas var idata = bc.getImageData(0,0,cw,ch); var data = idata.data; </code></pre>
+            "nobrush"><code>function draw(v,c,bc,cw,ch) { if(v.paused || v.ended) return false;
+            /*Tout d'abord, dessine dans le support canvas */
+            bc.drawImage(v,0,0,cw,ch);
+            /*Récupére les données de pixels à partir du support canvas*/
+            var idata = bc.getImageData(0,0,cw,ch); var data = idata.data; </code></pre>
             <p>
               Même chose que dans le dernier exemple. Vérifiez si nous devons nous arrêter, puis dessinez la vidéo sur
               le canvas de support et récupérez les données de pixels.

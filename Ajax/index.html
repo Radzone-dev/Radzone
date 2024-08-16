@@ -22,8 +22,8 @@
         <div class="content">
           <div class="method">
             <h3>
-              <em>All jQuery code you saw here can be optimized ! I didn't use "var" or "array"... ect, Because this
-              exemples was made for beginners And i don't want confuse them with lots of code !</em>
+             All the jQuery code you have here can be optimized! I didn't use "var" or "array"... ect,
+             because these examples were made for beginners and I don't want to confuse them with a lot of code!
             </h3>
             <h3>
               <em>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
@@ -39,9 +39,9 @@
               <br>
               This is adapted for this Responsive page, adapt it for you !
             </h3>
-            <h2>
+            <h3>
               2 :<span class="c1">All links on called files <i>(html ,texte)</i> must be granted to the receiving page !</span>
-            </h2>
+            </h3>
             <hr>
             <h3>
               The image in the header was olso call by jQuery method .attr() <em>( not ajax )</em>
@@ -211,12 +211,12 @@ $(document).ready(function() {
          <div id="pre">
         <pre class="brush: html;collapse: false">
  &lt;img id="img" src="images/logo.png" width="70%" alt="img"&gt;
-
+  &lt;h3&gt;"2 Images and one h3 balise"&lt;/h3&gt;
  &lt;img id="img2" src="images/rz.jpg" width="70%" alt="img2"&gt;
-        </pre><button class="appelmulti">I get this</button>
+        </pre><button class="appelmulti">I have this</button>
             <div id="multi"></div>
             <h4>
-              <em>( You can chose what you want call with .find() for exemple ! )</em>
+              <em>( But You can chose what you want call with .find() for exemple ! )</em>
             </h4>
         </div>
             <hr>
@@ -537,7 +537,7 @@ $(document).ready(function() {
   }
 ]
 </pre> <h4>
-     Because I give the table an id in the js, I can customize it in the page CSS
+     Because in the js I give an ID to the table, I can customize only this table in the CSS of the page
               </h4>
  <pre class="brush: css;collapse: false">
 #table_json {
@@ -564,7 +564,7 @@ $(document).ready(function() {
 
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
-        $("#videohtml").html('<video id="Radzone" loop width="80%" ><source src="video/Radzone.mp4"/></video>');
+        $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
         $('#Radzone')[0].play();
 
         $('#btnxml').click(function () {
