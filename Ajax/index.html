@@ -276,28 +276,28 @@ $(document).ready(function() {
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $('#btnxml').click(function () {
-  $('thead').show();
-  $('#tableBody').empty();  // Clear the table body.
+ $("#btnxml").click(function () {
+  $("thead").show();
+  $("#tableBody").empty();  // Clear the table body.
   $.ajax({
-    type: 'GET',
-    url: 'files/book.xml',    // The file path.
-    dataType: 'xml',
+    type: "GET",
+    url: "files/book.xml",    // The file path.
+    dataType: "xml",
     success: function(xml) {
      $(xml).find('book').each(function() {
-      $('#tableBody').append(
-        '&lt;tr&gt;' +
-        '&lt;td&gt;' +
-        $(this).find('author').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('title').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('genre').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('price').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('description').text() + '&lt;/td&gt; ' +
-        '&lt;/tr&gt;');
+      $("#tableBody").append(
+        "&lt;tr&gt;" +
+        "&lt;td&gt;" +
+        $(this).find('author').text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find('title').text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find('genre').text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find('price').text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find('description').text() + "&lt;/td&gt; " +
+        "&lt;/tr&gt;");
        });
         }
      });
