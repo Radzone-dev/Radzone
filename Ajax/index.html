@@ -276,8 +276,8 @@ $(document).ready(function() {
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $('#btnxml').click(function () {
-  $('thead').show();
+ $("#btnxml").click(function () {
+  $("thead").show();
   $('#tableBody').empty();  // Clear the table body.
   $.ajax({
     type: 'GET',
@@ -285,7 +285,7 @@ $(document).ready(function() {
     dataType: 'xml',
     success: function(xml) {
      $(xml).find('book').each(function() {
-      $('#tableBody').append(
+      $("#tableBody").append(
         '&lt;tr&gt;' +
         '&lt;td&gt;' +
         $(this).find('author').text() + '&lt;/td&gt; ' +
@@ -566,7 +566,7 @@ $(document).ready(function() {
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
         $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
-        $('#Radzone')[0].play();
+        $("#Radzone")[0].play();
 
         $('#btnxml').click(function () {
            $("thead").show();
