@@ -566,31 +566,31 @@ $(document).ready(function() {
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
         $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
-        $('#Radzone')[0].play();
+        $("#Radzone")[0].play();
 
-        $('#btnxml').click(function () {
+        $("#btnxml").click(function () {
            $("thead").show();
-    $('#tableBody').empty();       // Clear the table body.
+    $("#tableBody").empty();       // Clear the table body.
     $.ajax({
-        type: 'GET',
-        url: 'files/book.xml',           // The file path.
-        dataType: 'xml',
+        type: "GET",
+        url: "files/book.xml",           // The file path.
+        dataType: "xml",
         success: function(xml) {
-            $(xml).find('book').each(function() {
-                $('#tableBody').append(
-                    '<tr>' +
+            $(xml).find("book").each(function() {
+                $("#tableBody").append(
+                    "<tr>" +
 
-                    '<td>' +
-                            $(this).find('author').text() + '</td> ' +
-                    '<td>' +
-                            $(this).find('title').text() + '</td> ' +
-                    '<td>' +
-                            $(this).find('genre').text() + '</td> ' +
-                    '<td>' +
-                            $(this).find('price').text() + '</td> ' +
-                    '<td>' +
-                            $(this).find('description').text() + '</td> ' +
-                    '</tr>');
+                    "<td>" +
+                            $(this).find('author').text() + "</td> " +
+                    "<td>" +
+                            $(this).find('title').text() + "</td> " +
+                    "<td>" +
+                            $(this).find('genre').text() + "</td> " +
+                    "<td>" +
+                            $(this).find('price').text() + "</td> " +
+                    "<td>" +
+                            $(this).find('description').text() + "</td> " +
+                    "</tr>");
             });
         }
     });
@@ -662,7 +662,7 @@ $(document).ready(function() {
         $("button.appevid3").click(function() {
           $("#video").load("files/liste.txt #Radzone");
 
-          $('#Radzone')[0].play();
+          $("#Radzone")[0].play();
 
         });
 
