@@ -60,7 +60,7 @@
               </h4>
               <pre class="brush: js;collapse: false">
       $(document).ready(function() {
-       $(".logo").attr("src", "images/logo.png");
+       $('.logo').attr('src', 'images/logo.png');
         });
         </pre>
             </div>
@@ -81,10 +81,10 @@
               </h4>
               <pre class="brush: js;collapse: false">
       $(document).ready(function() {
-       $("#videohtml").html('&lt;video loop id="Radzone" width="80%"&gt;
+       $('#videohtml').html('&lt;video loop id="Radzone" width="80%"&gt;
        &lt;source src="video/Radzone.mp4"/&gt;
        &lt;/video&gt;');
-        $("#Radzone")[0].play();<!-- For autoplay -->
+        $('#Radzone')[0].play();<!-- For autoplay -->
         });
         </pre>
             </div>
@@ -130,11 +130,11 @@
               </h4>
               <pre class="brush: js;">
    $(document).ready(function() {
-     $(".list-item").find(".item").on("click", function() {
-        videoData = $(this).data("video");
-        videoSource = $("#videoclip").find("#mp4video");
-        videoSource.attr("src", videoData);
-        autoplayVideo = $("#videoclip").get(0);
+     $('.list-item').find('.item').on('click', function() {
+        videoData = $(this).data('video');
+        videoSource = $('#videoclip').find('#mp4video');
+        videoSource.attr('src', videoData);
+        autoplayVideo = $('#videoclip').get(0);
         autoplayVideo.load();
         autoplayVideo.play();
     });
@@ -168,27 +168,27 @@
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $("button.appelvideo").click(function() {
+ $('button.appelvideo').click(function() {
   $.ajax({
-   url: "files/video.html",
+   url: 'files/video.html',
     success: function(result) {
-     $("#objet1").html(result);
+     $('#objet1').html(result);
      }
           });
         });
-    $("button.appelimg").click(function() {
+    $('button.appelimg').click(function() {
      $.ajax({
-      url: "files/img.html",
+      url: 'files/img.html',
        success: function(result) {
-        $("#objet1").html(result);
+        $('#objet1').html(result);
             }
           });
         });
-    $("button.appeltable").click(function() {
+    $('button.appeltable').click(function() {
      $.ajax({
-      url: "files/XLS.html",
+      url: 'files/XLS.html',
        success: function(result) {
-        $("#objet1").html(result);
+        $('#objet1').html(result);
             }
           });
     });
@@ -276,28 +276,28 @@ $(document).ready(function() {
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $("#btnxml").click(function () {
-  $("thead").show();
-  $("#tableBody").empty();  // Clear the table body.
+ $('#btnxml').click(function () {
+  $('thead').show();
+  $('#tableBody').empty();  // Clear the table body.
   $.ajax({
-    type: "GET",
-    url: "files/book.xml",    // The file path.
-    dataType: "xml",
+    type: 'GET',
+    url: 'files/book.xml',    // The file path.
+    dataType: 'xml',
     success: function(xml) {
-     $(xml).find("book').each(function() {
-      $("#tableBody").append(
-        "&lt;tr&gt;" +
-        "&lt;td&gt;" +
-        $(this).find('author').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('title').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('genre').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('price').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('description').text() + "&lt;/td&gt; " +
-        "&lt;/tr&gt;");
+     $(xml).find('book').each(function() {
+      $('#tableBody').append(
+        '&lt;tr&gt;' +
+        '&lt;td&gt;' +
+        $(this).find('author').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('title').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('genre').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('price').text() + '&lt;/td&gt; ' +
+        '&lt;td&gt;' +
+        $(this).find('description').text() + '&lt;/td&gt; ' +
+        '&lt;/tr&gt;');
        });
         }
      });
@@ -374,18 +374,18 @@ $(document).ready(function() {
               </h4>
               <pre class="brush: js;">
       $(document).ready(function() {
-       $("button.appevid1").click(function() {
-          $("#video").load("files/liste.txt #Madagascar");
+       $('button.appevid1').click(function() {
+          $('#video').load('files/liste.txt #Madagascar');
 
         });
 
-        $("button.appevid2").click(function() {
-          $("#video").load("files/liste.txt #bigbunny");
+        $('button.appevid2').click(function() {
+          $('#video').load('files/liste.txt #bigbunny');
 
         });
 
-        $("button.appevid3").click(function() {
-          $("#video").load("files/liste.txt #Radzone");
+        $('button.appevid3').click(function() {
+          $('#video').load('files/liste.txt #Radzone');
 
         });
         });
@@ -424,14 +424,14 @@ $(document).ready(function() {
                 CODE JQUERY
               </h4>
               <pre class="brush: js;">
-$("#btn").click(function(event) {
- $.getJSON("files/user.json", function(user) {
-  $("#output").html("&lt;p&gt; Name: " +
-     user.name + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Gender: " +
-     user.gender + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Salary: " +
-     user.salary + "&lt;/p&gt;");
+$('#btn').click(function(event) {
+ $.getJSON('files/user.json', function(user) {
+  $('#output').html('&lt;p&gt; Name: ' +
+     user.name + '&lt;/p&gt;');
+  $('#output').append('&lt;p&gt;Gender: ' +
+     user.gender + '&lt;/p&gt;');
+  $('#output').append('&lt;p&gt;Salary: ' +
+     user.salary + '&lt;/p&gt;');
     });
 });
 </pre>
@@ -460,37 +460,37 @@ $("#btn").click(function(event) {
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
-  $("#btnjson").click(function() {
-    var displayResources = $("#output2");
+  $('#btnjson').click(function() {
+    var displayResources = $('#output2');
 
- /* displayResources.text("Loading data from JSON source..."); wait message for very big json  */
+ /* displayResources.text('Loading data from JSON source...'); wait message for very big json  */
 
     $.ajax({
-      type: "GET",
-      url: "files/book.json",
+      type: 'GET',
+      url: 'files/book.json',
       success: function(result) {
       console.log(result);
  var output =
- "&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
+ '&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;';
       for (var i in result) {
         output +=
-        "&lt;tr&gt;&lt;td&gt;" +
+        '&lt;tr&gt;&lt;td&gt;' +
         result[i].author +
-        "&lt;/td&gt;&lt;td&gt;" +
+        '&lt;/td&gt;&lt;td&gt;' +
         result[i].price +
-        "&lt;/td&gt;&lt;td&gt;" +
+        '&lt;/td&gt;&lt;td&gt;' +
         result[i].genre +
-        "&lt;/td&gt;&lt;td&gt;" +
+        '&lt;/td&gt;&lt;td&gt;' +
         result[i].title +
-        "&lt;/td&gt;&lt;td&gt;" +
+        '&lt;/td&gt;&lt;td&gt;' +
         result[i].description +
-        "&lt;/td&gt;&lt;/tr&gt;";
+        '&lt;/td&gt;&lt;/tr&gt;';
               }
-      output += "&lt;/tbody&gt;&lt;/table&gt;";
+      output += '&lt;/tbody&gt;&lt;/table&gt;';
 
       displayResources.html(output);
-       /* $("table").addClass("table_book_json");  Insert a class to all the tables in the page */
-        /* $("#table_jason").addClass("table_book_json");  Insert a class only to the element with id="table_jason" */
+       /* $('table').addClass('table_book_json');  Insert a class to all the tables in the page */
+        /* $('#table_jason').addClass('table_book_json');  Insert a class only to the element with id='table_jason' */
             }
           });
         });
@@ -560,51 +560,51 @@ $(document).ready(function() {
       $(document).ready(function() {
         /*  image in the header was olso call by jQuery method .attr() */
 
-        $(".logo").attr("src", "images/logo.png");
+        $('.logo').attr('src', 'images/logo.png');
 
 
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
-        $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
-        $("#Radzone")[0].play();
+        $('#videohtml').html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
+        $('#Radzone')[0].play();
 
-        $("#btnxml").click(function () {
-           $("thead").show();
-    $("#tableBody").empty();       // Clear the table body.
+        $('#btnxml').click(function () {
+           $('thead').show();
+    $('#tableBody').empty();       // Clear the table body.
     $.ajax({
-        type: "GET",
-        url: "files/book.xml",           // The file path.
-        dataType: "xml",
+        type: 'GET',
+        url: 'files/book.xml',           // The file path.
+        dataType: 'xml',
         success: function(xml) {
-            $(xml).find("book").each(function() {
-                $("#tableBody").append(
-                    "<tr>" +
+            $(xml).find('book').each(function() {
+                $('#tableBody').append(
+                    '<tr>' +
 
-                    "<td>" +
-                            $(this).find('author').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('title').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('genre').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('price').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('description').text() + "</td> " +
-                    "</tr>");
+                    '<td>' +
+                            $(this).find('author').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('title').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('genre').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('price').text() + '</td> ' +
+                    '<td>' +
+                            $(this).find('description').text() + '</td> ' +
+                    '</tr>');
             });
         }
     });
     });
         /* video insertion method .attr() data-video  */
 
-        $(".list-item").find(".item").on("click", function() {
+        $('.list-item').find('.item').on('click', function() {
           /*let */
-          videoData = $(this).data("video");
+          videoData = $(this).data('video');
           /* let */
-          videoSource = $("#videoclip").find("#mp4video");
-          videoSource.attr("src", videoData);
+          videoSource = $('#videoclip').find('#mp4video');
+          videoSource.attr('src', videoData);
           /*let */
-          autoplayVideo = $("#videoclip").get(0);
+          autoplayVideo = $('#videoclip').get(0);
           autoplayVideo.load();
           autoplayVideo.play();
         });
@@ -612,104 +612,104 @@ $(document).ready(function() {
 
         /* AJAX method .ajax() */
 
-        $("button.appelvideo").click(function() {
+        $('button.appelvideo').click(function() {
           $.ajax({
-            url: "files/video.html",
+            url: 'files/video.html',
             success: function(result) {
-              $("#objet1").html(result);
+              $('#objet1').html(result);
             }
           });
         });
-        $("button.appelimg").click(function() {
+        $('button.appelimg').click(function() {
           $.ajax({
-            url: "files/img.html",
+            url: 'files/img.html',
             success: function(result) {
-              $("#objet1").html(result);
+              $('#objet1').html(result);
             }
           });
         });
-        $("button.appeltable").click(function() {
+        $('button.appeltable').click(function() {
           $.ajax({
-            url: "files/XLS.html",
+            url: 'files/XLS.html',
             success: function(result) {
-              $("#objet1").html(result);
+              $('#objet1').html(result);
             }
           });
         });
 
-         $("button.appelmulti").click(function() { /* $("#multi").toggle(); */
+         $('button.appelmulti').click(function() { /* $('#multi').toggle(); */
           $.ajax({
-            url: "files/multi.html",
+            url: 'files/multi.html',
             success: function(result) {
-              $("#multi").html(result);
+              $('#multi').html(result);
             }
           });
         });
 
         /* AJAX method .load()*/
 
-        $("button.appevid1").click(function() {
-          $("#video").load("files/liste.txt #Madagascar");
+        $('button.appevid1').click(function() {
+          $('#video').load('files/liste.txt #Madagascar');
 
 
         });
 
-        $("button.appevid2").click(function() {
-          $("#video").load("files/liste.txt #bigbunny");
+        $('button.appevid2').click(function() {
+          $('#video').load('files/liste.txt #bigbunny');
 
         });
 
-        $("button.appevid3").click(function() {
-          $("#video").load("files/liste.txt #Radzone");
+        $('button.appevid3').click(function() {
+          $('#video').load('files/liste.txt #Radzone');
 
-          $("#Radzone")[0].play();
+          $('#Radzone')[0].play();
 
         });
 
 
         /* AJAX method .getJSON() */
 
-        $("#btn").click(function(event) { /* $("#output").toggle(); */
-          $.getJSON("files/user.json", function(user) {
-            $("#output").html("<p> Name: " +
-              user.name + "</p>");
-            $("#output").append("<p>Gender: " +
-              user.gender + "</p>");
-            $("#output").append("<p>Salary: " +
-              user.salary + "</p>");
+        $('#btn').click(function(event) { /* $('#output').toggle(); */
+          $.getJSON('files/user.json', function(user) {
+            $('#output').html('<p> Name: ' +
+              user.name + '</p>');
+            $('#output').append('<p>Gender: ' +
+              user.gender + '</p>');
+            $('#output').append('<p>Salary: ' +
+              user.salary + '</p>');
           });
         });
            /* AJAX method .getJSON() Book.json*/
-        $("#btnjson").click(function() { /* $("#output2").toggle(), function(){  */
-          var displayResources = $("#output2");
+        $('#btnjson').click(function() { /* $("#output2").toggle(), function(){  */
+          var displayResources = $('#output2');
 
          /* displayResources.text("Loading data from JSON source..."); wait message if the json very big */
 
           $.ajax({
-            type: "GET",
-            url: "files/book.json",
+            type: 'GET',
+            url: 'files/book.json',
             success: function(result) {
               console.log(result);
               var output =
-                "<table id=table_jason><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>";
+                '<table id=table_jason><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></thead>';
               for (var i in result) {
                 output +=
-                  "<tr><td>" +
+                  '<tr><td>' +
                   result[i].author +
-                  "</td><td>" +
+                  '</td><td>' +
                   result[i].price +
-                  "</td><td>" +
+                  '</td><td>' +
                   result[i].genre +
-                  "</td><td>" +
+                  '</td><td>' +
                   result[i].title +
-                  "</td><td>" +
+                  '</td><td>' +
                   result[i].description +
-                  "</td></tr>";
+                  '</td></tr>';
               }
-              output += "</tbody></table>";
+              output += '</tbody></table>';
 
               displayResources.html(output);
-              $("#table_jason").addClass("table_book_json"); /* Insert a class to the table */
+              $('#table_jason').addClass('table_book_json'); /* Insert a class to the table */
             }
           });
         });
