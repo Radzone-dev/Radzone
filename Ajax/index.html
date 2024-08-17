@@ -81,10 +81,10 @@
               </h4>
               <pre class="brush: js;collapse: false">
       $(document).ready(function() {
-       $("#videohtml").html('&lt;video loop id="Radzone" width="80%"&gt;
+       $("#videohtml").html("&lt;video loop id="Radzone" width="80%"&gt;
        &lt;source src="video/Radzone.mp4"/&gt;
-       &lt;/video&gt;');
-        $('#Radzone')[0].play();<!-- For autoplay -->
+       &lt;/video&gt;");
+        $("#Radzone")[0].play();<!-- For autoplay -->
         });
         </pre>
             </div>
@@ -278,26 +278,26 @@ $(document).ready(function() {
 $(document).ready(function() {
  $("#btnxml").click(function () {
   $("thead").show();
-  $('#tableBody').empty();  // Clear the table body.
+  $("#tableBody").empty();  // Clear the table body.
   $.ajax({
-    type: 'GET',
-    url: 'files/book.xml',    // The file path.
-    dataType: 'xml',
+    type: "GET",
+    url: "files/book.xml",    // The file path.
+    dataType: "xml",
     success: function(xml) {
-     $(xml).find('book').each(function() {
+     $(xml).find("book").each(function() {
       $("#tableBody").append(
-        '&lt;tr&gt;' +
-        '&lt;td&gt;' +
-        $(this).find('author').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('title').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('genre').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('price').text() + '&lt;/td&gt; ' +
-        '&lt;td&gt;' +
-        $(this).find('description').text() + '&lt;/td&gt; ' +
-        '&lt;/tr&gt;');
+        "&lt;tr&gt;" +
+        "&lt;td&gt;" +
+        $(this).find("author").text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find("title").text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find("genre").text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find("price").text() + "&lt;/td&gt; " +
+        "&lt;td&gt;" +
+        $(this).find("description").text() + "&lt;/td&gt; " +
+        "&lt;/tr&gt;");
        });
         }
      });
@@ -565,7 +565,7 @@ $(document).ready(function() {
 
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
-        $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
+        $("#videohtml").html("<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>");
         $("#Radzone")[0].play();
 
         $("#btnxml").click(function () {
