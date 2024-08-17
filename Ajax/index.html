@@ -284,7 +284,7 @@ $(document).ready(function() {
     url: "files/book.xml",    // The file path.
     dataType: "xml",
     success: function(xml) {
-     $(xml).find('book').each(function() {
+     $(xml).find("book').each(function() {
       $("#tableBody").append(
         "&lt;tr&gt;" +
         "&lt;td&gt;" +
@@ -565,7 +565,7 @@ $(document).ready(function() {
 
         /* video insertion by method .html() ( DOM Manipulation not ajax ) */
 
-        $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
+        $("#videohtml").html("<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>");
         $("#Radzone")[0].play();
 
         $("#btnxml").click(function () {
