@@ -168,7 +168,7 @@
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $("button.appelvideo").click(function() {
+ $(".appelvideo").click(function() {
   $.ajax({
    url: "files/video.html",
     success: function(result) {
@@ -176,7 +176,7 @@ $(document).ready(function() {
      }
           });
         });
-    $("button.appelimg").click(function() {
+    $(".appelimg").click(function() {
      $.ajax({
       url: "files/img.html",
        success: function(result) {
@@ -184,7 +184,7 @@ $(document).ready(function() {
             }
           });
         });
-    $("button.appeltable").click(function() {
+    $(".appeltable").click(function() {
      $.ajax({
       url: "files/XLS.html",
        success: function(result) {
@@ -648,18 +648,18 @@ $(document).ready(function() {
 
         /* AJAX method .load()*/
 
-        $("button.appevid1").click(function() {
+        $(".appevid1").click(function() {
           $("#video").load("files/liste.txt #Madagascar");
 
 
         });
 
-        $("button.appevid2").click(function() {
+        $(".appevid2").click(function() {
           $("#video").load("files/liste.txt #bigbunny");
 
         });
 
-        $("button.appevid3").click(function() {
+        $(".appevid3").click(function() {
           $("#video").load("files/liste.txt #Radzone");
 
           $("#Radzone")[0].play();
