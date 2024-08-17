@@ -2,6 +2,9 @@
   font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;
   font-weight: 700;
 }
+h2{
+  background-color: #DDD;
+}
 
 body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
     #contant>p{text-align:center;}
@@ -13,11 +16,11 @@ body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
     ul.exemple{list-style-type:none;}
     img.logo{border:0;}
     .bt{font-size:1rem;cursor:pointer;background:#202020;margin:5px;width:300px;border-radius:10px;transition:all 1.2s ease-in-out;color:#d4d0c8;border:none;font-weight:500;padding:5px;}
-    .bt:hover{background:rgba(0, 0, 0, .3);transition:all 1.2s ease-in-out;color:#000;}
+   button:hover,#btnjson:hover,#btnxml:hover,#btn:hover {background:rgba(0, 0, 0, .3);transition:all 1.2s ease-in-out;color:#000;}
     hr{width:100%;height:1px;}
     div{background-color:#fff;margin:auto;margin-top:20px;}
-    button,#btn,#btnjson,#btnxml{margin-right:10px;font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;
-  font-weight: 800;font-size: 1.02rem;}
+    button,#btn,#btnjson,#btnxml{background: #474747;margin-right:10px;font-family: Georgia,serif;
+    font-size: 1.01rem;transition:all 1.2s ease-in-out;cursor:pointer;color:#fff;border:none; border-radius: 5px; padding: 5px;}
     .method{width:80%;margin:auto;}
     .content{text-align:center;width:100%;margin:auto;margin-top:10px;border:solid 1px;border-radius:20px;}
     hr{width:100%;height:5px;background-color:#000;}
@@ -25,7 +28,8 @@ body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
     .list-item{text-align:left;float:left;margin:auto;}
     div #output{background-color:#202020;color:#ddd;}
     #pre{max-width:600px;min-width:420px;}
-    a{text-decoration: none;}
+    a{text-decoration: none; color: #313BF6;}
+    a:hover{color: #000;}
     div #xml{
       width:80%;margin:auto;
     }
@@ -41,4 +45,12 @@ body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
    color: #fff;
    border-radius: 20px
 
+}  img#zoom {
+  width: 100px;
+  transition: transform 1.5s; cursor:pointer; background-color: #fff; border: 0;
+}
+img#zoom:hover {
+      -ms-transform: scale(7); /* IE 9 */
+  -webkit-transform: scale(7); /* Safari 3-8 */
+          transform: scale(7);
 }

@@ -21,31 +21,31 @@
       <div class="item2">
         <div class="content">
           <div class="method">
-            <h3>
+            <p>
              All the jQuery code you have here can be optimized! I didn't use "var" or "array"... ect,
              because these examples were made for beginners and I don't want to confuse them with a lot of code!
-            </h3>
-            <h3>
+            </p>
+            <p>
               <em>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
               "learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank"
               title="w3school">www.w3schools.com</a></em>
-            </h3>
-            <h3>
+            </p>
+            <h4>
               <span class="c1">Warning !</span>
-              <br>
-              1 : All the width you see in the code are in % !
+              <br>1 :<span class="c1">All src= on files called must be granted to the receiving page !</span>
+            </h4> <p><img src="images/exemple.png" id="zoom" alt="exemple">
+              </p>
+            <h4>
+              2 : All the width you see in the code are in % !
               <br>
               <em><span class="c2">&lt;video id="Radzone" width="80%"&gt;</span></em>
               <br>
-              This is adapted for this Responsive page, adapt it for you !
-            </h3>
-            <h3>
-              2 :<span class="c1">All links on called files <i>(html ,texte)</i> must be granted to the receiving page !</span>
-            </h3>
+              This is adapted for this Page, adapt it for you !
+            </h4>
             <hr>
-            <h3>
+            <h4>
               The image in the header was olso call by jQuery method .attr() <em>( not ajax )</em>
-            </h3>
+            </h4>
             <div id="pre">
               <h4>
                 CODE HTML
@@ -65,9 +65,9 @@
         </pre>
             </div>
             <hr>
-            <h3>
+            <h4>
               video insertion by method .html() <em>( DOM Manipulation not ajax )</em>
-            </h3>
+            </h4>
             <div id="videohtml"></div>
             <div id="pre">
               <h4>
@@ -89,9 +89,9 @@
         </pre>
             </div>
             <hr>
-            <h3>
+            <h4>
               video insertion method .attr() data-video <em>( Not ajax but can be useful )</em>
-            </h3>
+            </h4>
             <div class="list-item">
               <ul>
                 <li class="item" data-video="video/Radzone.mp4">
@@ -147,9 +147,9 @@
             </h2>
             <hr>
             <div id="button">
-              <h3>
+              <h4>
                 AJAX method .ajax()
-              </h3><button class="appelvideo">Get Video</button> <button class="appelimg">Get img</button>
+              </h4><button class="appelvideo">Get Video</button> <button class="appelimg">Get img</button>
               <button class="appeltable">Get table</button>
             </div>
             <div id="objet1"></div>
@@ -220,14 +220,14 @@ $(document).ready(function() {
             </h4>
         </div>
             <hr>
-            <h3>
+            <h4>
               AJAX method .ajax() for .XML
               <br>
-            </h3>
+            </h4>
             <div id="xml">
               <input type="button" value="Read XML" id="btnxml">
               <table>
-                <thead>
+                <thead style="display: none">
                   <tr>
                     <th>
                       Author
@@ -256,7 +256,7 @@ $(document).ready(function() {
               <pre class="brush: html;">
     &lt;input type="button" value="Read XML" id="btnxml" /&gt;
     &lt;table&gt;
-      &lt;thead&gt;
+      &lt;thead style="display: none"&gt;
         &lt;tr&gt;
           &lt;th&gt;Author&lt;/th&gt;
           &lt;th&gt;Title&lt;/th&gt;
@@ -277,6 +277,7 @@ $(document).ready(function() {
               <pre class="brush: js;">
 $(document).ready(function() {
  $('#btnxml').click(function () {
+  $("thead").show();
   $('#tableBody').empty();  // Clear the table body.
   $.ajax({
     type: 'GET',
@@ -349,11 +350,11 @@ $(document).ready(function() {
             </div>
             <hr>
             <div id="button2">
-              <h3>
+              <h4>
                 AJAX method .load()
                 <br>
                 <span class="c2"><em>( on .txt file in this exemple )</em></span>
-              </h3><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
+              </h4><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
               <button class="appevid3">Radzone</button>
             </div>
             <div id="video"></div>
@@ -407,9 +408,9 @@ $(document).ready(function() {
       </pre>
             </div>
             <hr>
-            <h3>
+            <h4>
               AJAX method .getJSON()
-            </h3><input type="button" id="btn" value="Get User Data">
+            </h4><input type="button" id="btn" value="Get User Data">
             <div id="output"></div>
             <div id="pre">
               <h4>
@@ -443,10 +444,10 @@ $("#btn").click(function(event) {
   "gender": "Male",
   "salary": "10 000000 €"
 }
-      </pre><hr> <h3>
+      </pre><hr> <h4>
               AJAX method .getJSON()<br>
                <i>( Same as the book.xml but xml converted in json ) </i>
-            </h3><input type="button" id="btnjson" value="Get book.Json Data">
+            </h4><input type="button" id="btnjson" value="Get book.Json Data">
  <div id="output2"></div> <h4>
                 CODE HTML
               </h4>
@@ -462,7 +463,7 @@ $(document).ready(function() {
   $("#btnjson").click(function() {
     var displayResources = $("#output2");
 
- /* displayResources.text("Loading data from JSON source..."); wait message if the json very big */
+ /* displayResources.text("Loading data from JSON source..."); wait message for very big json  */
 
     $.ajax({
       type: "GET",
@@ -568,7 +569,7 @@ $(document).ready(function() {
         $('#Radzone')[0].play();
 
         $('#btnxml').click(function () {
-           /*$("#tableBody").toggle();*/
+           $("thead").show();
     $('#tableBody').empty();       // Clear the table body.
     $.ajax({
         type: 'GET',
