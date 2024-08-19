@@ -216,12 +216,12 @@ $(document).ready(function() {
         </pre><button class="appelmulti">I have this</button>
             <div id="multi"></div>
             <h4>
-              <em>( But You can chose what you want call with .find() for exemple ! )</em>
+              <em>( AJAX method .load() is more simple to chose what you want ! )</em>
             </h4>
         </div>
             <hr>
             <h4>
-              AJAX method .ajax() for .XML
+              AJAX method .ajax() type: "GET" .xml
               <br>
             </h4>
             <div id="xml">
@@ -445,7 +445,7 @@ $("#btn").click(function(event) {
   "salary": "10 000000 €"
 }
       </pre><hr> <h4>
-              AJAX method .getJSON()<br>
+              AJAX method type: "GET"<br>
                <i>( Same as the book.xml but xml converted in json ) </i>
             </h4><input type="button" id="btnjson" value="Get book.Json Data">
  <div id="output2"></div> <h4>
@@ -468,6 +468,7 @@ $(document).ready(function() {
     $.ajax({
       type: "GET",
       url: "files/book.json",
+      dataType : "json",
       success: function(result) {
       console.log(result);
  var output =
@@ -688,6 +689,7 @@ $(document).ready(function() {
           $.ajax({
             type: "GET",
             url: "files/book.json",
+            dataType : "json",
             success: function(result) {
               console.log(result);
               var output =
