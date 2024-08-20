@@ -21,6 +21,7 @@
       <div class="item2">
         <div class="content">
           <div class="method">
+            <p>A minimum knowledge of Css and Html is necessary to understand and use jQuery !</p>
             <p>
              All the jQuery code you have here can be optimized! I didn't use "var" or "array"... ect,
              because these examples were made for beginners and I don't want to confuse them with a lot of code!
@@ -51,17 +52,17 @@
                 CODE HTML
               </h4>
               <pre class="brush: html;collapse: false">
-        &lt;div id="header"&gt;
-         &lt;img class="logo" src="" alt="logo"&gt;
-        &lt;/div&gt;
+  &lt;div id="header"&gt;
+    &lt;img class="logo" src="" alt="logo"&gt;
+  &lt;/div&gt;
         </pre>
               <h4>
                 CODE JQUERY
               </h4>
               <pre class="brush: js;collapse: false">
-      $(document).ready(function() {
-       $(".logo").attr("src", "images/logo.png");
-        });
+  $(document).ready(function() {
+    $(".logo").attr("src", "images/logo.png");
+       });
         </pre>
             </div>
             <hr>
@@ -74,18 +75,18 @@
                 CODE HTML
               </h4>
               <pre class="brush: html;collapse: false">
-          &lt;div id="videohtml"&gt;  &lt;/div&gt;
+   &lt;div id="videohtml"&gt;  &lt;/div&gt;
         </pre>
               <h4>
                 CODE JQUERY
               </h4>
               <pre class="brush: js;collapse: false">
-      $(document).ready(function() {
-       $("#videohtml").html('&lt;video loop id="Radzone" width="80%"&gt;
-       &lt;source src="video/Radzone.mp4"/&gt;
-       &lt;/video&gt;');
-        $("#Radzone")[0].play();<!-- For autoplay -->
-        });
+  $(document).ready(function() {
+    $("#videohtml").html('&lt;video loop id="Radzone" width="80%"&gt;
+     &lt;source src="video/Radzone.mp4"/&gt;
+      &lt;/video&gt;');
+       $("#Radzone")[0].play();<!-- For autoplay -->
+  });
         </pre>
             </div>
             <hr>
@@ -111,8 +112,8 @@
                 CODE HTML
               </h4>
               <pre class="brush: html;">
-&lt;video id="videoclip" poster= "images/Radzone.jpg" controls width="80%" title="Video title"&gt;
-    &lt;source id="mp4video" src="video/Radzone.mp4" type="video/mp4"/&gt;
+&lt;video id="videoclip" controls width="80%" title="Video title"&gt;
+    &lt;source id="mp4video" src="" type="video/mp4"/&gt;
 &lt;/video&gt;
 &lt;div class="list-item"&gt;
  &lt;ul&gt;
@@ -148,24 +149,39 @@
             <hr>
             <div id="button">
               <h4>
-                AJAX method .ajax()
-              </h4><button class="appelvideo">Get Video</button> <button class="appelimg">Get img</button>
-              <button class="appeltable">Get table</button>
+                AJAX method .ajax() type: "GET"
+              </h4><button class="appelvideo">Get Html Video</button>
+              <button  class="btnxml">Get Book XML <i>(list)</i></button>
+              <button  class="btnjson">Get Book Json <i>(table)</i></button>
+             </div>
+            <div id="objet1">
             </div>
-            <div id="objet1"></div>
+            <div id="xml">
+              <ul class="Book">
+              </ul>
+            </div>
             <div id="pre">
               <h4>
                 CODE HTML
               </h4>
               <pre class="brush: html;collapse: false">
-      &lt;button class="appelvideo"&gt; Get Video&lt;/button&gt;
-      &lt;button class="appelimg"&gt; Get img&lt;/button&gt;
-      &lt;button class="appeltable"&gt; Get table&lt;/button&gt;
-
-    &lt;div id="objet1"&gt; &lt;/div&gt;</pre>
+&lt;div id="button"&gt;
+  &lt;button class="appelvideo"&gt;Get Html Video&lt;/button&gt;
+  &lt;button class="btnxml"&gt;Get Book XML &lt;i&gt;(list)&lt;/i&gt;&lt;/button&gt;
+  &lt;button class="btnjson"&gt;Get Book Json &lt;i&gt;(table)&lt;/i&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div id="objet1"&gt;
+&lt;/div&gt;
+&lt;div id="xml"&gt;
+  &lt;ul class="Book"&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+             </pre>
               <h4>
-                CODE JQUERY
-              </h4>
+                CODE JQUERY Get Html Video
+              </h4><h4>
+              <em>( AJAX <a href="#button2">method .load()</a> is better for Html ! )</em>
+            </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
  $(".appelvideo").click(function() {
@@ -176,139 +192,93 @@ $(document).ready(function() {
      }
           });
         });
-    $(".appelimg").click(function() {
-     $.ajax({
-      url: "files/img.html",
-       success: function(result) {
-        $("#objet1").html(result);
-            }
-          });
-        });
-    $(".appeltable").click(function() {
-     $.ajax({
-      url: "files/XLS.html",
-       success: function(result) {
-        $("#objet1").html(result);
-            }
-          });
-    });
-   });</pre>
-              <h4>
-                CODE HTML for img.html
-                <br>
-              </h4>
-              <pre class="brush: html;collapse: false">
-&lt;img id="img" src="images/logo.png" width="70%" alt="img"&gt;
-        </pre>
-            </div>
-            <h4>
-              <em>( In these 3 basic examples all the elements present in the called HTML will be inserted ! )</em>
-            </h4>
-            <h4>
-              Exemple ,If i make this in the called html
-              <br>
-            </h4>
-         <div id="pre">
-        <pre class="brush: html;collapse: false">
- &lt;img id="img" src="images/logo.png" width="70%" alt="img"&gt;
-  &lt;h3&gt;"2 Images and one h3 balise"&lt;/h3&gt;
- &lt;img id="img2" src="images/rz.jpg" width="70%" alt="img2"&gt;
-        </pre><button class="appelmulti">I have this</button>
-            <div id="multi"></div>
-            <h4>
-              <em>( AJAX method .load() is more simple to chose what you want ! )</em>
-            </h4>
-        </div>
-            <hr>
-            <h4>
-              AJAX method .ajax() type: "GET" .xml
-              <br>
-            </h4>
-            <div id="xml">
-              <input type="button" value="Read XML" id="btnxml">
-              <table>
-                <thead style="display: none">
-                  <tr>
-                    <th>
-                      Author
-                    </th>
-                    <th>
-                      Title
-                    </th>
-                    <th>
-                      Genre
-                    </th>
-                    <th>
-                      Price
-                    </th>
-                    <th>
-                      Description
-                    </th>
-                  </tr>
-                </thead>
-                <tbody id="tableBody"></tbody>
-              </table>
-            </div>
-            <div id="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;">
-    &lt;input type="button" value="Read XML" id="btnxml" /&gt;
-    &lt;table&gt;
-      &lt;thead style="display: none"&gt;
-        &lt;tr&gt;
-          &lt;th&gt;Author&lt;/th&gt;
-          &lt;th&gt;Title&lt;/th&gt;
-          &lt;th&gt;Genre&lt;/th&gt;
-          &lt;th&gt;Price&lt;/th&gt;
-          &lt;th&gt;Description&lt;/th&gt;
-        &lt;/tr&gt;
-      &lt;/thead&gt;
-      &lt;tbody id="tableBody"&gt;
-
-      &lt;/tbody&gt;
-
-    &lt;/table&gt;
-    </pre>
-              <h4>
-                CODE JQUERY
+   });</pre><h4>
+                CODE JQUERY Get Book XML
               </h4>
               <pre class="brush: js;">
 $(document).ready(function() {
- $("#btnxml").click(function () {
-  $("thead").show();
-  $("#tableBody").empty();  // Clear the table body.
-  $.ajax({
-    type: "GET",
-    url: "files/book.xml",    // The file path.
-    dataType: "xml",
-    success: function(xml) {
-     $(xml).find("book').each(function() {
-      $("#tableBody").append(
-        "&lt;tr&gt;" +
-        "&lt;td&gt;" +
-        $(this).find('author').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('title').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('genre').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('price').text() + "&lt;/td&gt; " +
-        "&lt;td&gt;" +
-        $(this).find('description').text() + "&lt;/td&gt; " +
-        "&lt;/tr&gt;");
-       });
-        }
+  $(".btnxml").click(function () {
+  //$("#objet1").empty(); only for this page
+   $.ajax({
+   type: "GET",
+   url: "files/book.xml",
+   dataType: "xml",
+
+//error: function (e) {
+// alert("An error occurred while processing XML file");
+// console.log("XML reading Failed: ", e);
+// },
+    success: function (response) {
+
+    // make sue the ul is empty
+    // before appending data
+  $("ul.Book").children().remove();
+  $(response).find("book").each(function () {
+ var _author = 'Author: ' + $(this).find('author').text();
+   console.log(_author);
+   var _title = 'Title: ' + $(this).find('title').text();
+   var _genre = 'Genre: ' + $(this).find('genre').text();
+   var _price = 'Price: ' + $(this).find('price').text();
+   var _description = 'Description: ' + $(this).find('description').text();
+
+  // add content to the HTML
+    $("ul.Book").append('&lt;hr&gt;' + '&lt;li&gt;' + _author + '&lt;/li&gt;');
+    $("ul.Book").append('&lt;li&gt;' + _title + '&lt;/li&gt;');
+    $("ul.Book").append('&lt;li&gt;' + _genre + '&lt;/li&gt;');
+    $("ul.Book").append('&lt;li&gt;' + _price + '&lt;/li&gt;');
+    $("ul.Book").append('&lt;li&gt;' + _description + '&lt;/li&gt;');
      });
+    }
   });
+ });
 });
    </pre>
-              <h4>
+   <h4>
+    CODE JQUERY  Get Book Json
+   </h4>
+              <pre class="brush: js;">
+$(document).ready(function() {
+  $(".btnjson").click(function() {
+// $("ul.Book").children().remove(); only for this page
+    var displayResources = $("#objet1");
+
+// displayResources.text("Loading data from JSON source..."); wait message if the json very big
+
+  $.ajax({
+   type: "GET",
+   url: "files/book.json",
+   dataType : "json",
+   success: function(result) {
+   console.log(result);
+    var output =
+    "&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
+    for (var i in result) {
+    output +=
+     "&lt;tr&gt;&lt;td&gt;" +
+     result[i].author +
+     "&lt;/td&gt;&lt;td&gt;" +
+     result[i].price +
+     "&lt;/td&gt;&lt;td&gt;" +
+     result[i].genre +
+     "&lt;/td&gt;&lt;td&gt;" +
+     result[i].title +
+     "&lt;/td&gt;&lt;td&gt;" +
+     result[i].description +
+     "&lt;/td&gt;&lt;/tr&gt;";
+              }
+      output += "&lt;/tbody&gt;&lt;/table&gt;";
+      displayResources.html(output);
+// $("table").addClass("table_book_json");  Insert a class to all the tables in the page
+// $("#table_jason").addClass("table_book_json");  Insert a class only to the element with id="table_jason"
+        }
+     });
+   });
+});
+</pre>     <h4>
                 CODE for book.xml
               </h4>
               <pre class="brush: xml;">
- &lt;?xml version="1.0"?&gt;
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;   
 &lt;catalog&gt;
   &lt;book&gt;
     &lt;author&gt;Doe, John&lt;/author&gt;
@@ -347,157 +317,7 @@ $(document).ready(function() {
   &lt;/book&gt;
 &lt;/catalog&gt;
      </pre>
-            </div>
-            <hr>
-            <div id="button2">
-              <h4>
-                AJAX method .load()
-                <br>
-                <span class="c2"><em>( on .txt file in this exemple )</em></span>
-              </h4><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
-              <button class="appevid3">Radzone</button>
-            </div>
-            <div id="video"></div>
-            <div id="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
-      &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
-      &lt;button class="appevid2"&gt; Big Bunny&lt;/button&gt;
-      &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
-
-    &lt;div id="video"&gt; &lt;/div&gt;
-    </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
-      $(document).ready(function() {
-       $(".appevid1").click(function() {
-          $("#video").load("files/liste.txt #Madagascar");
-
-        });
-
-        $(".appevid2").click(function() {
-          $("#video").load("files/liste.txt #bigbunny");
-
-        });
-
-        $(".appevid3").click(function() {
-          $("#video").load("files/liste.txt #Radzone");
-
-        });
-        });
-        </pre>
-              <h4>
-                CODE texte for Page liste.txt
-              </h4>
-              <pre class="brush: plain;">
-       &lt;video id="Madagascar" controls autoplay width="80%"&gt;
-        &lt;source src="video/Madagascar.mp4" type= "video/mp4"&gt;
-      &lt;/video&gt;
-
-      &lt;video id="bigbunny" controls autoplay width="80%"&gt;
-        &lt;source src="video/mov_bbb.mp4" type="video/mp4"&gt;
-      &lt;/video&gt;
-
-      &lt;video id="Radzone" autoplay mute width="80%"&gt;
-        &lt;source src="video/Radzone.mp4" type="video/mp4"&gt;
-      &lt;/video&gt;
-      </pre>
-            </div>
-            <hr>
-            <h4>
-              AJAX method .getJSON()
-            </h4><input type="button" id="btn" value="Get User Data">
-            <div id="output"></div>
-            <div id="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
-   &lt;input type="button" id="btn" value="Get User Data"&gt;
-    &lt;div id="output"&gt;&lt;/div&gt;
-    </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
-$("#btn").click(function(event) {
- $.getJSON("files/user.json", function(user) {
-  $("#output").html("&lt;p&gt; Name: " +
-     user.name + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Gender: " +
-     user.gender + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Salary: " +
-     user.salary + "&lt;/p&gt;");
-    });
-});
-</pre>
-              <h4>
-                CODE for user.json
-              </h4>
-              <pre class="brush: plain;collapse: false">
-{
-  "name": "Rad Zone",
-  "gender": "Male",
-  "salary": "10 000000 €"
-}
-      </pre><hr> <h4>
-              AJAX method type: "GET"<br>
-               <i>( Same as the book.xml but xml converted in json ) </i>
-            </h4><input type="button" id="btnjson" value="Get book.Json Data">
- <div id="output2"></div> <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
- &lt;input type="button" id="btnjson" value="Get book.Json Data"&gt;
- &lt;div id="output2"&gt;&lt;/div&gt;
-</pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
-$(document).ready(function() {
-  $("#btnjson").click(function() {
-    var displayResources = $("#output2");
-
- /* displayResources.text("Loading data from JSON source..."); wait message for very big json  */
-
-    $.ajax({
-      type: "GET",
-      url: "files/book.json",
-      dataType : "json",
-      success: function(result) {
-      console.log(result);
- var output =
- "&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
-      for (var i in result) {
-        output +=
-        "&lt;tr&gt;&lt;td&gt;" +
-        result[i].author +
-        "&lt;/td&gt;&lt;td&gt;" +
-        result[i].price +
-        "&lt;/td&gt;&lt;td&gt;" +
-        result[i].genre +
-        "&lt;/td&gt;&lt;td&gt;" +
-        result[i].title +
-        "&lt;/td&gt;&lt;td&gt;" +
-        result[i].description +
-        "&lt;/td&gt;&lt;/tr&gt;";
-              }
-      output += "&lt;/tbody&gt;&lt;/table&gt;";
-
-      displayResources.html(output);
-       /* $("table").addClass("table_book_json");  Insert a class to all the tables in the page */
-        /* $("#table_jason").addClass("table_book_json");  Insert a class only to the element with id="table_jason" */
-            }
-          });
-        });
-      });
-</pre>
-              <h4>
+         <h4>
                 CODE for book.json
               </h4>
               <pre class="brush: plain;">
@@ -538,82 +358,140 @@ $(document).ready(function() {
     "title": "The Sundered Grail"
   }
 ]
-</pre> <h4>
-     Because in the js I give an ID to the table, I can customize only this table in the CSS of the page
+</pre>
+    </div>
+        <hr>
+            <div id="button2">
+              <h4>
+                AJAX method .load()
+                <br>
+                <span class="c2"><em>(Call ID on .txt file in this exemple but can call what you want ! same principe for .html )</em></span>
+              </h4><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
+              <button class="appevid3">Radzone</button>
+            </div>
+            <div id="video"></div>
+            <div id="pre">
+              <h4>
+                CODE HTML
               </h4>
- <pre class="brush: css;collapse: false">
-#table_json {
- margin-top: 10px;
- background-color: #202020;
- color: #fff;
- border-radius: 20px;
- }
- </pre>
+              <pre class="brush: html;collapse: false">
+    &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
+    &lt;button class="appevid2"&gt; Big Bunny&lt;/button&gt;
+    &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
+
+  &lt;div id="video"&gt; &lt;/div&gt;
+    </pre>
+              <h4>
+                CODE JQUERY
+              </h4>
+              <pre class="brush: js;">
+ $(document).ready(function() {
+    $(".appevid1").click(function() {
+      $("#video").load("files/liste.txt #Madagascar");
+
+  });
+
+  $(".appevid2").click(function() {
+    $("#video").load("files/liste.txt #bigbunny");
+
+  });
+
+  $(".appevid3").click(function() {
+    $("#video").load("files/liste.txt #Radzone");
+
+  });
+});
+        </pre>
+              <h4>
+                CODE texte for Page liste.txt
+              </h4>
+              <pre class="brush: plain;">
+  &lt;video id="Madagascar" controls autoplay width="80%"&gt;
+    &lt;source src="video/Madagascar.mp4" type= "video/mp4"&gt;
+  &lt;/video&gt;
+
+  &lt;video id="bigbunny" controls autoplay width="80%"&gt;
+    &lt;source src="video/mov_bbb.mp4" type="video/mp4"&gt;
+  &lt;/video&gt;
+
+  &lt;video id="Radzone" autoplay mute width="80%"&gt;
+    &lt;source src="video/Radzone.mp4" type="video/mp4"&gt;
+  &lt;/video&gt;
+      </pre>
+            </div>
+              <hr>
+            <h4>
+              AJAX method .getJSON()
+            </h4><input type="button" id="btn" value="Get User Data">
+            <div id="output"></div>
+            <div id="pre">
+              <h4>
+                CODE HTML
+              </h4>
+              <pre class="brush: html;collapse: false">
+   &lt;input type="button" id="btn" value="Get User Data"&gt;
+    &lt;div id="output"&gt;&lt;/div&gt;
+    </pre>
+              <h4>
+                CODE JQUERY
+              </h4>
+              <pre class="brush: js;">
+$("#btn").click(function(event) {
+ $.getJSON("files/user.json", function(user) {
+  $("#output").html("&lt;p&gt; Name: " +
+     user.name + "&lt;/p&gt;");
+  $("#output").append("&lt;p&gt;Gender: " +
+     user.gender + "&lt;/p&gt;");
+  $("#output").append("&lt;p&gt;Salary: " +
+     user.salary + "&lt;/p&gt;");
+    });
+});
+</pre>
+              <h4>
+                CODE for user.json
+              </h4>
+              <pre class="brush: plain;collapse: false">
+{
+  "name": "Rad Zone",
+  "gender": "Male",
+  "salary": "10 000000 €"
+}
+      </pre></div>
+
 </div>
-   <hr>
+   </div>
     </div>
-     </div>
+     <div class="item3"></div>
       </div>
-      <div class="item3"></div>
-    </div>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script>
-      $(document).ready(function() {
-        /*  image in the header was olso call by jQuery method .attr() */
-
+       $(document).ready(function() {
+       // image in the header was olso call by jQuery method .attr()
+         $("#xml").hide();
         $(".logo").attr("src", "images/logo.png");
-
-
-        /* video insertion by method .html() ( DOM Manipulation not ajax ) */
-
-        $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
+      //video insertion by method .html() ( DOM Manipulation not ajax )
+         $("#videohtml").html('<video id="Radzone" loop mute width="80%" ><source src="video/Radzone.mp4"/></video>');
         $("#Radzone")[0].play();
 
-        $("#btnxml").click(function () {
-           $("thead").show();
-    $("#tableBody").empty();       // Clear the table body.
-    $.ajax({
-        type: "GET",
-        url: "files/book.xml",           // The file path.
-        dataType: "xml",
-        success: function(xml) {
-            $(xml).find("book").each(function() {
-                $("#tableBody").append(
-                    "<tr>" +
-
-                    "<td>" +
-                            $(this).find('author').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('title').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('genre').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('price').text() + "</td> " +
-                    "<td>" +
-                            $(this).find('description').text() + "</td> " +
-                    "</tr>");
-            });
-        }
-    });
-    });
-        /* video insertion method .attr() data-video  */
+           // video insertion method .attr() data-video
 
         $(".list-item").find(".item").on("click", function() {
-          /*let */
+          //let
           videoData = $(this).data("video");
-          /* let */
+          // let
           videoSource = $("#videoclip").find("#mp4video");
           videoSource.attr("src", videoData);
-          /*let */
+          //let
           autoplayVideo = $("#videoclip").get(0);
           autoplayVideo.load();
           autoplayVideo.play();
         });
 
 
-        /* AJAX method .ajax() */
+            // AJAX method .ajax() html
 
         $(".appelvideo").click(function() {
+          $("ul.Book").children().remove();$("#xml").hide();
           $.ajax({
             url: "files/video.html",
             success: function(result) {
@@ -621,70 +499,50 @@ $(document).ready(function() {
             }
           });
         });
-        $(".appelimg").click(function() {
-          $.ajax({
-            url: "files/img.html",
-            success: function(result) {
-              $("#objet1").html(result);
-            }
-          });
-        });
-        $(".appeltable").click(function() {
-          $.ajax({
-            url: "files/XLS.html",
-            success: function(result) {
-              $("#objet1").html(result);
-            }
-          });
-        });
 
-         $(".appelmulti").click(function() { /* $("#multi").toggle(); */
-          $.ajax({
-            url: "files/multi.html",
-            success: function(result) {
-              $("#multi").html(result);
-            }
-          });
-        });
+         // AJAX method .ajax()
+               //xml
+        $(".btnxml").click(function () {$("#xml").show();
+          $("#objet1").empty();
+           $.ajax({
+        type: "GET",
+        url: "files/book.xml",
+        dataType: "xml",
 
-        /* AJAX method .load()*/
+        //error: function (e) {
+        // alert("An error occurred while processing XML file");
+       // console.log("XML reading Failed: ", e);
+       // },
+        success: function (response) {
+        // make sue the ul is empty
+        // before appending data
 
-        $(".appevid1").click(function() {
-          $("#video").load("files/liste.txt #Madagascar");
+            $("ul.Book").children().remove();
 
+            $(response).find("book").each(function () {
+                var _author = 'Author: ' + $(this).find('author').text();
+                console.log(_author);
+                var _title = 'Title: ' + $(this).find('title').text();
+                var _genre = 'Genre: ' + $(this).find('genre').text();
+                var _price = 'Price: ' + $(this).find('price').text();
+                var _description = 'Description: ' + $(this).find('description').text();
 
-        });
+                // add content to the HTML
+                $("ul.Book").append('<hr>' + '<li>' + _author + '</li>');
+                $("ul.Book").append('<li>' + _title + '</li>');
+                $("ul.Book").append('<li>' + _genre + '</li>');
+                $("ul.Book").append('<li>' + _price + '</li>');
+                $("ul.Book").append('<li>' + _description + '</li>');
+            });
+        }
+    });
+    });
+         // AJAX method .get() Book.json
+        $(".btnjson").click(function() {$("#xml").hide();
+          $("ul.Book").children().remove();
+          var displayResources = $("#objet1");
 
-        $(".appevid2").click(function() {
-          $("#video").load("files/liste.txt #bigbunny");
-
-        });
-
-        $(".appevid3").click(function() {
-          $("#video").load("files/liste.txt #Radzone");
-
-          $("#Radzone")[0].play();
-
-        });
-
-
-        /* AJAX method .getJSON() */
-
-        $("#btn").click(function(event) { /* $("#output").toggle(); */
-          $.getJSON("files/user.json", function(user) {
-            $("#output").html("<p> Name: " +
-              user.name + "</p>");
-            $("#output").append("<p>Gender: " +
-              user.gender + "</p>");
-            $("#output").append("<p>Salary: " +
-              user.salary + "</p>");
-          });
-        });
-           /* AJAX method .getJSON() Book.json*/
-        $("#btnjson").click(function() { /* $("#output2").toggle(), function(){  */
-          var displayResources = $("#output2");
-
-         /* displayResources.text("Loading data from JSON source..."); wait message if the json very big */
+         // displayResources.text("Loading data from JSON source..."); wait message if the json very big
 
           $.ajax({
             type: "GET",
@@ -711,10 +569,42 @@ $(document).ready(function() {
               output += "</tbody></table>";
 
               displayResources.html(output);
-              $("#table_jason").addClass("table_book_json"); /* Insert a class to the table */
+              $("#table_jason").addClass("table_book_json"); // Insert a class to the table
             }
           });
         });
+             /* AJAX method .load()*/
+
+        $(".appevid1").click(function() {
+          $("#video").load("files/liste.txt #Madagascar");
+
+
+        });
+
+        $(".appevid2").click(function() {
+          $("#video").load("files/liste.txt #bigbunny");
+
+        });
+
+         $(".appevid3").click(function() {
+          $("#video").load("files/liste.txt #Radzone");
+
+
+        });
+        //  AJAX method .getJSON
+
+         $("#btn").click(function(event) {
+          $.getJSON("files/user.json", function(user) {
+            $("#output").html("<p> Name: " +
+              user.name + "</p>");
+            $("#output").append("<p>Gender: " +
+              user.gender + "</p>");
+            $("#output").append("<p>Salary: " +
+              user.salary + "</p>");
+          });
+        });
+
+
 
       });
     </script>

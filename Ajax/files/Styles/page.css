@@ -13,7 +13,7 @@ body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
     .header{background:#202020;margin-top:-28px;margin-right:-5px;margin-left:-5px;flex:0 1 auto;align-self:auto;text-align:center;width:100%;}
     .item2{width:80%;align-self:auto;}
     .item3{color:#d4d0c8;background:#202020;width:100%;text-align:center;margin-bottom:-8px;}
-    ul.exemple{list-style-type:none;}
+    ul{list-style-type:none;}
     img.logo{border:0;}
     .bt{font-size:1rem;cursor:pointer;background:#202020;margin:5px;width:300px;border-radius:10px;transition:all 1.2s ease-in-out;color:#d4d0c8;border:none;font-weight:500;padding:5px;}
    button:hover,#btnjson:hover,#btnxml:hover,#btn:hover {background:rgba(0, 0, 0, .3);transition:all 1.2s ease-in-out;color:#000;}
@@ -26,20 +26,24 @@ body{margin:0;font-family: Georgia,serif;font-size: 1rem;}
     hr{width:100%;height:5px;background-color:#000;}
     table.ta{width:80%;}
     .list-item{text-align:left;float:left;margin:auto;}
-    div #output{background-color:#202020;color:#ddd;}
+    div #output{background-color:#202020;color:#ddd;width:80%;border-radius: 20px;}
     #pre{max-width:600px;min-width:420px;}
     a{text-decoration: none; color: #313BF6;}
     a:hover{color: #000;}
+    div #xml ul{ margin-left: -40px; }
     div #xml{
-      width:80%;margin:auto;
+     width:80%;margin:auto; margin-top: 10px;padding-bottom: 10px;
+   background-color: #202020;
+   color: #fff;
+   border-radius: 20px
     }
+
     span.c2 {font-size: smaller}
-    /*span.c1 {font-size: larger}*/
     .table_book_json td, th {
    padding: 5px;
 
 }
-  .table_book_json {
+  .table_book_json { width:80%; margin:auto;
     margin-top: 10px;
    background-color: #202020;
    color: #fff;
@@ -53,4 +57,6 @@ img#zoom:hover {
       -ms-transform: scale(7); /* IE 9 */
   -webkit-transform: scale(7); /* Safari 3-8 */
           transform: scale(7);
+}  ul hr:first-of-type {
+  width:0%;height:0px;
 }
