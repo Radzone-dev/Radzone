@@ -101,6 +101,10 @@ iframe{
  a{
       text-decoration: none;
     }
+    #pre {
+  font-size:0.8rem;
+
+}
 /* START Show/Hide Possible mouse event button CSS */
 .button {
   text-align: center;
