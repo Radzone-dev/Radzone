@@ -149,7 +149,7 @@
         convallis id, mcongue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
       </div>
       <!-- fin de div#centre -->
-      <p> CODE HTML FULL PAGE <i>(no Lorem ipsum texte)</i>
+      <p> CODE HTML FULL PAGE <i>(no Lorem ipsum texte)</i></p><div class="pre">
         <pre class="brush: xml;">
  &lt;!DOCTYPE html&gt;
   &lt;html lang="fr"&gt;
@@ -301,8 +301,8 @@
     &lt;/body&gt;
   &lt;/html&gt;
     </pre>
-      </p>
-      <p> CODE CSS FULL PAGE
+      </div>
+      <p> CODE CSS FULL PAGE</p>  <div class="pre">
         <pre class="brush: css;">
  html {
   font-size: 100%;
@@ -489,10 +489,11 @@ a.modal-open:hover {
   color:#FF6600;
 }
 /* END MODAL CSS */
-</pre>
-      </p>
-      <p> CODE JS function Show/Hide elements on file "JavaScript.js"
-        <pre class="brush: js;">
+</pre></div>
+
+      <p> CODE JS function Show/Hide elements on file "JavaScript.js" </p>
+       <div class="pre">
+       <pre class="brush: js;">
      var elements_array = new Array("video", "video2", "Image", "Iframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
         function displayElements(the_element) {
           if (document.getElementById(the_element).style.display == "block") {
@@ -506,16 +507,16 @@ a.modal-open:hover {
           document.getElementById(the_element).style.display = "block";
         }
  </pre>
-      </p>
-      <p> CODE JS function play_video for Onclick img + play Video on file "JavaScript.js"
-        <pre class="brush: js;">
+      </div>
+      <p> CODE JS function play_video for Onclick img + play Video on file "JavaScript.js"</p>
+        <div class="pre"><pre class="brush: js;">
         function play_video() {
           document.getElementById("video2").play();
         }
    </pre>
-      </p>
-      <p> CODE JS function Show/Hide Possible mouse event on file "JavaScript.js"
-        <pre class="brush: js;">
+      </div>
+      <p> CODE JS function Show/Hide Possible mouse event on file "JavaScript.js"</p>
+        <div class="pre"> <pre class="brush: js;">
        function HideShow() {
           var x = document.getElementById("mouseevent");
           if (x.style.display === "none") {
@@ -525,10 +526,10 @@ a.modal-open:hover {
          }
         }
    </pre>
-      </p>
-      <p> CODE HTML MODAL Pure CSS ONLY
+      </div>
+      <p> CODE HTML MODAL Pure CSS ONLY </p>
        <i style="font-size: 10px">(Already in the FULL PAGE HTML Code !/Déjà dans le Code FULL PAGE HTML !)</i>
-       <pre class="brush: html;">
+       <div class="pre"> <pre class="brush: html;">
         &lt;a class="modal-open" href="#modalcont">Click To Open Modal&lt;/a&gt;
           &lt;div class="modal" id="modalcont"&gt;
             &lt;div class="modal-content"&gt;
@@ -544,10 +545,10 @@ a.modal-open:hover {
             &lt;/div&gt;
           &lt;/div&gt;
         </pre>
-      </p>
-      <p> CODE CSS MODAL Pure CSS ONLY
+      </div>
+      <p> CODE CSS MODAL Pure CSS ONLY </p>
        <i style="font-size: 10px">(Already in the FULL PAGE CSS Code !/Déjà dans le Code FULL PAGE CSS !)</i>
-        <pre class="brush: css;">
+        <div class="pre"><pre class="brush: css;">
      *.modal {
        padding: 0;
        margin: 0;
@@ -639,7 +640,7 @@ a.modal-open:hover {
        color:#FF6600;
              }
   </pre>
-      </p>
+      </div>
     </div>
     <script src="files/js/JavaScript.js"></script>
   <script type="text/javascript">
