@@ -1,70 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="https://radzone-dev.github.io/Radzone/img/favicon.ico">
-    <link href="JavaScript and jQuery Tutorials_files/files/css.css" rel="stylesheet" type="text/css">
     <title>
-      jQuery Tutorials
+      JQuery Tutorials
     </title>
-  </head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <meta name="author" content="http://radservebeer.free.fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <style type="text/css">
+    h1{ color: #C6C6C6;
+      font-size:1.5rem;
+    }
+      h2{ color:  rgba(7,151,195, .5);
+      font-size:1.1rem;
+    }
+    </style>
+</head>
   <body>
-    <div class="c1">
-      <img src="JavaScript and jQuery Tutorials_files/files/logo.png" alt="logo" id="logo">
-    </div>
-    <div class="wholecontent optionset1a">
-      <div class="content optionset1b">
-        <h1>
-            jQuery Tutorials <i>( The Bases )</i>
-          </h1>
-          <h2 class="c2">
-            Learn how to make Dynamic Web Pages
-          </h2>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Getting%20Started.html" target="_blank"
-            title="Getting Started">Part 1 - Getting Started</a>
-          </p>
-          <p>
-            <a href="JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Selectors.html" target="_blank"
-            title="jQuery Selectors">Part 2 - jQuery Selectors</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Events.html" target="_blank"
-            title="jQuery Events">Part 3 - jQuery Events</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Effects.html" target="_blank"
-            title="jQuery Effects">Part 4 - jQuery Effects</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Animation.html" target="_blank"
-            title="jQuery Animation">Part 5 - jQuery Animation</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation.html" target="_blank"
-            title="jQuery CSS Manipulation">Part 6 - jQuery CSS Manipulation</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7.html" target="_blank"
-            title="jQuery HTML Manipulation">Part 7 - jQuery HTML Manipulation</a>
-          </p>
-          <p>
-            <a href=
-            "JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Traversing.html" target="_blank"
-            title="jQuery Traversing">Part 8 - jQuery Traversing</a>
-          </p>
-          <p>
-            <a href="JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Variables.html" target="_blank"
-            title="Variables">Part 9 - Variables</a>
-          </p>
-          <hr>
+    <div class="flex-container">
+      <div class="item1">
+        <img src="../img/logo.png" width="400" height="150" class="logo" alt="logo">
       </div>
+      <div class="item2">
+        <div id="contant"><div class="method">
+          <h1>
+            JQuery Tutorials <i>( The Bases )</i>
+          </h1><h2>
+            Learn how to make Dynamic Web Pages
+          </h2><hr>
+          <p>
+            <input class="toggle-btn bt" name="Show/Hide" type="button" value="Tutorials">
+          </p>
+          <ul class="exemple" hidden="hidden">
+            <hr>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Getting%20Started.html','_blank').focus();" name=
+              "1 - Getting Started" type="button" value="Getting Started">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick=
+              "window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Selectors.html','_blank').focus();" name=
+              "2 - jQuery Selectors" type="button" value="jQuery Selectors">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick=
+              "window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Events.html','_blank').focus();" name=
+              "3 - jQuery Events" type="button" value="jQuery Events">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Effects.html','_blank').focus();" name="4 - jQuery Effects" type=
+              "button" value="jQuery Effects">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Animation.html','_blank').focus();" name="5 - jQuery Animation" type=
+              "button" value="jQuery Animation">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation.html','_blank').focus();" name="6 - jQuery CSS Manipulation" type=
+              "button" value="jQuery CSS Manipulation">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20HTML%20Manipulation7.html','_blank').focus();" name="7 - jQuery HTML Manipulation" type=
+              "button" value="jQuery HTML Manipulation">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20jQuery%20Traversing.html','_blank').focus();" name="8 - jQuery Traversing" type=
+              "button" value="jQuery Traversing">
+              <hr>
+            </li>
+            <li>
+              <input class="bt" onclick="window.open('JavaScript%20and%20jQuery%20Tutorials_files/files/JavaScript%20and%20jQuery_%20Variables.html','_blank').focus();" name="9 - Variables" type=
+              "button" value="jQuery Variables">
+              <hr>
+            </li>
+          </ul></div>
+        </div>
+      </div>
+      <div class="item3">
+       </div>
     </div>
+    <script src="../js/jquery.js"></script>
+    <script>
+    $(document).ready(function(){
+       $(".toggle-btn").click(function(){
+      $('ul').fadeToggle(3000);
+     });
+    });
+    </script>
   </body>
 </html>
