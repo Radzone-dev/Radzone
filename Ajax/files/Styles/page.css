@@ -133,9 +133,11 @@ div #output {
   border-radius: 20px;
 }
 #pre {
+  font-size:0.85rem;
   max-width: 600px;
   min-width: 420px;
 }
+
 a {
   text-decoration: none;
   color:#0797C3 ;
