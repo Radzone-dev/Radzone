@@ -70,7 +70,8 @@ div#centre {  -webkit-border-radius: 8px;
   padding: 1px 20px;
   margin-left: 210px;
   margin-right: 210px;
-  background: #EEEEEE;
+  background:#222222;
+   color:#E8E8E8;
 
 }
 .strong {
@@ -94,9 +95,6 @@ img#zoom:hover {
 }
 #link:hover {
   color: #f60;
-}
-iframe{
-  background: #FFF ;
 }
  a{
       text-decoration: none;

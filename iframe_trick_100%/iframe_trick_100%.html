@@ -1,0 +1,256 @@
+﻿<!DOCTYPE html>
+<html>
+ <head>
+    <title>
+      Iframe 100% Trick CSS
+    </title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="../img/favicon.ico">
+    <meta name="author" content="http://radservebeer.free.fr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css" type="text/css">
+    <script type="text/javascript" src="../Exemple_ShowHide_+_SyntaxHighlighter/files/Scripts/shCore.js"></script>
+    <script type="text/javascript" src="../Exemple_ShowHide_+_SyntaxHighlighter/files/Scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="../Exemple_ShowHide_+_SyntaxHighlighter/files/Scripts/shBrushXml.js"></script>
+    <link type="text/css" rel="stylesheet" href="../Exemple_ShowHide_+_SyntaxHighlighter/files/Styles/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="../Exemple_ShowHide_+_SyntaxHighlighter/files/Styles/shThemeRDark.css" id="theme">
+<style type="text/css">
+    h1 {
+      color: #c6c6c6;
+      font-size: 1.5rem;
+    }
+    h2 {
+      color: rgba(7, 151, 195, .5);
+      font-size: 1.1rem;
+    }
+    #containerframe {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+    .maframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    #smallframe {
+      width: 40%;
+      margin: auto;
+    }
+    #hide {
+      display: none;
+    }
+    #hide:target {
+      display: block;
+    }
+    .btt a {
+      font-size: 1rem;
+      cursor: pointer;
+      background: #111;
+      margin: 5px;
+      text-decoration: none;
+      margin: auto;
+      border-radius: 10px;
+      transition: all 1.2s ease-in-out;
+      color: rgba(7, 151, 195);
+      border: none;
+      font-weight: 500;
+      padding: 15px;
+    }
+    .btt:hover a {
+      background: rgba(0, 0, 0, .1);
+      transition: all 1.2s ease-in-out;
+      color: #ff8c00;
+    }
+    .pre {
+      font-size: .8rem;
+    }
+    code {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: .8rem;
+      background: rgba(0, 0, 0, .7);
+      padding: 2px;
+    }
+</style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="item1">
+        <img src="../img/logo.png" width="400" height="150" class="logo" alt="logo">
+      </div>
+      <div class="item2">
+        <div id="contant">
+          <div class="method">
+            <h1>
+              Iframe 100% Responsive Only With Css
+            </h1>
+            <h2>
+              The Very Simple Trick
+            </h2>
+            <hr>
+            <p>Many people who need or want to insert an iframe into their site struggle to make this frame fully responsive to all screen sizes! They try to use JavaScript most of the time, which works but can be difficult to manage if you are not familiar
+              with JavaScript! So I will give you a very simple CSS trick! When you see how easy it is to do, you will be surprised ! </p>
+            <hr>
+            <h2>The Exemple</h2>
+            <hr>
+            <p>First look at this example where you have 2 iframes with the same size but inserted into 2 divs with different sizes,resize the page you see !</p>
+            <p class="btt"><br><a href="#hide">Expand</a></p><br>
+            <hr>
+          </div>
+          <div id="hide">
+            <p class="btt"><a href="#">Close</a></p>
+            <br>
+            <div id="containerframe">
+              <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51.2" height="36">
+            </iframe>
+            </div>
+            <hr>
+            <div id="smallframe">
+              <div id="containerframe">
+                <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51.2" height="36">
+            </iframe>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="method">
+            <h2>Now The Html Code</h2>
+            <hr>
+            <p> CODE HTML of the Exemple<i>(with the 2 frames)</i></p>
+            <div class="pre">
+<pre class="brush: xml;collapse: false">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;
+      Iframe 100% Trick CSS
+    &lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="site"&gt;
+      &lt;!-- BIG FRAME HTML CODE START --&gt;
+      &lt;div id="bigframe"&gt;
+        &lt;div class="containerframe"&gt;
+          &lt;iframe src="frame.html" class="myframe" width="51.2" height="36"&gt;
+            &lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- BIG FRAME HTML CODE END --&gt;
+      &lt;p&gt;&lt;/p&gt;
+      &lt;!-- SMALL FRAME HTML CODE START --&gt;
+      &lt;div id="smallframe"&gt;
+        &lt;div class="containerframe"&gt;
+          &lt;iframe src="frame.html" class="myframe" width="51.2" height="36"&gt;
+            &lt;/iframe&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;!-- SMALL FRAME HTML CODE END --&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+            <hr>
+            <p>Like you can see the frame have exactely the same parameter for the 2 size<br>
+              <hr> <b>1: You need to add a class to the iframe</b> !
+              <pre><code>class="myframe"</code></pre>
+            </p>
+            <p> <b>2: You have to give it a ratio to the iframe <span style="font-size: smaller">(ratio means 'width' and 'height')</span>!</b>
+              <pre><code>width="51.2" height="36"</code></pre><span style="font-size: smaller">Is just the ratio you want for your frame, in this case I chose to divide 1024 X 720 by 20 (<i>1024÷20=51.2 and 720÷20=36</i>) It's up to you to choose your appropriate ratio and there is no need to divide it.</span></p>
+            <p><b>3:The frames must be enclosed in a div</b>
+              <pre><code>&lt;div class="containerframe"&gt;</code></pre> </p>
+            <p>That look like this.</p>
+            <div class="pre">
+<pre class="brush: xml;collapse: false">
+&lt;div class="containerframe"&gt;
+&lt;iframe src="frame.html" class="myframe" width="51.2" height="36"&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+            </div>
+            <hr>
+            <h2>Now The Css Trick</h2>
+            <p>First the Css for the exemple with The 2 frames !</p>
+            <div class="pre">
+<pre class="brush: css;">
+body, html {
+  margin: 0;
+  padding: 0 ;
+}
+/* CSS FOR THIS PAGE */
+#site {
+  width: 100%;/* THE DIV SITE SET TO 100% TO TAKE ALL THE PAGE */
+}
+#bigframe {
+  width: 80%; /* THE BIGFRAME WAS SET TO 80% OF THE DIV SITE  */
+  margin: auto;
+}
+#smallframe {
+  width: 40%;/* THE SMALFRAME WAS SET TO 40% OF THE DIV SITE */
+  margin: auto;
+}
+/*END OF CSS FOR THIS PAGE */
+
+/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE THE VALUES !!! */
+.containerframe {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.myframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* END OF THE CSS TRICK */
+</pre>
+            </div>
+            <hr>
+            <p><b>Here is just the trick to make the Frame fully Responsive ! you can chage the class Name but<br> DO NOT CHANGE THE VALUES</b> </p>
+            <div class="pre">
+<pre class="brush: css;collapse: false">
+
+/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE THE VALUES !!! */
+.containerframe {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.myframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* END OF THE CSS TRICK */
+</pre>
+            </div>
+            <hr>
+            <h1>Just Add 1 div, Give 1 size, Add 2 class and 8 lines of css, easy no !</h1>
+            <hr>
+          </div>
+        </div>
+      </div>
+      <div class="item3">
+      </div>
+    </div>
+    <script type="text/javascript">
+      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+      SyntaxHighlighter.config.stripBrs = true;
+      SyntaxHighlighter.all();
+    </script>
+  </body>
+</html>
