@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
  <html lang="fr">
   <head>
     <meta charset="utf-8">
@@ -14,7 +14,7 @@
     <script type="text/javascript" src="files/Scripts/shBrushXml.js"></script>
     <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
     <link type="text/css" rel="Stylesheet" href="files/Styles/shThemeRDark.css" id="theme">
-   </head>
+  </head>
   <body>
     <h1>
       Exemple Show/Hide avec js + Modal Pure CSS
@@ -139,13 +139,15 @@
         </ol>
       <div>
         <h2>
-          Iframe
+          Iframe Avec Trick CSS pour la Rendre 100% Responsive !
         </h2>
         <p>
-          Lorem ipsum dolor sit amet,<br>
-          <strong class="strong" onmousedown="displayElements('Iframe')">Iframe onmousedown</strong> (<i>si html externe cible dans iframe non bloquée ou html cible perso comme ici sur une de mes pages avec une animation en pure js !</i>)<br>
-          <iframe style="display: none" id="Iframe" src="files/media/" name="IFrame" width="100%" height="400px">
-          </iframe> </p>
+          <strong class="strong" onmousedown="displayElements('containerframe')" >Iframe onmousedown</strong>
+          (<i>Iframe possible si site externe cible ne bloque pas les iframe ou html cible perso comme ici sur une de mes pages avec une animation en pure js !</i>)<br>
+           <div id="containerframe" style="display: none">
+            <iframe src="files/media/" name="IFrame" class="maframe" width="560" height="315">
+            </iframe>
+          </div></p>
         convallis id, mcongue eu, quam. Mauris ullamcorper felis vitae erat. Proin feugiat, augue non elementum posuere, metus purus iaculis lectus, et tristique ligula justo vitae magna.
       </div>
       <!-- fin de div#centre -->
@@ -286,15 +288,14 @@
       &lt;/ol&gt;
       &lt;div&gt;
         &lt;h2&gt;
-          Iframe
+          Iframe Avec Trick CSS pour la Rendre 100% Responsive !
         &lt;/h2&gt;
         &lt;p&gt;
-          Lorem ipsum dolor sit amet,&lt;br&gt;
-          &lt;strong class="strong" onmousedown="displayElements('Iframe')"&gt;(si html externe cible dans iframe non bloquée ou html cible perso comme ici !)&lt;br&gt;
-          &lt;/strong&gt;
-           &lt;iframe style="display: none" id="Iframe" src="files/media/" name="IFrame" width="100%" height="400px"&gt;
-          &lt;/iframe&gt;
-          &lt;/p&gt;
+           &lt;strong class="strong" onmousedown="displayElements('containerframe')" >Iframe onmousedown&lt;/strong> (&lt;i>Iframe possible si site externe cible ne bloque pas les iframe ou html cible perso comme ici sur une de mes pages avec une animation en pure js !&lt;/i&gt;)&lt;br&gt;
+           &lt;div id="containerframe" style="display: none"&gt;
+            &lt;iframe src="files/media/" name="IFrame" class="maframe" width="560" height="315"&gt;
+            &lt;/iframe&gt;
+          &lt;/div&gt;
       &lt;/div&gt;
       &lt;/div&gt;
        &lt;script src="JavaScript.js"&gt;&lt;/script&gt; &lt;!--THE JAVASCRIPT --&gt;
@@ -361,6 +362,20 @@ img#zoom:hover {
 }
 #link:hover {
   color: #f60;
+}
+/* Trick CSS To Make Iframe Responsive */
+#containerframe {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+.maframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 /* START Show/Hide Possible mouse event button CSS */
 .button {
@@ -494,7 +509,7 @@ a.modal-open:hover {
       <p> CODE JS function Show/Hide elements on file "JavaScript.js" </p>
        <div class="pre">
        <pre class="brush: js;">
-     var elements_array = new Array("video", "video2", "Image", "Iframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
+     var elements_array = new Array("video", "video2", "Image", "containerframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
         function displayElements(the_element) {
           if (document.getElementById(the_element).style.display == "block") {
             document.getElementById(the_element).style.display = "none";

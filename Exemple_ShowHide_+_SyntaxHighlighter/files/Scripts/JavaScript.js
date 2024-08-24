@@ -1,5 +1,5 @@
 /* Script de Rad Zone pour afficher les element */
-var elements_array = new Array("video", "video2", "Image", "Iframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
+var elements_array = new Array("video", "video2", "Image", "containerframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
 function displayElements(the_element) {
   if (document.getElementById(the_element).style.display == "") {
     document.getElementById(the_element).style.display = "none";
