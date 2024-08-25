@@ -27,7 +27,7 @@
       color: rgba(7, 151, 195, .5);
       font-size: 1.1rem;
     }
-    #containerframe {
+    .containerframe {
       position: relative;
       width: 100%;
       height: 0;
@@ -78,6 +78,10 @@
       background: rgba(0, 0, 0, .7);
       padding: 2px;
     }
+    .emo{  font-size: 30px;
+        color:rgba(7, 151, 195);
+    }
+
 </style>
   </head>
   <body>
@@ -101,19 +105,19 @@
             <h2>The Exemple</h2>
             <hr>
             <p>First look at this example where you have 2 iframes with the same size but inserted into 2 divs with different sizes,resize the page you see !</p>
-            <p class="btt"><br><a href="#hide">Expand</a></p><br>
+            <p class="btt"><br><a href="#hide">Open</a></p><br>
             <hr>
           </div>
           <div id="hide">
             <p class="btt"><a href="#">Close</a></p>
             <br>
-            <div id="containerframe">
+            <div class="containerframe">
               <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51.2" height="36">
             </iframe>
             </div>
             <hr>
             <div id="smallframe">
-              <div id="containerframe">
+              <div class="containerframe">
                 <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51.2" height="36">
             </iframe>
               </div>
@@ -242,7 +246,44 @@ body, html {
 </pre>
             </div>
             <hr>
-            <h1>Just Add 1 div, Give 1 size, Add 2 class and 8 lines of css, easy no !</h1>
+<p>Copy the code below ! That's all you need !&nbsp;&nbsp;<span class="emo">&#128064;</span></p>
+<div class="pre">
+<pre class="brush: xml;collapse: false">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;
+      RAD ZONE Webcreation Iframe responsive Css
+    &lt;/title&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;style type="text/css"&gt;
+    .containerframe {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+    }
+    .myframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="containerframe"&gt;
+      &lt;iframe src="frame.html" class="myframe" width="51.2" height=
+      "36"&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+</div><hr>
+<h1>Just Add 1 div, 1 size,2 class and 8 lines of css, easy no !</h1>
             <hr>
           </div>
         </div>
