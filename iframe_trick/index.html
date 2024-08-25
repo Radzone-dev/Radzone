@@ -125,7 +125,7 @@
             <hr>
           </div>
           <div class="method">
-            <h2>Now The Html Code</h2>
+            <h2>Now The Code</h2>
             <hr>
             <p> CODE HTML of the Exemple<i>(with the 2 frames)</i></p>
             <div class="pre">
@@ -134,7 +134,7 @@
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;
-      Iframe 100% Trick CSS
+      Iframe 100% Trick CSS Exemple
     &lt;/title&gt;
     &lt;meta charset="utf-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
@@ -164,37 +164,16 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-            </div>
-            <hr>
-            <p>Like you can see the frame have exactely the same parameter for the 2 size.<br>
-            Only the size of the div <i>"bigframe"</i> and <i>"smallframe"</i> change in the Css !<br>
-           With the Css trick the frames adapt to the different sizes of the divs !
-              <hr> <b>1: You need to add a class to the iframe</b> !
-              <pre><code>class="myframe"</code></pre>
-            </p>
-            <p> <b>2: You have to give it a ratio to the iframe <span style="font-size: smaller">(ratio means 'width' and 'height')</span>!</b>
-              <pre><code>width="51.2" height="36"</code></pre><span style="font-size: smaller">Is just the ratio you want for your frame, in this case I chose to divide 1024 X 720 by 20 (<i>1024÷20=51.2 and 720÷20=36</i>) It's up to you to choose your appropriate ratio and there is no need to divide it.</span></p>
-            <p><b>3:The frames must be enclosed in a div</b>
-              <pre><code>&lt;div class="containerframe"&gt;</code></pre> </p>
-            <p>That look like this.</p>
+        </div>
+           <hr>
+         <p>CODE CSS for the exemple with The 2 frames !</p><hr>
             <div class="pre">
-<pre class="brush: xml;collapse: false">
-&lt;div class="containerframe"&gt;
-&lt;iframe src="frame.html" class="myframe" width="51.2" height="36"&gt;
- &lt;/iframe&gt;
-&lt;/div&gt;
-</pre>
-            </div>
-            <hr>
-            <h2>Now The Css Trick</h2>
-            <p>First the Css for the exemple with The 2 frames !</p>
-            <div class="pre">
-<pre class="brush: css;">
-body, html {
+<pre class="brush: css;collapse: false">
+body, html, #site {
   margin: 0;
   padding: 0 ;
 }
-/* CSS FOR THIS PAGE */
+/* CSS FOR THE EXEMPLE PAGE */
 #site {
   width: 100%;/* THE DIV SITE SET TO 100% TO TAKE ALL THE PAGE */
 }
@@ -225,8 +204,32 @@ body, html {
 /* END OF THE CSS TRICK */
 </pre>
             </div>
+         <hr>
+            <p>Like you can see the frame have exactely the same parameter for the 2 size.<br>
+            Only the size of the div <i>"bigframe"</i> and <i>"smallframe"</i> change in the Css !<br>
+           With the Css trick the frames adapt to the different sizes of the divs !
+              </p> <hr>
+              <h2>Now The Trick</h2>
+              <hr><p><b>1: You need to add a class to the iframe</b> !
+              <pre><code>class="myframe"</code></pre>
+            </p>
+            <p> <b>2: You have to give it a ratio to the iframe <span style="font-size: smaller">(ratio means 'width' and 'height')</span>!</b>
+              <pre><code>width="51.2" height="36"</code></pre><span style="font-size: smaller">Is just the ratio you want for your frame, in this case I chose to divide 1024 X 720 by 20 (<i>1024÷20=51.2 and 720÷20=36</i>) It's up to you to choose your appropriate ratio and there is no need to divide it.</span></p>
+            <p><b>3:The frames must be enclosed in a div</b>
+              <pre><code>&lt;div class="containerframe"&gt;</code></pre> </p>
+            <p>That look like this.</p>
+            <div class="pre">
+<pre class="brush: xml;collapse: false">
+&lt;div class="containerframe"&gt;
+&lt;iframe src="frame.html" class="myframe" width="51.2" height="36"&gt;
+ &lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+            </div>
             <hr>
-            <p><b>Here is just the trick to make the Frame fully Responsive ! you can chage the class Name but<br> DO NOT CHANGE THE VALUES</b> </p>
+            <h2>Now The Css Trick</h2>
+            <hr>
+            <p><b>Here is just the Css trick to make the Frame fully Responsive ! you can chage the class Name but<br> DO NOT CHANGE THE VALUES !</b> </p>
             <div class="pre">
 <pre class="brush: css;collapse: false">
 
