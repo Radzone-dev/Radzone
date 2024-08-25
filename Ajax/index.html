@@ -219,9 +219,9 @@ $(document).ready(function() {
 // },
     success: function (response) {
 
-    // make sue the ul is empty
-    // before appending data
+    // make sure the ul is empty
   $("ul.Book").children().remove();
+   // before appending data
   $(response).find("book").each(function () {
  var _author = 'Author: ' + $(this).find('author').text();
    console.log(_author);
@@ -444,7 +444,7 @@ $(document).ready(function() {
               <h4>
                 CODE JQUERY
               </h4>
-              <pre class="brush: js;">
+              <pre class="brush: js;;collapse: false">
 $("#btn").click(function(event) {
  $.getJSON("files/user.json", function(user) {
   $("#output").html("&lt;p&gt; Name: " +
