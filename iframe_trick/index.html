@@ -51,20 +51,25 @@
     #hide:target {
         display: block;
     }
+
     .btt a {
-        font-size: 1rem;
-        cursor: pointer;
-        background: #111;
-        margin: 5px;
-        text-decoration: none;
-        margin: auto;
         border-radius: 10px;
         transition: all 1.2s ease-in-out;
-        color: rgba(7, 151, 195);
         border: none;
-        font-weight: 500;
-        padding: 15px;
+        padding: 15px 30px 15px 30px;
+
+        background: #111;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        color: rgba(7, 151, 195);
+        font-weight: 600;
     }
+    p.btt{ width: 80px;  margin: auto;  margin-top: 30px;
+
+
+    }
+
     .btt:hover a {
         background: rgba(0, 0, 0, 0.1);
         transition: all 1.2s ease-in-out;
@@ -74,18 +79,21 @@
         font-size: 0.8rem;
     }
     code {
+        border-radius: 10px;
+         color: #5BA1CF;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 0.8rem;
-        background: rgba(0, 0, 0, 0.7);
-        padding: 2px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 5px 10px 5px 10px;
     }
     .emo {
         font-size: 30px;
         color: rgba(7, 151, 195);
     }
-    span.code{
+    span.code {
         font-size: smaller;
     }
+
     </style>
   </head>
   <body>
@@ -115,7 +123,9 @@
             </h2>
             <hr>
             <p>
-             First look at this example where you have 2 iframes, linked to a html page with one of my pure js animations, they have the same size but inserted in 2 divs with different sizes, and resize the page you see !
+              First look at this example where you have 2 iframes, linked to a html page with one of my pure js
+              animations, they have the same size but inserted in 2 divs with different sizes, resize your browser
+              window, you will see the adaptation of the frames !
             </p>
             <p class="btt">
               <br>
@@ -148,7 +158,7 @@
             </h2>
             <hr>
             <p>
-              CODE HTML of the Exemple<em>(with the 2 frames)</em>
+              CODE HTML<sub>5</sub> of the Exemple<em>(with the 2 frames)</em>
             </p>
             <div class="pre">
               <pre class="brush: xml;collapse: false">
@@ -235,7 +245,7 @@ body, html, #site {
               <br>
               Only the size of the div <em>"bigframe"</em> and <em>"smallframe"</em> change in the Css !
               <br>
-              With the Css trick the frames adapt to the different sizes of the divs !
+              With the Css trick the frames adapt to the size of the browser window !
             </p>
             <hr>
             <h2>
@@ -248,20 +258,20 @@ body, html, #site {
             <pre><code>class="myframe"</code></pre>
             <p></p>
             <p>
-              <strong>2: You have to give it a ratio to the iframe <span class="code">(ratio means 'width' and
-              'height')</span>!</strong>
+              <strong>2: You have to give a ratio to the iframe !</strong>
+              <br>
+              <span class="code">It's just a height and width that you have to give, the values you give don't really
+              matter but you have to put them in !</span>
             </p>
-            <pre><code>width="51" height="36"</code></pre><span class="code">Is just the ratio you want for your frame,
-            in this case I chose to divide 1024 X 720 by 20 (<em>1024÷20=51.2 &asymp; (51) and 720÷20=36</em>) It's up
-            to you to choose your appropriate ratio and there is no need to divide it.</span>
+            <pre><code>width="51" height="36"</code></pre>
             <p></p>
             <p>
-              <strong>3:The frames must be enclosed in a div</strong>
+              <strong>3: The iFrame must be placed in a div !</strong>
             </p>
             <pre><code>&lt;div class="containerframe"&gt;</code></pre>
             <p></p>
             <p>
-              That look like this.
+              It looks like this.
             </p>
             <div class="pre">
               <pre class="brush: xml;collapse: false">
@@ -273,7 +283,7 @@ body, html, #site {
             </div>
             <hr>
             <h2>
-              Now The Css Trick
+              The Css Trick
             </h2>
             <hr>
             <p>
@@ -343,7 +353,7 @@ body, html, #site {
             </div>
             <hr>
             <h1>
-              Just 1 div, 1 size, 2 class and 9 lines of css, easy no !
+              Just 1 div, 1 size, 2 classes and 9 lines of Css, easy right ?
             </h1>
             <hr>
           </div>
