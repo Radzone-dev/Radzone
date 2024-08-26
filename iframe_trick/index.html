@@ -30,15 +30,18 @@
     }
     .containerframe {
         position: relative;
+        overflow: hidden;
         width: 100%;
         height: 0;
-        padding-bottom: 56.25%;
+        padding-top: 56.25%;
     }
     .maframe {
         border: none;
         position: absolute;
         top: 0;
         left: 0;
+        bottom: 0;
+        right: 0;
         width: 100%;
         height: 100%;
     }
@@ -58,7 +61,6 @@
         transition: all 1.2s ease-in-out;
         border: none;
         padding: 15px 30px 15px 30px;
-
         background: #111;
         cursor: pointer;
         font-size: 1rem;
@@ -95,6 +97,12 @@
 
     span.code {
         font-size: smaller;
+    } strong a  {  text-decoration: none; color: rgba(7, 151, 195);
+
+    }
+   strong a:hover
+     {
+        color: #ff8c00;
     }
     </style>
   </head>
@@ -115,7 +123,7 @@
             <hr>
             <p>
               Many people who need or want to insert an iframe into their site struggle to make this frame fully
-              responsive to all screen sizes! They try to use JavaScript most of the time, which works but can be
+              responsive to all screen sizes and maintain the aspect ratio ! They try to use JavaScript most of the time, which works but can be
               difficult to manage if you are not familiar with JavaScript! So I will give you a very simple CSS trick!
               When you see how easy it is to do, you will be surprised !
             </p>
@@ -126,8 +134,8 @@
             <hr>
             <p>
               First look at this example where you have 2 iframes, linked to a html page with one of my pure js
-              animations, they have the same size but inserted in 2 divs with different sizes, resize your browser
-              window, you will see the adaptation of the frames !
+              animations, they are identical but inserted in 2 divs with different sizes, resize your browser
+              window, you will see the adaptation of the iframes !
             </p>
             <p class="btt">
               <br>
@@ -142,14 +150,14 @@
             </p>
             <br>
             <div class="containerframe">
-              <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51"
-              height="36"></iframe>
+              <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe">
+               </iframe>
             </div>
             <hr>
             <div id="smallframe">
               <div class="containerframe">
-                <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe" width="51"
-                height="36"></iframe>
+                <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe">
+                </iframe>
               </div>
             </div>
             <hr>
@@ -176,11 +184,11 @@
     &lt;link rel="stylesheet" href="style.css" type="text/css"&gt;
   &lt;/head&gt;
   &lt;body&gt;
-    &lt;div id="site"&gt;
+    &lt;div id="page"&gt;
       &lt;!-- BIG FRAME HTML CODE START --&gt;
       &lt;div id="bigframe"&gt;
         &lt;div class="containerframe"&gt;
-          &lt;iframe src="frame.html" class="myframe" width="51" height="36"&gt;
+          &lt;iframe src="frame.html" class="myframe"&gt;
             &lt;/iframe&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -189,7 +197,7 @@
       &lt;!-- SMALL FRAME HTML CODE START --&gt;
       &lt;div id="smallframe"&gt;
         &lt;div class="containerframe"&gt;
-          &lt;iframe src="frame.html" class="myframe" width="51" height="36"&gt;
+          &lt;iframe src="frame.html" class="myframe"&gt;
             &lt;/iframe&gt;
         &lt;/div&gt;
       &lt;/div&gt;
@@ -206,35 +214,31 @@
             <hr>
             <div class="pre">
               <pre class="brush: css;collapse: false">
-body, html, #site {
-  margin: 0;
-  padding: 0 ;
-}
-/* CSS FOR THE EXEMPLE PAGE */
-#site {
-  width: 100%;/* THE DIV SITE SET TO 100% TO TAKE ALL THE PAGE */
-}
+/*START OF CSS FOR THE EXEMPLE */
 #bigframe {
-  width: 80%; /* THE BIGFRAME WAS SET TO 80% OF THE DIV SITE  */
+  width: 80%; /* the bigframe was set to 80% of this page  */
   margin: auto;
 }
 #smallframe {
-  width: 40%;/* THE SMALFRAME WAS SET TO 40% OF THE DIV SITE */
+  width: 40%; /* the smalframe was set to 40% of this page */
   margin: auto;
 }
-/*END OF CSS FOR THIS PAGE */
+/*END OF CSS FOR THE EXEMPLE*/
 
-/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE THE VALUES !!! */
+/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE ANY VALUES except your desired aspect ratio !!! */
 .containerframe {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-top: 56.25%;
 }
 .myframe {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -243,11 +247,11 @@ body, html, #site {
             </div>
             <hr>
             <p>
-              Like you can see the frame have exactely the same parameter for the 2 size.
+              Like you can see the iframe have exactely the same parameter.
               <br>
               Only the size of the div <em>"bigframe"</em> and <em>"smallframe"</em> change in the Css !
               <br>
-              With the Css trick the frames adapt to the size of the browser window !
+              With CSS trick, iframes adapt to the size of the browser window and maintain the aspect ratio !
             </p>
             <hr>
             <h2>
@@ -260,25 +264,24 @@ body, html, #site {
             <pre><code>class="myframe"</code></pre>
             <p></p>
             <p>
-              <strong>2: You have to give a ratio to the iframe !</strong>
-              <br>
-              <span class="code">It's just a height and width that you have to give, the values you give don't really
-              matter but you have to put them in !</span>
-            </p>
-            <pre><code>width="51" height="36"</code></pre>
-            <p></p>
-            <p>
-              <strong>3: The iFrame must be placed in a div !</strong>
+              <strong>2: The iFrame must be placed inside a div !</strong>
             </p>
             <pre><code>&lt;div class="containerframe"&gt;</code></pre>
             <p></p>
             <p>
-              It looks like this.
+              <strong>3: Chose the Aspect Ratio you want for the iframe !<span style="font-size: smaller"> <a href="AspectRatio.html" target="_blank" title="Aspect Ratio">( Aspect Ratio Exemples )</a></span></strong>
+              <br>
+              <span class="code">by changing the padding-top in the Css (16:9, 4:3 ...ect) !</span>
+            </p>
+            <pre><code>padding-top:</code></pre>
+            <p></p>
+            <p>
+              The Html looks like this.
             </p>
             <div class="pre">
               <pre class="brush: xml;collapse: false">
 &lt;div class="containerframe"&gt;
-&lt;iframe src="frame.html" class="myframe" width="51" height="36"&gt;
+&lt;iframe src="frame.html" class="myframe"&gt;
  &lt;/iframe&gt;
 &lt;/div&gt;
 </pre>
@@ -291,22 +294,30 @@ body, html, #site {
             <p>
               <strong>Here is just the Css trick to make the Frame fully Responsive ! you can chage the class Name but
               <br>
-              DO NOT CHANGE THE VALUES !</strong>
+              DO NOT CHANGE ANY VALUES except your desired aspect ratio !</strong><br>
+               I give you the different Aspect Ratio in the Css !
             </p>
             <div class="pre">
               <pre class="brush: css;collapse: false">
 
-/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE THE VALUES !!! */
+/* START OF THE CSS TRICK, IMPORTANT!!! DO NOT CHANGE ANY VALUES except your desired aspect ratio !!! */
 .containerframe {
   position: relative;
+  overflow: hidden;
   width: 100%;
   height: 0;
-  padding-bottom: 56.25%;
+  padding-top: 56.25%;  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+/*  padding-top: 75%;        /*   for 4:3 Aspect Ratio */
+/*  padding-top: 66.66%;     /*   for 3:2 Aspect Ratio */
+/*  padding-top: 177.77%;    /*   for 9:16 Aspect Ratio  phone portrait ratio */
+/*  padding-top: 100%;       /*   for 1:1 Aspect Ratio Height and Width is Always Equal */
 }
 .myframe {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
   height: 100%;
 }
@@ -331,23 +342,30 @@ body, html, #site {
     &lt;style type="text/css"&gt;
     .containerframe {
       position: relative;
+      overflow: hidden;
       width: 100%;
       height: 0;
-      padding-bottom: 56.25%;
-    }
+      padding-top: 56.25%;  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  /*  padding-top: 75%;        /*   for 4:3 Aspect Ratio */
+  /*  padding-top: 66.66%;     /*   for 3:2 Aspect Ratio */
+  /*  padding-top: 177.77%;    /*   for 9:16 Aspect Ratio  phone portrait ratio */
+  /*  padding-top: 100%;       /*   for 1:1 Aspect Ratio */
+        }
     .myframe {
       position: absolute;
       top: 0;
       left: 0;
+      bottom: 0;
+      right: 0;
       width: 100%;
       height: 100%;
-    }
+}
     &lt;/style&gt;
   &lt;/head&gt;
   &lt;body&gt;
     &lt;div class="containerframe"&gt;
-      &lt;iframe src="frame.html" class="myframe" width="51" height=
-      "36"&gt;&lt;/iframe&gt;
+      &lt;iframe src="frame.html" class="myframe"&gt;
+      &lt;/iframe&gt;
     &lt;/div&gt;
   &lt;/body&gt;
 &lt;/html&gt;
@@ -355,7 +373,7 @@ body, html, #site {
             </div>
             <hr>
             <h1>
-              Just 1 div, 1 size, 2 classes and 9 lines of Css, easy right ?
+              Just 1 div, 2 classes and 12 lines of Css, easy right ?
             </h1>
             <hr>
           </div>
