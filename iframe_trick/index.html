@@ -97,12 +97,17 @@
 
     span.code {
         font-size: smaller;
-    } strong a  {  text-decoration: none; color: rgba(7, 151, 195);
+    }
+    strong a  {
+        text-decoration: none; color: rgba(7, 151, 195);
 
     }
-   strong a:hover
+    strong a:hover
      {
         color: #ff8c00;
+    }
+    span.ratio {
+        font-size: smaller
     }
     </style>
   </head>
@@ -123,9 +128,9 @@
             <hr>
             <p>
               Many people who need or want to insert an iframe into their site struggle to make this frame fully
-              responsive to all screen sizes and maintain the aspect ratio ! They try to use JavaScript most of the time, which works but can be
-              difficult to manage if you are not familiar with JavaScript! So I will give you a very simple CSS trick!
-              When you see how easy it is to do, you will be surprised !
+              responsive to all screen sizes and maintain the aspect ratio ! They try to use JavaScript most of the
+              time, which works but can be difficult to manage if you are not familiar with JavaScript! So I will give
+              you a very simple CSS trick! When you see how easy it is to do, you will be surprised !
             </p>
             <hr>
             <h2>
@@ -134,8 +139,8 @@
             <hr>
             <p>
               First look at this example where you have 2 iframes, linked to a html page with one of my pure js
-              animations, they are identical but inserted in 2 divs with different sizes, resize your browser
-              window, you will see the adaptation of the iframes !
+              animations, they are identical but inserted in 2 divs with different sizes, resize your browser window,
+              you will see the adaptation of the iframes !
             </p>
             <p class="btt">
               <br>
@@ -150,14 +155,12 @@
             </p>
             <br>
             <div class="containerframe">
-              <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe">
-               </iframe>
+              <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe"></iframe>
             </div>
             <hr>
             <div id="smallframe">
               <div class="containerframe">
-                <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe">
-                </iframe>
+                <iframe src="../Exemple_ShowHide_+_SyntaxHighlighter/files/media/index.html" class="maframe"></iframe>
               </div>
             </div>
             <hr>
@@ -269,7 +272,8 @@
             <pre><code>&lt;div class="containerframe"&gt;</code></pre>
             <p></p>
             <p>
-              <strong>3: Chose the Aspect Ratio you want for the iframe !<span style="font-size: smaller"> <a href="AspectRatio.html" target="_blank" title="Aspect Ratio">( Aspect Ratio Exemples )</a></span></strong>
+              <strong>3: Chose the Aspect Ratio you want for the iframe ! <span class="ratio"><a href="AspectRatio.html"
+              target="_blank" title="Aspect Ratio">( Aspect Ratio Exemples )</a></span></strong>
               <br>
               <span class="code">by changing the padding-top in the Css (16:9, 4:3 ...ect) !</span>
             </p>
@@ -294,8 +298,9 @@
             <p>
               <strong>Here is just the Css trick to make the Frame fully Responsive ! you can chage the class Name but
               <br>
-              DO NOT CHANGE ANY VALUES except your desired aspect ratio !</strong><br>
-               I give you the different Aspect Ratio in the Css !
+              DO NOT CHANGE ANY VALUES except your desired aspect ratio !</strong>
+              <br>
+              I give you the different Aspect Ratio in the Css !
             </p>
             <div class="pre">
               <pre class="brush: css;collapse: false">
