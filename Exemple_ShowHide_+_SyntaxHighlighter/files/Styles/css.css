@@ -227,3 +227,28 @@ a.modal-open:hover {
     color: #ff6600;
 }
 /* END MODAL CSS */
+ #hide {
+            display: none;
+        }
+
+        #hide:target {
+            display: block;
+        }
+
+        a.sh {
+            transition: all 1.2s ease-in-out;
+            display: block;
+            padding: 20px;
+            color: #f60;
+            font-weight: bold;
+            margin: 10px auto;
+            width: 100px;
+            background: #252525;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        a.sh:hover {
+            background: rgba(0, 0, 0, 0.5);
+        }
