@@ -154,7 +154,7 @@ div #xml {
     color: #fff;
     border-radius: 20px;
 }
-#pre {
+.pre {
     font-size: 0.85rem;
     max-width: 600px;
     min-width: 420px;

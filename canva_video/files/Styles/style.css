@@ -202,7 +202,7 @@ code {
         monospace;
     line-height: 1.6;
 }
-#pre {
+.pre {
     font-size: 0.9rem;
     max-width: 600px;
     min-width: 420px;
