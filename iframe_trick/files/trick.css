@@ -1,0 +1,90 @@
+
+h1 {
+        color: #c6c6c6;
+        font-size: 1.4rem;
+    }
+    h2 {
+        color: rgba(7, 151, 195, 0.5);
+        font-size: 1.1rem;
+    }
+    .containerframe {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        height: 0;
+        padding-top: 56.25%;
+    }
+    .maframe {
+        border: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    #smallframe {
+        width: 40%;
+        margin: auto;
+    }
+    #hide {
+        display: none;
+    }
+    #hide:target {
+        display: block;
+    }
+
+    .btt a {
+        border-radius: 10px;
+        transition: all 1.2s ease-in-out;
+        border: none;
+        padding: 15px 30px 15px 30px;
+        background: #111;
+        cursor: pointer;
+        font-size: 1rem;
+        text-decoration: none;
+        color: rgba(7, 151, 195);
+        font-weight: 600;
+    }
+    p.btt {
+        width: 80px;
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .btt:hover a {
+        background: rgba(0, 0, 0, 0.1);
+        transition: all 1.2s ease-in-out;
+        color: #ff8c00;
+    }
+    .pre {
+        font-size: 0.8rem;
+    }
+    code {
+        border-radius: 10px;
+        color: #5ba1cf;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.8rem;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 5px 10px 5px 10px;
+    }
+    .emo {
+        font-size: 30px;
+        color: rgba(7, 151, 195);
+    }
+
+    span.code {
+        font-size: smaller;
+    }
+    strong a  {
+        text-decoration: none; color: rgba(7, 151, 195);
+
+    }
+    strong a:hover
+     {
+        color: #ff8c00;
+    }
+    span.ratio {
+        font-size: smaller
+    }
