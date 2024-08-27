@@ -1,131 +1,142 @@
-body {  background: #212121;
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  font-family: Quicksand,'Helvetica Neue',Arial,sans-serif;  font-size: 1em;
-  line-height: 18px;
-  border: 0;
+body {
+    background: #212121;
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Quicksand, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1em;
+    line-height: 18px;
+    border: 0;
 }
-a{
-  text-decoration: none;
+a {
+    text-decoration: none;
 }
 
 .optionset1b {
-  background: #212121;
-  color: #FF822E;
-     -moz-border-radius: 10px 10px;
-  -webkit-border-radius: 10px 10px;
-          border-radius: 10px 10px 10px 10px;
+    background: #212121;
+    color: #ff822e;
+    -moz-border-radius: 10px 10px;
+    -webkit-border-radius: 10px 10px;
+    border-radius: 10px 10px 10px 10px;
 }
-h2, h3 {
-  color: #0E7DCC;
+h2,
+h3 {
+    color: #0e7dcc;
 }
 h1 {
-  font-size: 24px;
-  line-height: 30px;
+    font-size: 24px;
+    line-height: 30px;
 }
- h1 i {
-  font-size: 16px;
+h1 i {
+    font-size: 16px;
 }
 h2 {
-  font-size: 18px;
-  line-height: 20px;
+    font-size: 18px;
+    line-height: 20px;
 }
 
 iframe {
-  border-radius:10px;
-  background-color: #eee;
+    border-radius: 10px;
+     background: #121212;
+    color: #c6c6c6;
 }
-.optionset1a, body {
-  background: #212121;
+.optionset1a,
+body {
+    background: #212121;
 }
-.optionset1b p{
- font: 1rem  "Trebuchet MS", Helvetica, sans-serif
-
+.optionset1b p {
+    font:
+        1rem 'Trebuchet MS',
+        Helvetica,
+        sans-serif;
 }
-  strong{
- font: 1rem bold  "Trebuchet MS", Helvetica, sans-serif
-
+strong {
+    font:
+        1rem bold 'Trebuchet MS',
+        Helvetica,
+        sans-serif;
 }
 .optionset1b hr {
-  background-color: #50719b;
+    background-color: #50719b;
 
-  height: 2px;
-  border: 0;
+    height: 2px;
+    border: 0;
 }
 
 a {
-  color: #24d;
+    color: #24d;
 }
 body {
-  color: #111;
+    color: #111;
 }
 
 .samplecode {
-  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  border-radius:10px;
-  font-size: 14px;
-  font-weight: 700;
-  margin: 5px 0 0;
-  border: thin solid rgba(7,151,195, .8);
-  padding: 2px 2px 2px 5px;
-  background:#121212 ;
-  color:#C6C6C6;
+    font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 5px 0 0;
+    border: thin solid rgba(7, 151, 195, 0.8);
+    padding: 2px 2px 2px 5px;
+    background: #121212;
+    color: #c6c6c6;
 }
 .content {
-  width: 940px;
-  position: relative;
-  margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+    width: 940px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .wholecontent {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.content {
-  padding-top: 10px;
-  padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-a, body, div, img {
-  margin: 0;
-  padding: 0;
+a,
+body,
+div,
+img {
+    margin: 0;
+    padding: 0;
 }
-a, div, img {
-  border: 0;
+a,
+div,
+img {
+    border: 0;
 }
 h2.c1 {
-  margin-bottom: 50px;
+    margin-bottom: 50px;
 }
 a {
-  color: #FF822E;
+    color: #ff822e;
 }
 iframe.c2 {
-  width: 100%;
-  height: 200px;
+    width: 100%;
+    height: 200px;
 }
 div.c1 {
-     background: #212121;
-     /* margin-top: -8px;*/
-      flex:0 1 auto;
-      align-self: auto;
-      text-align: center;
-      width: 100%;
-      margin-bottom: 10px;
+    background: #212121;
+    /* margin-top: -8px;*/
+    flex: 0 1 auto;
+    align-self: auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
 }
 iframe.c3 {
-  width: 100%;
-  height: 380px;
+    width: 100%;
+    height: 380px;
 }
- div.c1 img{
-   width: 300px;
-   height: 112px;
-
- }
-  div.c1 h2 {
+div.c1 img {
+    width: 300px;
+    height: 112px;
+}
+div.c1 h2 {
     float: left;
     margin: 10px;
     margin-top: 50px;

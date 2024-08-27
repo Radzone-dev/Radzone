@@ -198,7 +198,8 @@ a.modal-open:hover {
     z-index: 9999;
     opacity: 1;
 }
-.modal-close { width: 20px;
+.modal-close {
+    width: 20px;
     height: 20px;
 
     float: right;
