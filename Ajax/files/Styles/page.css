@@ -15,7 +15,7 @@ html{background: #212121}
 .bt{
   cursor: pointer;
 } img#zoom {
-   cursor: url(magnifier.png) 10 14, pointer;
+   cursor: url(113.png) 10 14, pointer;
 }
 div, img#zoom {
   background-color: #fff;
@@ -168,4 +168,7 @@ img#zoom:hover {
 ul hr:first-of-type {
   width: 0;
   height: 0;
+}
+video{
+    border-radius:10px;
 }
