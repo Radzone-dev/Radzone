@@ -119,7 +119,7 @@ because these examples were designed for beginners and I don't want to confuse t
             <div class="pre">
               <h4>
                 CODE HTML
-              </h4>
+                </h4>
               <pre class="brush: html;">
 &lt;video id="videoclip" controls width="80%" title="Video title"&gt;
     &lt;source id="mp4video" src="" type="video/mp4"/&gt;
@@ -173,13 +173,14 @@ because these examples were designed for beginners and I don't want to confuse t
               <h4>
                 CODE HTML
               </h4>
+               <cite>In 3 separate divs, just to not confuse you with the extra js needed to be able to use a single div like I did on this page </cite>
               <pre class="brush: html;collapse: false">
 &lt;div id="button"&gt;
   &lt;button class="appelvideo"&gt;Get Html Video&lt;/button&gt;
   &lt;button class="btnxml"&gt;Get Book XML &lt;i&gt;(list)&lt;/i&gt;&lt;/button&gt;
   &lt;button class="btnjson"&gt;Get Book Json &lt;i&gt;(table)&lt;/i&gt;&lt;/button&gt;
 &lt;/div&gt;
-&lt;div id="objet1"&gt;
+&lt;div id="video"&gt;
 &lt;/div&gt;
  &lt;div id="json_book"&gt;
 &lt;/div&gt;
@@ -199,7 +200,7 @@ $(document).ready(function() {
   $.ajax({
    url: "files/video.html",
     success: function(result) {
-     $("#objet1").html(result);
+     $("#video").html(result);
      }
           });
         });
