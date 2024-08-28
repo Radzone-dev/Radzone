@@ -91,9 +91,9 @@ because these examples were designed for beginners and I don't want to confuse t
               </h4>
               <pre class="brush: js;collapse: false">
   $(document).ready(function() {
-    $("#videohtml").html('&lt;video loop id="Radzone" width="80%"&gt;
-     &lt;source src="video/Radzone.mp4"/&gt;
-      &lt;/video&gt;');
+    $("#videohtml").html('<video loop id="Radzone" width="80%"></video>
+     <source src="video/Radzone.mp4"/>
+      </video>');
        $("#Radzone")[0].play();<!-- For autoplay -->
   });
         </pre>
@@ -204,90 +204,91 @@ $(document).ready(function() {
    });</pre><h4>
                 CODE JQUERY Get Book XML
               </h4>
-              <pre class="brush: js;">
+          <pre class="brush: js;">
 $(document).ready(function() {
-  $(".btnxml").click(function () {
-  //$("#objet1").empty(); only for this page
-   $.ajax({
-   type: "GET",
-   url: "files/book.xml",
-   dataType: "xml",
+$(".btnxml").click(function () {$("#xml").show();
+      $("#objet1").empty();
+       $.ajax({
+    type: "GET",
+    url: "files/book.xml",
+    dataType: "xml",
 
-//error: function (e) {
-// alert("An error occurred while processing XML file");
-// console.log("XML reading Failed: ", e);
-// },
+    //error: function (e) {
+    // alert("An error occurred while processing XML file");
+   // console.log("XML reading Failed: ", e);
+   // },
     success: function (response) {
+    // make sue the ul is empty
+    // before appending data
 
-    // make sure the ul is empty
-  $("ul.Book").children().remove();
-   // before appending data
-  $(response).find("book").each(function () {
- var _author = 'Author: ' + $(this).find('author').text();
-   console.log(_author);
-   var _title = 'Title: ' + $(this).find('title').text();
-   var _genre = 'Genre: ' + $(this).find('genre').text();
-   var _price = 'Price: ' + $(this).find('price').text();
-   var _description = 'Description: ' + $(this).find('description').text();
+        $("ul.Book").children().remove();
 
-  // add content to the HTML
-    $("ul.Book").append('&lt;hr&gt;' + '&lt;li&gt;' + _author + '&lt;/li&gt;');
-    $("ul.Book").append('&lt;li&gt;' + _title + '&lt;/li&gt;');
-    $("ul.Book").append('&lt;li&gt;' + _genre + '&lt;/li&gt;');
-    $("ul.Book").append('&lt;li&gt;' + _price + '&lt;/li&gt;');
-    $("ul.Book").append('&lt;li&gt;' + _description + '&lt;/li&gt;');
-     });
+        $(response).find("book").each(function () {
+            var _author = 'Author: ' + $(this).find('author').text();
+            console.log(_author);
+            var _title = 'Title: ' + $(this).find('title').text();
+            var _genre = 'Genre: ' + $(this).find('genre').text();
+            var _price = 'Price: ' + $(this).find('price').text();
+            var _description = 'Description: ' + $(this).find('description').text();
+
+            // add content to the HTML
+            $("ul.Book").append('<hr>' + '<li>' + _author + '</li>');
+            $("ul.Book").append('<li>' + _title + '</li>');
+            $("ul.Book").append('<li>' + _genre + '</li>');
+            $("ul.Book").append('<li>' + _price + '</li>');
+            $("ul.Book").append('<li>' + _description + '</li>');
+        });
     }
-  });
- });
 });
-   </pre>
+});
+});
+</pre>
    <h4>
     CODE JQUERY  Get Book Json
    </h4>
-              <pre class="brush: js;">
+      <pre class="brush: js;">
 $(document).ready(function() {
-  $(".btnjson").click(function() {
-// $("ul.Book").children().remove(); only for this page
-    var displayResources = $("#objet1");
+$(".btnjson").click(function() {$("#xml").hide();
+  $("ul.Book").children().remove();
+  var displayResources = $("#objet1");
 
-// displayResources.text("Loading data from JSON source..."); wait message if the json very big
+ // displayResources.text("Loading data from JSON source..."); wait message if the json very big
 
   $.ajax({
-   type: "GET",
-   url: "files/book.json",
-   dataType : "json",
-   success: function(result) {
-   console.log(result);
-    var output =
-    "&lt;table id=table_jason&gt;&lt;tbody&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Author&lt;/th&gt;&lt;th&gt;Price&lt;/th&gt;&lt;th&gt;genre&lt;/th&gt;&lt;th&gt;title&lt;/th&gt;&lt;th&gt;description&lt;/th&gt;&lt;/thead&gt;";
-    for (var i in result) {
-    output +=
-     "&lt;tr&gt;&lt;td&gt;" +
-     result[i].author +
-     "&lt;/td&gt;&lt;td&gt;" +
-     result[i].price +
-     "&lt;/td&gt;&lt;td&gt;" +
-     result[i].genre +
-     "&lt;/td&gt;&lt;td&gt;" +
-     result[i].title +
-     "&lt;/td&gt;&lt;td&gt;" +
-     result[i].description +
-     "&lt;/td&gt;&lt;/tr&gt;";
-              }
-      output += "&lt;/tbody&gt;&lt;/table&gt;";
+    type: "GET",
+    url: "files/book.json",
+    dataType : "json",
+    success: function(result) {
+      console.log(result);
+      var output =
+        "<table id=table_jason><tbody><thead><tr><th>Author</th><th>Price</th><th>genre</th><th>title</th><th>description</th></tr></thead>";
+      for (var i in result) {
+        output +=
+          "<tr><td>" +
+          result[i].author +
+          "</td><td>" +
+          result[i].price +
+          "</td><td>" +
+          result[i].genre +
+          "</td><td>" +
+          result[i].title +
+          "</td><td>" +
+          result[i].description +
+          "</td></tr>";
+      }
+      output += "</tbody></table>";
+
       displayResources.html(output);
-// $("table").addClass("table_book_json");  Insert a class to all the tables in the page
-// $("#table_jason").addClass("table_book_json");  Insert a class only to the element with id="table_jason"
-        }
-     });
-   });
+      $("#table_jason").addClass("table_book_json"); // Insert a class to the table
+    }
+  });
+});
 });
 </pre>     <h4>
                 CODE for book.xml
               </h4>
               <pre class="brush: xml;">
-&lt;?xml version="1.0" encoding="UTF-8"?&gt;   
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
 &lt;catalog&gt;
   &lt;book&gt;
     &lt;author&gt;Doe, John&lt;/author&gt;
@@ -444,16 +445,18 @@ $(document).ready(function() {
               <h4>
                 CODE JQUERY
               </h4>
-              <pre class="brush: js;;collapse: false">
+      <pre class="brush: js;;collapse: false">
+  $(document).ready(function() {
 $("#btn").click(function(event) {
- $.getJSON("files/user.json", function(user) {
-  $("#output").html("&lt;p&gt; Name: " +
-     user.name + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Gender: " +
-     user.gender + "&lt;/p&gt;");
-  $("#output").append("&lt;p&gt;Salary: " +
-     user.salary + "&lt;/p&gt;");
-    });
+  $.getJSON("files/user.json", function(user) {
+    $("#output").html("<p> Name: " +
+      user.name + "</p>");
+    $("#output").append("<p>Gender: " +
+      user.gender + "</p>");
+    $("#output").append("<p>Salary: " +
+      user.salary + "</p>");
+  });
+});
 });
 </pre>
               <h4>
