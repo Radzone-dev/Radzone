@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>
-      jQuery Ajax demo
+        jQuery Ajax demo
     </title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,75 +21,75 @@
     <script type="text/javascript" src="files/Scripts/shBrushJScript.js"></script>
     <script type="text/javascript" src="files/Scripts/shBrushXml.js"></script>
     <script type="text/javascript" src="files/Scripts/shBrushPlain.js"></script>
-    </head>
-  <body>
+    <script type="text/javascript" src="files/Scripts/shBrushPhp.js"></script>
+</head>
+<body>
     <div class="flex-container">
-      <div class="header">
-        <img class="logo" src="" alt="logo">
-      </div>
-      <div class="item2">
-        <div class="content">
-          <div class="method">
-            <p>A minimum knowledge of Css and Html is necessary to understand and use jQuery !</p>
-            <p>
-            All the jQuery code you have here can be optimized! I didn't use "var" or "array"... etc.,
-because these examples were designed for beginners and I don't want to confuse them with a lot of code!
-            </p>
-            <p>
-              <em>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
+        <div class="header">
+            <img class="logo" src="" alt="logo">
+        </div>
+        <div class="item2">
+            <div class="content">
+                <div class="method">
+                    <p>A minimum knowledge of Css and Html is necessary to understand and use jQuery !</p>
+                    <p>
+                        All the jQuery code you have here can be optimized! I didn't use "var" or "array"... etc., because these examples were designed for beginners and I don't want to confuse them with a lot of code!
+                    </p>
+                    <p>
+                        <em>For more go to <a href="https://learn.jquery.com/" target="_blank" title=
               "learn.jquery">learn.jquery</a> or <a href="https://www.w3schools.com/jquery/default.asp" target="_blank"
               title="w3school">www.w3schools.com</a></em>
-            </p>
-            <h4>
-              <span class="c1">Warning !</span>
-              <br>1 :<span class="c1">All src= on files called must be granted to the receiving page !</span>
-            </h4> <p><img src="images/exemple.png" id="zoom" alt="exemple">
-              </p>
-            <h4>
-              2 : All the width you see in the code are in % !
-              <br>
-              <em><span class="c2">&lt;video id="Radzone" width="80%"&gt;</span></em>
-              <br>
-              This is suitable for this page, adapt it for you !
-            </h4>
-            <hr>
-            <h4>
-              The image in the header was also called by the jQuery .attr() method <em>( not ajax )</em>
-            </h4>
-            <div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
+                    </p>
+                    <h4>
+                        <span class="c1">Warning !</span>
+                        <br>1 :<span class="c1">All src= on files called must be granted to the receiving page !</span>
+                    </h4>
+                    <p><img src="images/exemple.png" id="zoom" alt="exemple">
+                    </p>
+                    <h4>
+                        2 : All the width you see in the code are in % !
+                        <br>
+                        <em><span class="c2">&lt;video id="Radzone" width="80%"&gt;</span></em>
+                        <br> This is suitable for this page, adapt it for you !
+                    </h4>
+                    <hr>
+                    <h4>
+                        The image in the header was also called by the jQuery .attr() method <em>( not ajax )</em>
+                    </h4>
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;collapse: false">
   &lt;div id="header"&gt;
     &lt;img class="logo" src="" alt="logo"&gt;
   &lt;/div&gt;
         </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;collapse: false">
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                        <pre class="brush: js;collapse: false">
   $(document).ready(function() {
     $(".logo").attr("src", "images/logo.png");
        });
         </pre>
-            </div>
-            <hr>
-            <h4>
-              video insertion by method .html() <em>( DOM Manipulation not ajax )</em>
-            </h4>
-            <div id="videohtml"></div>
-            <div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
+                    </div>
+                    <hr>
+                    <h4>
+                        video insertion by method .html() <em>( DOM Manipulation not ajax )</em>
+                    </h4>
+                    <div id="videohtml"></div>
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;collapse: false">
    &lt;div id="videohtml"&gt;  &lt;/div&gt;
         </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;collapse: false">
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                        <pre class="brush: js;collapse: false">
   $(document).ready(function() {
     $("#videohtml").html('<video loop id="Radzone" width="80%"></video>
      <source src="video/Radzone.mp4"/>
@@ -97,30 +97,30 @@ because these examples were designed for beginners and I don't want to confuse t
        $("#Radzone")[0].play();<!-- For autoplay -->
   });
         </pre>
-            </div>
-            <hr>
-            <h4>
-              video insertion method .attr() data-video <em>( Not ajax but can be useful )</em>
-            </h4>
-            <div class="list-item">
-              <ul>
-                <li class="item" data-video="video/Radzone.mp4">
-                  <a href="javascript:void(0)">Radzone</a>
-                </li>
-                <li class="item" data-video="video/Madagascar.mp4">
-                  <a href="javascript:void(0)">Madagascar</a>
-                </li>
-                <li class="item" data-video="video/mov_bbb.mp4">
-                  <a href="javascript:void(0)">Big Bunny</a>
-                </li>
-              </ul>
-            </div><video id="videoclip" poster="images/rz.jpg" controls="" width="80%" title="Video title"><source id=
+                    </div>
+                    <hr>
+                    <h4>
+                        video insertion method .attr() data-video <em>( Not ajax but can be useful )</em>
+                    </h4>
+                    <div class="list-item">
+                        <ul>
+                            <li class="item" data-video="video/Radzone.mp4">
+                                <a href="javascript:void(0)">Radzone</a>
+                            </li>
+                            <li class="item" data-video="video/Madagascar.mp4">
+                                <a href="javascript:void(0)">Madagascar</a>
+                            </li>
+                            <li class="item" data-video="video/mov_bbb.mp4">
+                                <a href="javascript:void(0)">Big Bunny</a>
+                            </li>
+                        </ul>
+                    </div><video id="videoclip" poster="images/rz.jpg" controls="" width="80%" title="Video title"><source id=
             "mp4video" src="video/Radzone.mp4" type="video/mp4"></video>
-            <div class="pre">
-              <h4>
-                CODE HTML
-                </h4>
-              <pre class="brush: html;">
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;">
 &lt;video id="videoclip" controls width="80%" title="Video title"&gt;
     &lt;source id="mp4video" src="" type="video/mp4"/&gt;
 &lt;/video&gt;
@@ -135,10 +135,10 @@ because these examples were designed for beginners and I don't want to confuse t
   &lt;/ul&gt;
 &lt;/div&gt;
         </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                        <pre class="brush: js;">
    $(document).ready(function() {
      $(".list-item").find(".item").on("click", function() {
         videoData = $(this).data("video");
@@ -150,31 +150,31 @@ because these examples were designed for beginners and I don't want to confuse t
     });
     });
         </pre>
-            </div>
-            <hr>
-            <h2>
-              AJAX jQuery
-            </h2>
-            <hr>
-            <div id="button">
-              <h4>
-                AJAX method .ajax() type: "GET"
-              </h4><button class="appelvideo">Get Html Video</button>
-              <button  class="btnxml">Get Book XML <i>(list)</i></button>
-              <button  class="btnjson">Get Book Json <i>(table)</i></button>
-             </div>
-            <div id="objet1">
-            </div>
-            <div id="xml">
-              <ul class="Book">
-              </ul>
-            </div>
-            <div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-               <cite>In 3 separate divs, just to not confuse you with the extra js needed to be able to use a single div like I did on this page </cite>
-              <pre class="brush: html;collapse: false">
+                    </div>
+                    <hr>
+                    <h2>
+                        AJAX jQuery
+                    </h2>
+                    <hr>
+                    <div id="button">
+                        <h4>
+                            AJAX method .ajax() type: "GET"
+                        </h4><button class="appelvideo">Get Html Video</button>
+                        <button class="btnxml">Get Book XML <i>(list)</i></button>
+                        <button class="btnjson">Get Book Json <i>(table)</i></button>
+                    </div>
+                    <div id="objet1">
+                    </div>
+                    <div id="xml">
+                        <ul class="Book">
+                        </ul>
+                    </div>
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <cite>In 3 separate divs, just to not confuse you with the extra js needed to be able to use a single div like I did on this page </cite>
+                        <pre class="brush: html;collapse: false">
 &lt;div id="button"&gt;
   &lt;button class="appelvideo"&gt;Get Html Video&lt;/button&gt;
   &lt;button class="btnxml"&gt;Get Book XML &lt;i&gt;(list)&lt;/i&gt;&lt;/button&gt;
@@ -189,12 +189,13 @@ because these examples were designed for beginners and I don't want to confuse t
   &lt;/ul&gt;
 &lt;/div&gt;
              </pre>
-              <h4>
-                CODE JQUERY Get Html Video
-              </h4><h4>
-              <em>( AJAX <a href="#button2">method .load()</a> is better for Html ! )</em>
-            </h4>
-              <pre class="brush: js;">
+                        <h4>
+                            CODE JQUERY Get Html Video
+                        </h4>
+                        <h4>
+                            <em>( AJAX <a href="#button2">method .load()</a> is better for Html ! )</em>
+                        </h4>
+                        <pre class="brush: js;">
 $(document).ready(function() {
  $(".appelvideo").click(function() {
   $.ajax({
@@ -204,10 +205,11 @@ $(document).ready(function() {
      }
           });
         });
-   });</pre><h4>
-                CODE JQUERY Get Book XML
-              </h4>
-          <pre class="brush: js;">
+   });</pre>
+                        <h4>
+                            CODE JQUERY Get Book XML
+                        </h4>
+                        <pre class="brush: js;">
 $(document).ready(function() {
 $(".btnxml").click(function () {
     $.ajax({
@@ -244,10 +246,10 @@ $(".btnxml").click(function () {
 });
 });
 </pre>
-   <h4>
-    CODE JQUERY  Get Book Json
-   </h4>
-      <pre class="brush: js;">
+                        <h4>
+                            CODE JQUERY Get Book Json
+                        </h4>
+                        <pre class="brush: js;">
 $(document).ready(function() {
 $(".btnjson").click(function() {
   var displayResources = $("#json_book");
@@ -285,10 +287,11 @@ $(".btnjson").click(function() {
   });
 });
 });
-</pre>     <h4>
-                CODE for book.xml
-              </h4>
-              <pre class="brush: xml;"><?xml version="1.0" encoding="UTF-8"?>
+</pre>
+                        <h4>
+                            CODE for book.xml
+                        </h4>
+                        <pre class="brush: xml;"><?xml version="1.0" encoding="UTF-8"?>
 <catalog>
    <book>
       <author>Doe, John</author>
@@ -327,10 +330,10 @@ $(".btnjson").click(function() {
    </book>
 </catalog>
 </pre>
-         <h4>
-                CODE for book.json
-              </h4>
-              <pre class="brush: plain;">
+                        <h4>
+                            CODE for book.json
+                        </h4>
+                        <pre class="brush: plain;">
 [
   {
     "author": "Doe, John",
@@ -369,83 +372,148 @@ $(".btnjson").click(function() {
   }
 ]
 </pre>
-    </div>
-        <hr>
-            <div id="button2">
-              <h4>
-                AJAX method .load()
-                <br>
-                <span class="c2"><em>(Call the video tag IDs on the .txt file in this example, but you can call whatever you want "id" "class" "tag"...ect ! same principle for a .html file )</em></span>
-              </h4><button class="appevid1">Madagascar</button> <button class="appevid2">Big Bunny</button>
-              <button class="appevid3">Radzone</button>
-            </div>
-            <div id="video"></div>
-            <div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
-    &lt;button class="appevid1"&gt; Madagascar&lt;/button&gt;
-    &lt;button class="appevid2"&gt; Big Bunny&lt;/button&gt;
-    &lt;button class="appevid3"&gt; Radzone&lt;/button&gt;
-
-  &lt;div id="video"&gt; &lt;/div&gt;
+                    </div>
+                    <hr>
+                    <div id="button3">
+                        <h4>
+                            AJAX method type: "GET" and php
+                        </h4>
+                        <br>
+                        <label>Enter a Number: <input type="text" style=" width: 40px; margin:10px " id="num"></label><br>
+                        <button type="button">Show Multiplication Table</button>
+                        <div id="result"></div>
+                    </div>
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;collapse: false">
+&lt;label&gt; Enter a Number: &lt;input type="text" id="num"&gt; &lt;/label&gt;
+ &lt;button type="button"&gt; Show Multiplication Table&lt;/button&gt;
+    &lt;div id="result"&gt; &lt;/div&gt;
     </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
- $(document).ready(function() {
-    $(".appevid1").click(function() {
-      $("#video").load("files/liste.txt #Madagascar");
-
-  });
-
-  $(".appevid2").click(function() {
-    $("#video").load("files/liste.txt #bigbunny");
-
-  });
-
-  $(".appevid3").click(function() {
-    $("#video").load("files/liste.txt #Radzone");
-
-  });
-});
+                        <h4>
+                            CODE PHP
+                        </h4>
+                        <pre class="brush: php;">
+&lt;?php
+if(isset($_GET["number"])){
+    $number = htmlspecialchars($_GET["number"]);
+    if(is_numeric($number) && $number &gt;  0 && $number &lt; 100){
+        echo "&lt;table&gt; ";
+        for($i=0; $i&lt;11; $i++){
+            echo "&lt;tr&gt; ";
+                echo "&lt;td&gt; $number x $i&lt;/td&gt; ";
+                echo "&lt;td&gt; =&lt;/td&gt; ";
+                echo "&lt;td&gt; " . $number * $i . "&lt;/td&gt; ";
+            echo "&lt;/tr&gt; ";
+        }
+        echo "&lt;/table&gt; ";
+    } else{
+        echo "&lt;p&gt; Please enter a number between 0 and 100.&lt;/p&gt; ";
+    }
+}
+?&gt;
         </pre>
-              <h4>
-                CODE texte for liste.txt
-              </h4>
-              <pre class="brush: plain;">
-  &lt;video id="Madagascar" controls autoplay width="80%"&gt;
-    &lt;source src="video/Madagascar.mp4" type= "video/mp4"&gt;
-  &lt;/video&gt;
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                        <pre class="brush: js;">
+$(document).ready(function() {
+$("button").click(function(){
+    // Get value from input element on the page
+    var numValue = $("#num").val();
 
-  &lt;video id="bigbunny" controls autoplay width="80%"&gt;
-    &lt;source src="video/mov_bbb.mp4" type="video/mp4"&gt;
-  &lt;/video&gt;
+    // Send the input data to the server using get
+    $.get("files/create-table.php", {number: numValue} , function(data){
+        // Display the returned data in browser
+        $("#result").html(data);
+    });
+});
+});
+  </pre>
+                    </div>
+                    <hr>
+                    <div id="button4">
+                        <h4>
+                            AJAX method type: "POST" and php
+                        </h4>
+                        <br>
+                        <form>
+      <label>Name: <input type="text" name="name" class="imp1"></label>
+      <br>
+      <label>Comment:
+      <textarea cols="50" name="comment"></textarea></label>
+      <br>
+      <input class="imp" type="submit" value="Send">
+    </form>
+    <div id="result2"></div>
+                    </div>
+<div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;collapse: false">
+&lt;form&gt;
+    &lt;label&gt; Name: &lt;input type="text" name="name" class="imp1"&gt;
+    &lt;/label&gt;
+    &lt;br&gt;
+    &lt;label&gt; Comment:
+    &lt;textarea cols="50" name="comment"&gt;
+    &lt;/textarea&gt;
+    &lt;/label&gt;
+    &lt;br&gt;
+    &lt;input class="imp" type="submit" value="Send"&gt;
+&lt;/form&gt; </pre>
+                        <h4>
+                            CODE PHP
+                        </h4>
+                        <pre class="brush: php;">
+<?php
+$name = htmlspecialchars($_POST["name"]);
+$comment = htmlspecialchars($_POST["comment"]);
+echo "Hi, $name. Your comment has been received successfully." . "<br>";/* Highliter bug take off the -- in <br--> */
+echo "Here's the comment what you've entered: $comment";
+?>
+        </pre>
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                    <pre class="brush: js;">
+$(document).ready(function() {
+$("form").submit(function(event){
+    // Stop form from submitting normally
+    event.preventDefault();
 
-  &lt;video id="Radzone" autoplay mute width="80%"&gt;
-    &lt;source src="video/Radzone.mp4" type="video/mp4"&gt;
-  &lt;/video&gt;
-      </pre>
-            </div>
-              <hr>
-            <h4>
-              AJAX method .getJSON()
-            </h4><button id="btn">Get User Data</button>
-            <div id="output"></div>
-            <div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
+    /* Serialize the submitted form control values to be sent to the web server with the request */
+    var formValues = $(this).serialize();
+
+    // Send the form data using post
+    $.post("files/display-comment.php", formValues, function(data){
+        // Display the returned data in browser
+        $("#result2").html(data);
+    });
+});
+});
+</pre>
+                    </div>
+                    <hr>
+                    <h4>
+                        AJAX method .getJSON()
+                    </h4><button id="btn">Get User Data</button>
+                    <div id="output"></div>
+                    <div class="pre">
+                        <h4>
+                            CODE HTML
+                        </h4>
+                        <pre class="brush: html;collapse: false">
    &lt;button id="btn"&gt;Get User Data&lt;/button&gt;
     &lt;div id="output"&gt;&lt;/div&gt;
     </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-      <pre class="brush: js;;collapse: false">
+                        <h4>
+                            CODE JQUERY
+                        </h4>
+                        <pre class="brush: js;;collapse: false">
   $(document).ready(function() {
 $("#btn").click(function(event) {
   $.getJSON("files/user.json", function(user) {
@@ -459,28 +527,29 @@ $("#btn").click(function(event) {
 });
 });
 </pre>
-              <h4>
-                CODE for user.json
-              </h4>
-              <pre class="brush: plain;collapse: false">
+                        <h4>
+                            CODE for user.json
+                        </h4>
+                        <pre class="brush: plain;collapse: false">
 {
   "name": "Rad Zone",
   "gender": "Male",
   "salary": "10 000000 €"
 }
-      </pre></div>
-
-</div>
-   </div>
+      </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item3"></div>
     </div>
-     <div class="item3"></div>
-      </div>
     <script src="js/jquery-3.7.1.min.js"></script>
     <script src="js/compressed.js"></script>
     <script>
-      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
-      SyntaxHighlighter.config.stripBrs = true;
-      SyntaxHighlighter.all();
+        SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+        SyntaxHighlighter.config.stripBrs = true;
+        SyntaxHighlighter.all();
     </script>
-  </body>
+</body>
 </html>
+

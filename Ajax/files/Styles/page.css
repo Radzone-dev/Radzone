@@ -114,6 +114,27 @@ button:hover {
     color: #ff8c00;
 }
 
+input.imp {
+    background: #111;
+    font-family: Georgia, serif;
+    font-size: 1.01rem;
+    transition: 1.2s ease-in-out;
+    cursor: pointer;
+    color: #0797c3;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 25px 5px 25px;
+}
+
+input.imp:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 1.2s ease-in-out;
+    color: #ff8c00;
+}
+
+input.imp1 {
+    margin: 10px;
+}
 div {
     background: #212121;
     color: #e8e8e8;
