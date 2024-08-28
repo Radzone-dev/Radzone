@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>
+      jQuery Ajax demo
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    .child,
+    .parent,
+    body,
+    html {
+    background:#212121;
+    }
+    .parent { color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    input.imp { width: 40px; margin:10px; color: #000000; }
+     button {
+    background: #111;
+    font-family: Georgia, serif;
+    font-size: 1.01rem;
+    transition: 1.2s ease-in-out;
+    cursor: pointer;
+    color: #0797c3;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 25px 5px 25px;
+    }
+
+    button:hover {
+    background: rgba(0, 0, 0, 0.1);
+    transition: all 1.2s ease-in-out;
+    color: #ff8c00;
+    }
+    </style>
+  </head>
+  <body>
+
+      <div id="button3">
+                        <h4>
+                            AJAX method type: "GET" and php
+                        </h4>
+                        <br>
+                        <label>Enter a Number: <input type="text" style=" width: 40px; margin:10px " id="num"></label><br>
+                        <button type="button">Show Multiplication Table</button>
+                        <div id="result"></div>
+                    </div>
+
+     <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/compressed.js"></script>
+  </body>
+</html>
