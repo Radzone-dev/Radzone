@@ -252,3 +252,11 @@ a.modal-open:hover {
         a.sh:hover {
             background: rgba(0, 0, 0, 0.5);
         }
+
+         a.expli {
+            color: #0985cc;
+        }
+
+         a.expli:hover {
+            color: #f60;
+        }

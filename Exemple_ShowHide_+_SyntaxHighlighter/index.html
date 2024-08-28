@@ -164,6 +164,7 @@
                     <p>
                         <strong class="strong" onmousedown="displayElements('containerframe')">Iframe onmousedown</strong> (
                         <i>Iframe possible si site externe cible ne bloque pas les iframe ou html cible perso comme ici sur une de mes pages avec une animation en pure js !</i>)<br>
+                        <a href="../iframe_trick/" target="_blank" class="expli" title="iframe">Explications Ici</a>
                         <div id="containerframe" style="display: none">
                             <iframe src="files/media/" name="IFrame" class="maframe" width="560" height="315">
             </iframe>
@@ -173,7 +174,7 @@
                 </div>
             </li>
         </ol>
-        <hr>
+        <hr><h2>Tout les Codes / All the codes</h2><hr>
         <!-- fin de div#centre -->
         <p> CODE HTML FULL PAGE <i>(no Lorem ipsum texte)</i></p>
         <div class="pre">
@@ -184,449 +185,471 @@
     &lt;meta charset="utf-8"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;
+    &lt;meta name="author" content="http://radservebeer.free.fr"&gt;
+     &lt;title&gt;
         Exemple Show/Hide avec js + Modal Pure CSS
     &lt;/title&gt;
-    &lt;link rel="stylesheet" type="text/css" href="files/Styles/css.css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="Styles.css"&gt;
 &lt;/head&gt;
 &lt;body&gt;
- &lt;h1&gt;
-   Exemple Show/Hide avec js + Modal Pure CSS
- &lt;/h1&gt;
-    &lt;div id="colonne1"&gt;
-  &lt;h2&gt;
+&lt;h1&gt;
+    Exemple Show/Hide avec js + Modal Pure CSS
+&lt;/h1&gt;
+&lt;div id="colonne1"&gt;
+&lt;h2&gt;
     Video MP4 Exemples
-  &lt;/h2&gt;
-   &lt;ul&gt;
-      &lt;li&gt;
-       &lt;a href="javascript:void(0)" id="link" onclick="displayElements('video')"&gt; VIDEO onclick lien&lt;/a&gt;
-   &lt;/li&gt;
-   &lt;li&gt;
-     Onclick img &lt;br&gt;  + play Video&lt;br&gt; &lt;br&gt;
-      &lt;img src="files/images/rz.jpg" id="zoom" style="cursor:pointer; border: 0" alt="rz" onclick="play_video();displayElements('video2')"&gt;
-   &lt;/li&gt;
-    &lt;/ul&gt;
-      &lt;p style="font-style: italic"&gt;
-       If Video or audio was start on show state they still running when hiden ,stop them before hiding ,Dont set autoplay or the media will start on page opening even they are hidden !&lt;br&gt; &lt;br&gt;  Si la vidéo ou l'audio sont démarré à l'état d'affichage,
-       ils fonctionnent toujours lorsqu'ils sont masqués, stopez-les avant de les masquer ,Ne définissez pas la lecture automatique (autoplay), sinon le média démarrera à l'ouverture de la page même s'il est masqué!
-      &lt;/p&gt;
-  &lt;/div&gt;
-    &lt;!-- fin de div#colonne1 --&gt;
-   &lt;div id="colonne2"&gt;
-     &lt;form accept-charset="UTF-8" style="display: none" id="form" action="action_page.php" autocomplete="off" method="get" name="form"&gt;
-      &lt;fieldset style="background: #3081CC; border-radius: 20px"&gt;
-        &lt;label for="name"&gt; Name&lt;/label&gt; &lt;br&gt;
-         &lt;input name="name" type="text" value="RadZone"&gt; &lt;br&gt;
-         &lt;input checked="checked" name="sex" type="radio" value="male"&gt;  Male&lt;br&gt;
-         &lt;input name="sex" type="radio" value="female"&gt;  Female&lt;br&gt;
-          &lt;textarea cols="20" rows="5"&gt; Long text.&lt;/textarea&gt; &lt;br&gt;
-        &lt;select&gt;
-         &lt;option selected="selected" value="1"&gt;
-          Yes
-         &lt;/option&gt;
-        &lt;option value="2"&gt;
-         No
-        &lt;/option&gt;
-   &lt;/select&gt; &lt;br&gt;
-    &lt;input name="democheckbox" type="checkbox" value="1"&gt;  Checkbox&lt;br&gt;
-      &lt;button type="submit" value="Submit"&gt; Submit&lt;/button&gt;
-     &lt;/fieldset&gt;
- &lt;/form&gt;
-    &lt;/div&gt;
-    &lt;!-- fin de div#colonne2 --&gt;
-  &lt;div id="centre"&gt;
-     &lt;h3 class="button" onclick="HideShow()" style="cursor:pointer;"&gt;
-      Show/Hide Possible mouse event
-    &lt;/h3&gt;
-  &lt;ul id="mouseevent" style="display: none"&gt;
-    &lt;li style="list-style-type: none"&gt;
-     &lt;strong&gt;  onclick&lt;/strong&gt; :&nbsp;&nbsp;User clicks on an element&lt;br&gt;
-     &lt;strong&gt;  oncontextmenu&lt;/strong&gt; :&nbsp;&nbsp;User right-clicks on an element&lt;br&gt;
-     &lt;strong&gt;  ondblclick&lt;/strong&gt; :&nbsp;&nbsp;User double-clicks on an element&lt;br&gt;
-     &lt;strong&gt;  onmouseenter&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves into an element&lt;br&gt;
-     &lt;strong&gt;  onmouseleave&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves out of an element&lt;br&gt;
-     &lt;strong&gt;  onmousemove&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves over an element&lt;br&gt;
-     &lt;strong&gt;  onmouseout&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves out of an element&lt;br&gt;
-     &lt;strong&gt;  onmouseover&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves onto an element&lt;br&gt;
-     &lt;strong&gt;  onmousedown&lt;/strong&gt; :&nbsp;&nbsp;Mouse button is pressed over an element&lt;br&gt;
-     &lt;strong&gt;  onmouseup&lt;/strong&gt; :&nbsp;&nbsp;Mouse button is released over an element&lt;br&gt;
+&lt;/h2&gt;
+&lt;ul&gt;
+    &lt;li&gt;
+        &lt;a href="javascript:void(0)" id="link" onclick="displayElements('video')"&gt; VIDEO onclick lien&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        Onclick img &lt;br&gt;  + play Video&lt;br&gt; &lt;br&gt;
+        &lt;img src="rz.jpg" id="zoom" style="cursor:pointer; border: 0" alt="rz" onclick="play_video();displayElements('video2')"&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
-    &lt;video id="video2" style="display: none" controlslist="nodownload" poster="files/images/rz.jpg" width="100%" height="100%"&gt;
-     &lt;source src="files/media/rz_2.mp4" type="video/mp4"&gt;
-    &lt;/video&gt;
-    &lt;video id="video" style="display: none" controls="" controlslist="nodownload" poster="files/images/Madagascar.jpg" width="100%" height="100%"&gt;
-     &lt;source src="files/media/Madagascar.mp4" type="video/mp4"&gt;
-    &lt;/video&gt;
-     &lt;ol&gt;
-       &lt;li&gt;
-        &lt;h2&gt;
-         Form
-     &lt;/h2&gt;
-    &lt;strong class="strong" onmouseenter="displayElements('form')"&gt; Form onmouseenter&lt;/strong&gt;  Dans la colonne de droite (In the right column)
-   &lt;/li&gt;
-   &lt;hr&gt;
-   &lt;li&gt;
-    &lt;h2 id="showhide"&gt;
-     Show/Hide Pure CSS
-    &lt;/h2&gt;
-     Un Show/Hide en pure CSS Aucun JS ! ( Show/Hide Pure CSS no JS ! )
-     &lt;a class="sh" href="#hide"&gt; Show&lt;/a&gt;
-      &lt;div id="hide"&gt;
-      &lt;br&gt;
-       &lt;p&gt; &lt;img src="files/images/tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
-       &lt;a class="sh" href="#showhide"&gt; Hide&lt;/a&gt;
-      &lt;/div&gt;
-      &lt;/li&gt;
-        &lt;hr&gt;
-      &lt;li&gt;
-       &lt;h2 id="mo"&gt;
-        Modal Pure CSS
-       &lt;/h2&gt;
-        Une Modal en pure CSS Aucun JS ! ( Modal Pure CSS no JS ! )
-        &lt;a class="modal-open" href="#modalcont"&gt; Click To Open Modal&lt;/a&gt;
-    &lt;div class="modal" id="modalcont"&gt;
-     &lt;div class="modal-content"&gt;
-      &lt;a href="#mo" class="modal-close" title="Close Modal"&gt; X&lt;/a&gt;
-       &lt;blockquote&gt; As the Mummy says&lt;br&gt;
-        &lt;span style="font-family:Arial, Helvetica, sans-serif; font-size: larger"&gt; “I love dusting days”&lt;/span&gt;
-       &lt;/blockquote&gt;
-        &lt;hr style="width: 50%; height: 1px; background-color: #FF6600"&gt;
-       &lt;blockquote&gt; Comme dit la Momie&lt;br&gt;
-      &lt;span style="font-family:Arial, Helvetica, sans-serif; font-size: larger"&gt; “J'adore les jours de dépoussiérage”&lt;/span&gt;
-       &lt;/blockquote&gt;
-   &lt;div class="modal-area"&gt;
-    &lt;p&gt;
-    &lt;img src="files/images/img.jpg" width="432" height="324" style="border: 0" alt="momie"&gt;
-    &lt;/p&gt;
+&lt;p style="font-style: italic"&gt;
+    If Video or audio was start on show state they still running when hiden ,stop them before hiding ,Dont set autoplay or the media will start on page opening even they are hidden !&lt;br&gt; &lt;br&gt;  Si la vidéo ou l'audio sont démarré à l'état d'affichage,
+    ils fonctionnent toujours lorsqu'ils sont masqués, stopez-les avant de les masquer ,Ne définissez pas la lecture automatique (autoplay), sinon le média démarrera à l'ouverture de la page même s'il est masqué!
+&lt;/p&gt;
 &lt;/div&gt;
+&lt;!-- fin de div#colonne1 --&gt;
+&lt;div id="colonne2"&gt;
+&lt;form accept-charset="UTF-8" style="display: none" id="form" action="action_page.php" autocomplete="off" method="get" name="form"&gt;
+    &lt;fieldset style="background: #3081CC; border-radius: 20px"&gt;
+        &lt;label for="name"&gt; Name&lt;/label&gt; &lt;br&gt;
+        &lt;input name="name" type="text" value="RadZone"&gt; &lt;br&gt;
+        &lt;input checked="checked" name="sex" type="radio" value="male"&gt;  Male&lt;br&gt;
+        &lt;input name="sex" type="radio" value="female"&gt;  Female&lt;br&gt;
+        &lt;textarea cols="20" rows="5"&gt; Long text.&lt;/textarea&gt; &lt;br&gt;
+        &lt;select&gt;
+      &lt;option selected="selected" value="1"&gt;
+        Yes
+      &lt;/option&gt;
+      &lt;option value="2"&gt;
+        No
+      &lt;/option&gt;
+    &lt;/select&gt; &lt;br&gt;
+        &lt;input name="democheckbox" type="checkbox" value="1"&gt;  Checkbox&lt;br&gt;
+        &lt;button type="submit" value="Submit"&gt; Submit&lt;/button&gt;
+    &lt;/fieldset&gt;
+&lt;/form&gt;
 &lt;/div&gt;
- &lt;/div&gt;
- &lt;/li&gt;
- &lt;hr&gt;
- &lt;li&gt;
-  &lt;h2&gt;
-   Audio
-  &lt;/h2&gt;
-   &lt;strong class="strong" onmouseout="displayElements('MP3')"&gt; MP3 onmouseout&lt;/strong&gt;
-    &lt;audio id="MP3" style="display: none;width:100%;height:20px; " controls controlslist="nodownload" preload="auto"&gt;
-     &lt;source src="files/media/Music.mp3"&gt;
-    &lt;/audio&gt; &lt;br&gt;
-   &lt;/li&gt;
-    &lt;hr&gt;
-    &lt;li&gt;
-     &lt;h2&gt;
-      Image
-     &lt;/h2&gt;
-      &lt;strong class="strong" onmouseup="displayElements('Image')"&gt; &lt;br&gt;
-       Image onmouseup
-     &lt;/strong&gt; &lt;br&gt;
-     &lt;img src="files/images/tree.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="tree"&gt; &lt;br&gt;
+&lt;!-- fin de div#colonne2 --&gt;
+&lt;div id="centre"&gt;
+&lt;h3 class="button" onclick="HideShow()" style="cursor:pointer;"&gt;
+    Show/Hide Possible mouse event
+&lt;/h3&gt;
+&lt;ul id="mouseevent" style="display: none"&gt;
+    &lt;li style="list-style-type: none"&gt;
+        &lt;strong&gt;  onclick&lt;/strong&gt; :&nbsp;&nbsp;User clicks on an element&lt;br&gt;
+        &lt;strong&gt;  oncontextmenu&lt;/strong&gt; :&nbsp;&nbsp;User right-clicks on an element&lt;br&gt;
+        &lt;strong&gt;  ondblclick&lt;/strong&gt; :&nbsp;&nbsp;User double-clicks on an element&lt;br&gt;
+        &lt;strong&gt;  onmouseenter&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves into an element&lt;br&gt;
+        &lt;strong&gt;  onmouseleave&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves out of an element&lt;br&gt;
+        &lt;strong&gt;  onmousemove&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves over an element&lt;br&gt;
+        &lt;strong&gt;  onmouseout&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves out of an element&lt;br&gt;
+        &lt;strong&gt;  onmouseover&lt;/strong&gt; :&nbsp;&nbsp;The mouse pointer moves onto an element&lt;br&gt;
+        &lt;strong&gt;  onmousedown&lt;/strong&gt; :&nbsp;&nbsp;Mouse button is pressed over an element&lt;br&gt;
+        &lt;strong&gt;  onmouseup&lt;/strong&gt; :&nbsp;&nbsp;Mouse button is released over an element&lt;br&gt;
     &lt;/li&gt;
-    &lt;hr&gt;
-    &lt;li&gt;
-    &lt;div&gt;
-     &lt;h2&gt;
-      Iframe Avec Trick CSS pour la Rendre 100% Responsive !
-     &lt;/h2&gt;
-       &lt;p&gt;
-       &lt;strong class="strong" onmousedown="displayElements('containerframe')"&gt; Iframe onmousedown&lt;/strong&gt;  (
-       &lt;i&gt; Iframe possible si site externe cible ne bloque pas les iframe ou html cible perso comme ici sur une de mes pages avec une animation en pure js !&lt;/i&gt; )&lt;br&gt;
- &lt;div class="containerframe" style="display: none"&gt;
-   &lt;iframe src="files/media/" name="IFrame" class="maframe" width="560" height="315"&gt;
-   &lt;/iframe&gt;
- &lt;/div&gt;
-   &lt;/p&gt;
- &lt;/div&gt;
-  &lt;/li&gt;
- &lt;/ol&gt;
- &lt;hr&gt;
-        &lt;!-- fin de div#centre --&gt;
+&lt;/ul&gt;
+&lt;video id="video2" style="display: none" controlslist="nodownload" poster="rz.jpg" width="100%" height="100%"&gt;
+&lt;source src="video2.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;video id="video" style="display: none" controls="" controlslist="nodownload" poster="Madagascar.jpg" width="100%" height="100%"&gt;
+&lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;
+&lt;ol&gt;
+&lt;li&gt;
+    &lt;h2&gt;
+        Form
+    &lt;/h2&gt;
+    &lt;strong class="strong" onmouseenter="displayElements('form')"&gt; Form onmouseenter&lt;/strong&gt;  Dans la colonne de droite (In the right column)
+&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;
+    &lt;h2 id="showhide"&gt;
+        Show/Hide Pure CSS
+    &lt;/h2&gt;
+    Un Show/Hide en pure CSS Aucun JS ! ( Show/Hide Pure CSS no JS ! )
+    &lt;a class="sh" href="#hide"&gt; Show&lt;/a&gt;
+    &lt;div id="hide"&gt;
+        &lt;br&gt;
+        &lt;p&gt; &lt;img src="tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
+        &lt;a class="sh" href="#showhide"&gt; Hide&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;
+&lt;h2 id="mo"&gt;
+    Modal Pure CSS
+&lt;/h2&gt;
+Une Modal en pure CSS Aucun JS ! ( Modal Pure CSS no JS ! )
+&lt;a class="modal-open" href="#modalcont"&gt; Click To Open Modal&lt;/a&gt;
+&lt;div class="modal" id="modalcont"&gt;
+&lt;div class="modal-content"&gt;
+    &lt;a href="#mo" class="modal-close" title="Close Modal"&gt; X&lt;/a&gt;
+    &lt;blockquote&gt; As the Mummy says&lt;br&gt;
+        &lt;span style="font-family:Arial, Helvetica, sans-serif; font-size: larger"&gt; “I love dusting days”&lt;/span&gt;
+    &lt;/blockquote&gt;
+    &lt;hr style="width: 50%; height: 1px; background-color: #FF6600"&gt;
+    &lt;blockquote&gt; Comme dit la Momie&lt;br&gt;
+        &lt;span style="font-family:Arial, Helvetica, sans-serif; font-size: larger"&gt; “J'adore les jours de dépoussiérage”&lt;/span&gt;
+    &lt;/blockquote&gt;
+    &lt;div class="modal-area"&gt;
+        &lt;p&gt;
+            &lt;img src="img.jpg" width="432" height="324" style="border: 0" alt="momie"&gt;
+        &lt;/p&gt;
+    &lt;/div&gt;
 &lt;/div&gt;
-    &lt;script src="files/Scripts/JavaScript.js"&gt; &lt;/script&gt;
+&lt;/div&gt;
+&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;
+    &lt;h2&gt;
+        Audio
+    &lt;/h2&gt;
+    &lt;strong class="strong" onmouseout="displayElements('MP3')"&gt; MP3 onmouseout&lt;/strong&gt;
+    &lt;audio id="MP3" style="display: none;width:100%;height:20px; " controls controlslist="nodownload" preload="auto"&gt;
+&lt;source src="Music.mp3"&gt;
+&lt;/audio&gt;
+&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;
+    &lt;h2&gt;
+        Image
+    &lt;/h2&gt;
+    &lt;strong class="strong" onmouseup="displayElements('Image')"&gt; &lt;br&gt;
+Image onmouseup
+&lt;/strong&gt; &lt;br&gt;
+    &lt;img src="tree.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="tree"&gt;
+&lt;/li&gt;
+&lt;hr&gt;
+&lt;li&gt;
+&lt;div&gt;
+    &lt;h2&gt;
+        Iframe Avec Trick CSS pour la Rendre 100% Responsive !
+    &lt;/h2&gt;
+&lt;p&gt;
+    &lt;strong class="strong" onmousedown="displayElements('containerframe')"&gt; Iframe onmousedown&lt;/strong&gt;  (
+    &lt;i&gt; Iframe possible si site externe cible ne bloque pas les iframe ou html cible perso comme ici sur une de mes pages avec une animation en pure js !&lt;/i&gt; )&lt;br&gt;
+    &lt;div id="containerframe" style="display: none"&gt;
+        &lt;iframe src="iframe.html" name="IFrame" class="maframe"&gt;
+&lt;/iframe&gt;
+    &lt;/div&gt;
+&lt;/p&gt;
+ &lt;/div&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;!-- fin de div#centre --&gt;
+&lt;/div&gt;
+ &lt;script src="JavaScript.js"&gt; &lt;/script&gt; <!-- THE Javascript -->
 &lt;/body&gt;
-
 &lt;/html&gt;
     </pre>
-        </div>
+        </div><hr>
         <p> CODE CSS FULL PAGE</p>
         <div class="pre">
             <pre class="brush: css;">
+
+ * {
+     font-family: Quicksand, 'Helvetica Neue', Arial, sans-serif;
+     font-size: 1em;
+ }
  html {
-  font-size: 100%;
-}
-body {
-  padding: 1em;
-  font-size: .85em;
-  font-family: Verdana, 'Bitstream Vera Sans', 'Lucida Grande', sans-serif;
-  background: #202020;
-}
-h1 {
-  margin-top: 0;
-  text-align: center;
-  background: #FFE4B5;
-}
-ol, ul, li {
-  padding: 0;
-  margin: 1em;
-}
-div#colonne1 {
-  float: left;
-  width: 200px;
-  padding: 1px 0;
-  background: #202020;
-  color: #c8ccbc;
-}
-div#colonne2 {
-  float: right;
-  width: 200px;
-  padding: 1px 0;
-}
-div#centre {
-  padding: 1px 20px;
-  margin-left: 210px;
-  margin-right: 210px;
-  background: #F0E68C;
-}
-.strong {
-  cursor:pointer;
-  color:#FF6600;
-}
-.strong:hover {
-  color:  #3e779d;
-}
-img#zoom {
-  width: 100px;
-  transition: transform .1s;
-}
-img#zoom:hover {
-      -ms-transform: scale(1.5); /* IE 9 */
-  -webkit-transform: scale(1.5); /* Safari 3-8 */
-          transform: scale(1.5);
-}
-#link {
-  color: #0bcc45;
-}
-#link:hover {
-  color: #f60;
-}
-/* SHOW HIDE PURE CSS */
- #hide {
-display: none;
-        }
-
-#hide:target {
- display: block;
-        }
-
-a.sh {
- transition: all 1.2s ease-in-out;
- display: block;
- padding: 20px;
- color: #f60;
- font-weight: bold;
- margin: 10px auto;
- width: 100px;
- background: #252525;
- text-align: center;
- text-decoration: none;
- border-radius: 20px;
-        }
-
-  a.sh:hover {
-background: rgba(0, 0, 0, 0.5);
-        }
- /* END SHOW HIDE PURE CSS */
-/* Trick CSS To Make Iframe Responsive */
-.containerframe {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%;  /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-/*  padding-top: 75%;        /*   for 4:3 Aspect Ratio */
-/*  padding-top: 66.66%;     /*   for 3:2 Aspect Ratio */
-/*  padding-top: 177.77%;    /*   for 9:16 Aspect Ratio  phone portrait ratio */
-/*  padding-top: 100%;       /*   for 1:1 Aspect Ratio Height and Width is Always Equal */
-}
-.myframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-/* END OF THE CSS TRICK */
-/* START Show/Hide Possible mouse event button CSS */
-.button {
-  text-align: center;
-  border-top: 1px solid #96d1f8;
-  background: #65a9d7;
-  background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
-  background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
-  background:    -moz-linear-gradient(top, #3e779d, #65a9d7);
-  background:     -ms-linear-gradient(top, #3e779d, #65a9d7);
-  background:      -o-linear-gradient(top, #3e779d, #65a9d7);
-  padding: 5px 10px;
-  -webkit-border-radius: 8px;
+     font-size: 1.1em;
+ }
+ body {
+     padding: 1em;
+     font-size: 0.85em;
+     font-family: Verdana, 'Bitstream Vera Sans', 'Lucida Grande', sans-serif;
+     background: #202020;
+ }
+ h1 {
+     margin-top: 0;
+     text-align: center;
+     background: #333333;
+     color: #c8ccbc;
+     -webkit-border-radius: 8px;
      -moz-border-radius: 8px;
-          border-radius: 8px;
-  -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-     -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-          box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
-  text-shadow: rgba(0, 0, 0, .4) 0 1px 0;
-  color: white;
-  font-size: 14px;
-  font-family: Georgia, serif;
-  text-decoration: none;
-  vertical-align: middle;
-}
-.button:hover {
-  border-top-color: #28597a;
-  background: #28597a;
-  color: #ccc;
-}
-.button:active {
-  border-top-color: #1b435e;
-  background: #1b435e;
-}
-/* END Show/Hide Possible mouse event button CSS */
+     border-radius: 8px;
+ }
+ ol,
+ ul,
+ li {
+     padding: 0;
+     margin: 1em;
+ }
+ div#colonne1 {
+     float: left;
+     width: 200px;
+     padding: 1px 0;
+     background: #202020;
+     color: #c8ccbc;
+ }
+ div#colonne2 {
+     float: right;
+     width: 200px;
+     padding: 1px 0;
+ }
+ div#centre {
+     -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+     border-radius: 8px;
+     padding: 1px 20px;
+     margin-left: 210px;
+     margin-right: 210px;
+     background: #222222;
+     color: #e8e8e8;
+ }
+ .strong {
+     cursor: pointer;
+     color: #ff6600;
+ }
+ .strong:hover {
+     color: #3e779d;
+ }
+ img#zoom {
+     width: 100px;
+     transition: transform 0.1s;
+ }
+ img#zoom:hover {
+     -ms-transform: scale(1.5); /* IE 9 */
+     -webkit-transform: scale(1.5); /* Safari 3-8 */
+     transform: scale(1.5);
+ }
+ #link {
+     color: #0985cc;
+ }
+ #link:hover {
+     color: #f60;
+ }
+ a {
+     text-decoration: none;
+ }
 
-/* START MODAL CSS */
-*.modal {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  box-sizing: border-box;
-  -webkit-font-smoothing: subpixel-antialiased !important;
-  -webkit-backface-visibility: hidden;
-}
-p.modal {
-  margin-bottom: 1em;
-}
-a.modal-open {
-  transition: all 1.2s ease-in-out;
-  display: block;
-  padding: 20px;
-  color: #f60;
-  font-weight: bold;
-  margin: 10px auto;
-  width: 200px;
-  background: #252525;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 20px;
-}
-a.modal-open:hover {
-  background: rgba(0, 0, 0, .5);
-}
-.modal {
-  background: rgba(0, 0, 0, .7);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  transition: all .5s ease-in-out;
-  opacity: 0;
-  z-index: -1;
-}
-.modal:target {
-  opacity: 1;
-  transition: all .5s ease-in-out;
-  z-index: +1;
-}
-.modal-content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 500px;
-  background: #252525;
-  border-radius: 20px;
-  transform: translate(-50%, -200%);
-  transition: all .5s ease-in-out;
-  perspective: 1000;
-  outline: 1px solid transparent;
-  opacity: 0;
-}
-.modal:target .modal-content {
-  transform: translate(-50%, -50%);
-  transition: all .5s ease-in-out;
-  transition-delay: .5s;
-  z-index: 9999;
-  opacity: 1;
-}
-.modal-close {
-  width: 20px;
-  height: 20px;
-  float: right;
-  text-decoration: none;
-  padding: 22px 22px;
-  color: #424242;
-  font-weight: 800;
-  transition: all .5s ease-in-out;
-  z-index: +1;
-  background: rgba(0, 0, 0, .1);
-  text-align: center;
-  border-radius: 150px;
-}
-.modal-close:hover {
-  color: #fff;
-  background: rgba(0, 0, 0, .5);
-}
-.modal-area {
-  padding: 20px;
-  text-align: center;
-}
-.modal-content blockquote{
-  display:block;
-  text-align:center;
-  color:#FF6600;
-}
-/* END MODAL CSS */
+ /* Trick CSS To Make Iframe Responsive */
+ #containerframe {
+     position: relative;
+     width: 100%;
+     height: 0;
+     padding-bottom: 56.25%;
+ }
+ .maframe {
+     border: none;
+     border-radius: 20px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
+ /* END Trick CSS To Make Iframe Responsive */
+
+ /* START Show/Hide Possible mouse event button CSS */
+ .button {
+     text-align: center;
+     border-top: 1px solid #96d1f8;
+     background: #65a9d7;
+     background: -webkit-gradient(
+         linear,
+         left top,
+         left bottom,
+         from(#3e779d),
+         to(#65a9d7)
+     );
+     background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+     background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+     background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+     background: -o-linear-gradient(top, #3e779d, #65a9d7);
+     padding: 5px 10px;
+     -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+     border-radius: 8px;
+     -webkit-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+     -moz-box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+     box-shadow: rgba(0, 0, 0, 1) 0 1px 0;
+     text-shadow: rgba(0, 0, 0, 0.4) 0 1px 0;
+     color: white;
+     font-size: 14px;
+     font-family: Georgia, serif;
+     text-decoration: none;
+     vertical-align: middle;
+ }
+ .button:hover {
+     border-top-color: #28597a;
+     background: #28597a;
+     color: #ccc;
+ }
+ .button:active {
+     border-top-color: #1b435e;
+     background: #1b435e;
+ }
+ /* END Show/Hide Possible mouse event button CSS */
+
+ /* START MODAL CSS */
+ *.modal {
+     padding: 0;
+     margin: 0;
+     position: relative;
+     box-sizing: border-box;
+     -webkit-font-smoothing: subpixel-antialiased !important;
+     -webkit-backface-visibility: hidden;
+ }
+ p.modal {
+     margin-bottom: 1em;
+ }
+ a.modal-open {
+     transition: all 1.2s ease-in-out;
+     display: block;
+     padding: 20px;
+     color: #f60;
+     font-weight: bold;
+     margin: 10px auto;
+     width: 200px;
+     background: #252525;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 20px;
+ }
+ a.modal-open:hover {
+     background: rgba(0, 0, 0, 0.5);
+ }
+ .modal {
+     background: rgba(0, 0, 0, 0.7);
+     position: fixed;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     transition: all 0.5s ease-in-out;
+     opacity: 0;
+     z-index: -1;
+ }
+ .modal:target {
+     opacity: 1;
+     transition: all 0.5s ease-in-out;
+     z-index: +1;
+ }
+ .modal-content {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     width: 500px;
+     background: #252525;
+     border-radius: 20px;
+     transform: translate(-50%, -200%);
+     transition: all 0.5s ease-in-out;
+     perspective: 1000;
+     outline: 1px solid transparent;
+     opacity: 0;
+ }
+ .modal:target .modal-content {
+     transform: translate(-50%, -50%);
+     transition: all 0.5s ease-in-out;
+     transition-delay: 0.5s;
+     z-index: 9999;
+     opacity: 1;
+ }
+ .modal-close {
+     width: 20px;
+     height: 20px;
+
+     float: right;
+     text-decoration: none;
+     padding: 22px 22px;
+     color: #424242;
+     font-weight: 800;
+     transition: all 0.5s ease-in-out;
+     z-index: +1;
+     background: rgba(0, 0, 0, 0.1);
+     text-align: center;
+     border-radius: 150px;
+ }
+ .modal-close:hover {
+     color: #fff;
+     background: rgba(0, 0, 0, 0.5);
+ }
+ .modal-area {
+     padding: 10px;
+     text-align: center;
+ }
+ .modal-content blockquote {
+     display: block;
+     text-align: center;
+     color: #ff6600;
+ }
+ /* END MODAL CSS */
+
+  /* START SHOW/HIDE Pure CSS */
+ #hide {
+     display: none;
+ }
+
+ #hide:target {
+     display: block;
+ }
+
+ a.sh {
+     transition: all 1.2s ease-in-out;
+     display: block;
+     padding: 20px;
+     color: #f60;
+     font-weight: bold;
+     margin: 10px auto;
+     width: 100px;
+     background: #252525;
+     text-align: center;
+     text-decoration: none;
+     border-radius: 20px;
+ }
+
+ a.sh:hover {
+     background: rgba(0, 0, 0, 0.5);
+ }
+  /* END SHOW/HIDE Pure CSS */
 </pre>
-        </div>
+        </div><hr>
         <p> CODE JS function Show/Hide elements on file "JavaScript.js" </p>
         <div class="pre">
             <pre class="brush: js;">
-     var elements_array = new Array("video", "video2", "Image", "containerframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
-        function displayElements(the_element) {
-          if (document.getElementById(the_element).style.display == "block") {
-            document.getElementById(the_element).style.display = "none";
-            return;
-          }
-          for (i = 0; i &lt; elements_array.length; i++) {
-            var my_element = document.getElementById(elements_array[i]);
-            my_element.style.display = "none";
-          }
-          document.getElementById(the_element).style.display = "block";
-        }
- </pre>
-        </div>
+var elements_array = new Array("video", "video2", "Image", "containerframe", "form", "MP3"); /* INSERER TOUTE LES ID DES ELEMENTS A TRAITER ET NE PAS INSERER DES ID INEXISTANTES !!! */
+function displayElements(the_element) {
+if (document.getElementById(the_element).style.display == "") {
+document.getElementById(the_element).style.display = "none";
+return;
+}
+for (i = 0; i < elements_array.length; i++) {
+var my_element = document.getElementById(elements_array[i]);
+my_element.style.display = "none";
+}
+document.getElementById(the_element).style.display = "";
+} </pre>
+        </div><hr>
         <p> CODE JS function play_video for Onclick img + play Video on file "JavaScript.js"</p>
         <div class="pre">
             <pre class="brush: js;">
-        function play_video() {
-          document.getElementById("video2").play();
-        }
+function play_video() {
+document.getElementById("video2").play();
+}
    </pre>
-        </div>
+        </div><hr>
         <p> CODE JS function Show/Hide Possible mouse event on file "JavaScript.js"</p>
         <div class="pre">
             <pre class="brush: js;">
-       function HideShow() {
-          var x = document.getElementById("mouseevent");
-          if (x.style.display === "none") {
-          x.style.display = "block";
-         } else {
-         x.style.display = "none";
-         }
-        }
+function HideShow() {
+var x = document.getElementById("mouseevent");
+if (x.style.display === "none") {
+x.style.display = "block";
+} else {
+x.style.display = "none";
+}
+}
    </pre>
-        </div>
+        </div><hr>
          <p> CODE HTML SHOW\HIDE Pure CSS
             <i style="font-size: 10px">(Already in the FULL PAGE HTML Code !/Déjà dans le Code FULL PAGE HTML !)</i></p>
         <div class="pre">
@@ -634,12 +657,12 @@ a.modal-open:hover {
  &lt;a class="sh" href="#hide"&gt; Show&lt;/a&gt;
       &lt;div id="hide"&gt;
       &lt;br&gt;
-       &lt;p&gt; &lt;img src="files/images/tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
+       &lt;p&gt; &lt;img src="tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
        &lt;a class="sh" href="#showhide"&gt; Hide&lt;/a&gt;
       &lt;/div&gt;         </pre>
-        </div>
+        </div><hr>
          <p> CODE CSS SHOW\HIDE Pure CSS
-            <i style="font-size: 10px">(Already in the FULL PAGE CSS Code !/Déjà dans le Code FULL PAGE CSS !)</i></p>
+            <i style="font-size: 10px">(Already in the CSS FULL PAGE Code !/Déjà dans le Code CSS FULL PAGE !)</i></p>
         <div class="pre">
             <pre class="brush: css;">
  #hide {
@@ -668,7 +691,7 @@ a.modal-open:hover {
             background: rgba(0, 0, 0, 0.5);
         }
   </pre>
-        </div>
+        </div><hr>
         <p> CODE HTML MODAL Pure CSS ONLY
             <i style="font-size: 10px">(Already in the FULL PAGE HTML Code !/Déjà dans le Code FULL PAGE HTML !)</i></p>
         <div class="pre">
@@ -688,9 +711,9 @@ a.modal-open:hover {
             &lt;/div&gt;
           &lt;/div&gt;
         </pre>
-        </div>
+        </div><hr>
         <p> CODE CSS MODAL Pure CSS ONLY
-            <i style="font-size: 10px">(Already in the FULL PAGE CSS Code !/Déjà dans le Code FULL PAGE CSS !)</i></p>
+            <i style="font-size: 10px">(Already in the CSS FULL PAGE Code !/Déjà dans le Code CSS FULL PAGE !)</i></p>
         <div class="pre">
             <pre class="brush: css;">
      *.modal {

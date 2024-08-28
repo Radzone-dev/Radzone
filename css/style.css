@@ -78,3 +78,7 @@ hr {
     background: rgba(7, 151, 195, 0.15);
     border: 0;
 }
+.footer {
+      color: rgba(7, 151, 195, 0.4);
+      font-size:0.7em;
+  }
