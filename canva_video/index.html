@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', function(){
     var w = idata.width;
     var limit = data.length
    /*Parcoure les sous-pixels en convolutant chacun d'eux à l'aide d'une matrice de détection des contours.*/
-    for(var i = 0; i &lt; limit; i++) {
+    for(var i = 0; i < limit; i++) {
         if( i%4 == 3 ) continue;
         data[i] = 127 + 2*data[i] - data[i + 4] - data[i + w*4];
     }
@@ -445,7 +445,7 @@ document.a function draw(v,c,bc,cw,ch) {
     var w = idata.width;
     var limit = data.length
     /* Parcoure les sous-pixels en convolutant chacun d'eux à l'aide d'une matrice de détection des contours. */
-    for(var i = 0; i &lt; limit; i++) {
+    for(var i = 0; i < limit; i++) {
         if( i%4 == 3 ) continue;
         data[i] = 127 + 2*data[i] - data[i + 4] - data[i + w*4];
     }
