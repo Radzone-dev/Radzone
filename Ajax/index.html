@@ -181,6 +181,8 @@ because these examples were designed for beginners and I don't want to confuse t
 &lt;/div&gt;
 &lt;div id="objet1"&gt;
 &lt;/div&gt;
+ &lt;div id="json_book"&gt;
+&lt;/div&gt;
 &lt;div id="xml"&gt;
   &lt;ul class="Book"&gt;
   &lt;/ul&gt;
@@ -206,12 +208,11 @@ $(document).ready(function() {
               </h4>
           <pre class="brush: js;">
 $(document).ready(function() {
-$(".btnxml").click(function () {$("#xml").show();
-      $("#objet1").empty();
-       $.ajax({
-    type: "GET",
-    url: "files/book.xml",
-    dataType: "xml",
+$(".btnxml").click(function () {
+    $.ajax({
+        type: "GET",
+        url: "files/book.xml",
+        dataType: "xml",
 
     //error: function (e) {
     // alert("An error occurred while processing XML file");
@@ -219,9 +220,8 @@ $(".btnxml").click(function () {$("#xml").show();
    // },
     success: function (response) {
     // make sue the ul is empty
+     $("ul.Book").children().remove();
     // before appending data
-
-        $("ul.Book").children().remove();
 
         $(response).find("book").each(function () {
             var _author = 'Author: ' + $(this).find('author').text();
@@ -248,9 +248,8 @@ $(".btnxml").click(function () {$("#xml").show();
    </h4>
       <pre class="brush: js;">
 $(document).ready(function() {
-$(".btnjson").click(function() {$("#xml").hide();
-  $("ul.Book").children().remove();
-  var displayResources = $("#objet1");
+$(".btnjson").click(function() {
+  var displayResources = $("#json_book");
 
  // displayResources.text("Loading data from JSON source..."); wait message if the json very big
 
