@@ -1,6 +1,6 @@
 $(document).ready(function() {
 						   
-  $("h1").mousedown(function() {
+  $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
   });
   

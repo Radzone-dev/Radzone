@@ -54,16 +54,16 @@
         </div>
         <div>
           <h2>
-            click() Event
+            on( "click",) Event
           </h2>
           <p>
             The click event is triggered when the mouse button is pressed and released while over the selected element.
-            Example: <strong>$("h1").click()</strong>. Press and release the mouse button while over an &lt;h1&gt;
+            Example: <strong>$("h1").on( "click",)</strong>. Press and release the mouse button while over an &lt;h1&gt;
             element to trigger the event.
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).css("background-color","red");
   });
 
@@ -78,16 +78,16 @@
         </div>
         <div>
           <h2>
-            mousedown() Event
+            on( "mousedown",) Event
           </h2>
           <p>
             The mousedown event is triggered when the mouse button is pressed while over the selected element. Example:
-            <strong>$("h1").mousedown()</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
+            <strong>$("h1").on( "mousedown",)</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
             the event.
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mousedown(function() {
+  $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
   });
 
@@ -102,24 +102,24 @@
         </div>
         <div>
           <h2>
-            mousedown() and mouseup() Events
+            on( "mousedown",) and on( "mouseup",) Events
           </h2>
           <p>
             The mousedown event is triggered when the mouse button is pressed while over the selected element. Example:
-            <strong>$("h1").mousedown()</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
+            <strong>$("h1").on( "mousedown",)</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
             the event.
           </p>
           <p>
             The mouseup event is triggered when the mouse button is released while over the selected element. Example:
-            <strong>$("h1").mouseup()</strong>. Release the mouse button while over an &lt;h1&gt; element to trigger
+            <strong>$("h1").on( "mouseup",)</strong>. Release the mouse button while over an &lt;h1&gt; element to trigger
             the event.
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mousedown(function() {
+  $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseup(function() {
+  $("h1").on( "mouseup",function() {
     $(this).css("background-color","yellow");
   });
 
@@ -135,24 +135,24 @@
         </div>
         <div>
           <h2>
-            mouseenter() and mouseleave() Events
+            on( "mouseenter",) and on( "mouseleave",) Events
           </h2>
           <p>
             The mouseenter event is triggered when the mouse cursor enters the selected element. Example:
-            <strong>$("h1").mouseenter()</strong>. Move the mouse cursor over an &lt;h1&gt; element to trigger the
+            <strong>$("h1").on( "mouseenter",)</strong>. Move the mouse cursor over an &lt;h1&gt; element to trigger the
             event.
           </p>
           <p>
             The mouseleave event is triggered when the mouse cursor leaves the selected element. Example:
-            <strong>$("h1").mouseleave()</strong>. Move the mouse cursor off of an &lt;h1&gt; element to trigger the
+            <strong>$("h1").on( "mouseleave",)</strong>. Move the mouse cursor off of an &lt;h1&gt; element to trigger the
             event.
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseleave(function() {
+  $("h1").on( "mouseleave",function() {
     $(this).css("background-color","yellow");
   });
 
@@ -176,10 +176,10 @@
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseleave(function() {
+  $("h1").on( "mouseleave",function() {
     $(this).css("background-color","yellow");
     $(this).unbind();
   });
@@ -204,10 +204,10 @@
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseleave(function() {
+  $("h1").on( "mouseleave",function() {
     $(this).css("background-color","yellow");
     $("*").unbind();
   });
@@ -232,10 +232,10 @@
           </p>
           <pre class="samplecode">$(document).ready(function() {
 
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseleave(function() {
+  $("h1").on( "mouseleave",function() {
     $(this).css("background-color","yellow");
     $("*").unbind("mouseleave");
   });

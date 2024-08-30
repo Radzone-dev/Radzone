@@ -68,7 +68,7 @@
             Select elements by tag name. Example: <strong>"div"</strong> - Selects all &lt;div&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div").css("background-color","red");
   });
 });</pre>
@@ -88,7 +88,7 @@
             Select elements by tag name. Example: <strong>"p"</strong> - Selects all &lt;p&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("p").css("background-color","red");
   });
 });</pre>
@@ -110,7 +110,7 @@
             element (the Test button) since its ID attribute is set to testbutton.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div, strong, #testbutton").css("background-color","red");
   });
 });</pre>
@@ -130,7 +130,7 @@
             Select all elements by using an asterisk. Example: <strong>"*"</strong> - Selects all elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("*").css("background-color","red");
   });
 });</pre>
@@ -151,7 +151,7 @@
             <strong>"div &gt; p"</strong> - Selects all &lt;p&gt; elements that are children of &lt;div&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div &gt; p").css("background-color","red");
   });
 });</pre>
@@ -172,7 +172,7 @@
             p:first-child"</strong> - Selects all &lt;p&gt; elements that are first children of &lt;div&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div &gt; p:first-child").css("background-color","red");
   });
 });</pre>
@@ -193,7 +193,7 @@
             p:last-child"</strong> - Selects all &lt;p&gt; elements that are last children of &lt;div&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div &gt; p:last-child").css("background-color","red");
   });
 });</pre>
@@ -215,7 +215,7 @@
             &lt;div&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("div strong").css("background-color","red");
   });
 });</pre>
@@ -237,7 +237,7 @@
             elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("p:even").css("background-color","red");
   });
 });</pre>
@@ -259,7 +259,7 @@
             elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("p:odd").css("background-color","red");
   });
 });</pre>
@@ -315,7 +315,7 @@
             <strong>third</strong>.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("#third").css("background-color","red");
   });
 });</pre>
@@ -337,7 +337,7 @@
             <strong>multiple</strong>.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $(".multiple").css("background-color","red");
   });
 });</pre>
@@ -359,7 +359,7 @@
             elements that have class attribute values of <strong>multiple</strong>.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("strong.multiple").css("background-color","red");
   });
 });</pre>
@@ -381,7 +381,7 @@
             of the &lt;strong&gt; element on the second line will turn red.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton, strong").click(function() {
+  $("#testbutton, strong").on( "click",function() {
     $("strong.multiple").css("background-color","red");
   });
 });</pre>
@@ -403,7 +403,7 @@
             elements, will cause the clicked element's background color to turn red.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("#testbutton, strong").click(function() {
+  $("#testbutton, strong").on( "click",function() {
     $(this).css("background-color","red");
   });
 });</pre>

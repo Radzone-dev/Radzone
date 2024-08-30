@@ -68,7 +68,7 @@
             heading text to change it.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).text("clicked");
   });
 });</pre>
@@ -90,7 +90,7 @@
             heading text to change the text in the &lt;p&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text("new text");
   });
 });</pre>
@@ -112,7 +112,7 @@
             Click on the heading text to change the text in the &lt;p&gt; elements. The HTML markup will be shown.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text("new &lt;b&gt;text&lt;/b&gt;");
   });
 });</pre>
@@ -134,7 +134,7 @@
             - Click on the heading text to change the text in the &lt;p&gt; elements. The word "text" will be in bold.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").html("new &lt;b&gt;text&lt;/b&gt;");
   });
 });</pre>
@@ -157,7 +157,7 @@
             elements. The word "text" will be red and bold.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;');
   });
 });</pre>
@@ -180,7 +180,7 @@
             &lt;div&gt; element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").html('new &lt;b style="color: red;"&gt;text&lt;/b&gt;');
   });
 });</pre>
@@ -202,7 +202,7 @@
             to remove the contents of the &lt;div&gt; element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").empty();
   });
 });</pre>
@@ -224,7 +224,7 @@
             the heading text to append text to the end of the &lt;p&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").append(" More text.");
   });
 });</pre>
@@ -247,7 +247,7 @@
             &lt;div&gt; element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").append("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
@@ -269,7 +269,7 @@
             - Click on the heading text to add a &lt;p&gt; element after the &lt;div&gt; element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").after("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
@@ -291,7 +291,7 @@
             - Click on the heading text to add a &lt;p&gt; element after each of the two &lt;p&gt; elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").after("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
@@ -314,7 +314,7 @@
             &lt;div&gt; element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").prepend("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
@@ -337,7 +337,7 @@
             element.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("div").before("&lt;p&gt;new text&lt;/p&gt;");
   });
 });</pre>
@@ -360,7 +360,7 @@
             elements.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").replaceWith("&lt;h2&gt;new text&lt;/h2&gt;");
   });
 });</pre>
@@ -407,7 +407,7 @@
             text to change the image.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("#picture").attr("src", "floatingball.gif");
   });
 });</pre>

@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("p").hide();
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).next().slideToggle(300);
   });
 

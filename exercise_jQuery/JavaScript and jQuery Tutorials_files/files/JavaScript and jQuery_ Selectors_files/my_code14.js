@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#testbutton, strong").click(function() {
+  $("#testbutton, strong").on( "click",function() {
     $("strong.multiple").css("background-color","red");	
   });
 });

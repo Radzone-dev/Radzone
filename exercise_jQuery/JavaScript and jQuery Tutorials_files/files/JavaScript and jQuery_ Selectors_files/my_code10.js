@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#testbutton").click(function() {
+  $("#testbutton").on( "click",function() {
     $("p:odd").css("background-color","red");	
   });
 });

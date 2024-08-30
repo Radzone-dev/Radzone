@@ -1,9 +1,9 @@
 $(document).ready(function() {
 						   
-  $("h1").mousedown(function() {
+  $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
   });
-  $("h1").mouseup(function() {
+  $("h1").on( "mouseup",function() {
     $(this).css("background-color","yellow");
   });
   

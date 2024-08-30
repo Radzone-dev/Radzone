@@ -3,7 +3,7 @@ $(document).ready(function() {
   var text1 = "The heading text is ";
   var text2 = text1 + hText;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text(text2);
   });
 });

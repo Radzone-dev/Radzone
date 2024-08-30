@@ -65,7 +65,7 @@
             the &lt;h1&gt; elements to set the margin-left property.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("margin-left", "50px");
   });
 });</pre>
@@ -87,7 +87,7 @@
             mouse over the &lt;h1&gt; elements to increment the margin-left property.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css("margin-left", "+=50px");
   });
 });</pre>
@@ -110,7 +110,7 @@
             elements to set the properties.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").mouseenter(function() {
+  $("h1").on( "mouseenter",function() {
     $(this).css({
       "margin-left": "+=50px",
       "background-color": "red"
@@ -135,7 +135,7 @@
             element to add the emphasis class.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).addClass("emphasis");
   });
 });</pre>
@@ -157,7 +157,7 @@
             &lt;h1&gt; element to add the emphasis and shrink classes.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).addClass("emphasis shrink");
   });
 });</pre>
@@ -209,7 +209,7 @@
             first &lt;h1&gt; element to remove all of its classes.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).removeClass();
   });
 });</pre>
@@ -231,7 +231,7 @@
             the first &lt;h1&gt; element to remove its emphasis class.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).removeClass("emphasis");
   });
 });</pre>
@@ -253,7 +253,7 @@
             emphasis")</strong> - Click the first &lt;h1&gt; element to remove its shrink and emphasis classes.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).removeClass("shrink emphasis");
   });
 });</pre>
@@ -306,7 +306,7 @@
             to remove its emphasis class and add the shrink class.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).removeClass("emphasis").addClass("shrink");
   });
 });</pre>
@@ -328,7 +328,7 @@
             an &lt;h1&gt; element to toggle the emphasis class.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).toggleClass("emphasis");
   });
 });</pre>
@@ -350,7 +350,7 @@
             Repeatedly click an &lt;h1&gt; element to toggle the shrink and emphasis classes.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).toggleClass("shrink emphasis");
   });
 });</pre>
@@ -372,7 +372,7 @@
             click the first &lt;h1&gt; element to toggle its emphasis class.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $(this).toggleClass();
   });
 });</pre>

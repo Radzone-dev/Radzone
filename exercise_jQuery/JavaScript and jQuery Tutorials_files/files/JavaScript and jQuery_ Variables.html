@@ -68,7 +68,7 @@
           <pre class="samplecode">$(document).ready(function() {
   var hText = "This is just some text.";
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
@@ -91,7 +91,7 @@
           <pre class="samplecode">$(document).ready(function() {
   var hText = $("#head1").text();
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
@@ -116,7 +116,7 @@
   var text1 = "The heading text is ";
   var text2 = text1 + hText;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text(text2);
   });
 });</pre>
@@ -139,7 +139,7 @@
           <pre class="samplecode">$(document).ready(function() {
   var hText = "The heading text is " + $("#head1").text();
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
@@ -163,7 +163,7 @@
           <pre class="samplecode">$(document).ready(function() {
   var lineNum = 0;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").eq(lineNum).css("background-color", "red");
   });
 });</pre>
@@ -188,7 +188,7 @@
   var aNumber = 5;
   lineNum = aNumber - 4;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").eq(lineNum).css("background-color", "red");
   });
 });</pre>
@@ -212,7 +212,7 @@
           <pre class="samplecode">$(document).ready(function() {
   var lineNum = 0;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").css("background-color", "yellow");
     $("p").eq(lineNum).css("background-color", "red");
     lineNum++;
@@ -240,7 +240,7 @@
   var imageName = ["floatingball.gif", "redball.gif", "eightball.gif"];
   var indexNum = 0;
 
-  $("#picture").click(function() {
+  $("#picture").on( "click",function() {
     $("#picture").attr("src", imageName[indexNum]);
     indexNum++;
     if (indexNum &gt; 2) {indexNum = 0;}
@@ -265,7 +265,7 @@
   var imageName = ["floatingball.gif", "redball.gif", "eightball.gif"];
   var indexNum = 0;
 
-  $("#picture").click(function() {
+  $("#picture").on( "click",function() {
 
     $("#picture").fadeOut(300, function() {
       $("#picture").attr("src", imageName[indexNum]);

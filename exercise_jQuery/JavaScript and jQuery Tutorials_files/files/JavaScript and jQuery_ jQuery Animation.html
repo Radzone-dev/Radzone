@@ -64,7 +64,7 @@
             change the &lt;h2&gt; element font size.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "3em"
     }, 1000);
@@ -88,7 +88,7 @@
             the &lt;h2&gt; element width.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "3em",
       "width": "50%"
@@ -114,7 +114,7 @@
             change the &lt;h2&gt; element's left property.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "3em",
       "width": "50%",
@@ -142,7 +142,7 @@
             will be incremented each time the heading element is clicked.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "3em",
       "width": "50%",
@@ -168,7 +168,7 @@
             top heading element to hide the &lt;h2&gt; element by reducing its font size.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "hide",
       "width": "50%",
@@ -195,7 +195,7 @@
             &lt;2&gt; element by increasing its font size.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "toggle",
       "width": "50%",
@@ -224,7 +224,7 @@
             its font size.
           </p>
           <pre class="samplecode">$(document).ready(function() {
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("h2").animate({
       "font-size": "toggle",
       "width": "50%",

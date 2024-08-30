@@ -3,7 +3,7 @@ $(document).ready(function() {
   var aNumber = 5;
   lineNum = aNumber - 4;
 
-  $("h1").click(function() {
+  $("h1").on( "click",function() {
     $("p").eq(lineNum).css("background-color", "red");
   });
 });
