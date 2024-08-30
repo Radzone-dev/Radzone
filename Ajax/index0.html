@@ -20,31 +20,7 @@
     <script type="text/javascript" src="files/Scripts/shBrushJScript.js"></script>
     <script type="text/javascript" src="files/Scripts/shBrushXml.js"></script>
     <script type="text/javascript" src="files/Scripts/shBrushPlain.js"></script>
-    <script type="text/javascript" src="files/Scripts/shBrushPhp.js"></script>
-   <style type="text/css">
-   .containerframe {
-       position: relative;
-       overflow: hidden;
-       border: 0px;
-       width: 100%;
-       height: 0;
-       /*  padding-top: 56.25%;  16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-       /*  padding-top: 75%; /*   for 4:3 Aspect Ratio */
-       /*  padding-top: 66.66%;     /*   for 3:2 Aspect Ratio */
-       /*padding-top: 177.77%;    /*   for 9:16 Aspect Ratio  phone portrait ratio */
-        padding-top: 100%;       /*   for 1:1 Aspect Ratio Height and Width is Always Equal */
-   }
-   .myframe {
-       border: none;
-       position: absolute;
-       top: 0;
-       left: 0;
-       bottom: 0;
-       right: 0;
-       width: 100%;
-       height: 100%;
-   }
-   </style> </head>
+    </head>
   <body>
     <div class="flex-container">
       <div class="header">
@@ -392,86 +368,8 @@ $(".btnjson").click(function() {
   }
 ]
 </pre>
-    </div><hr>          <h4>
-              AJAX method . "POST" & "GET" with php
-            </h4><div class="containerframe">
-<iframe scrolling="auto" src="http://radislav.free.fr/Radzone/php.html" class="myframe">
- </iframe>
-</div><div id="video"></div><div class="pre">
-              <h4>
-                CODE HTML
-              </h4>
-              <pre class="brush: html;collapse: false">
-  &lt;!-- AJAX method type: "POST" --&gt;
-&lt;form&gt;
- &lt;label&gt; Name: &lt;input type="text" name="name"&gt; &lt;/label&gt;
- &lt;label&gt; Comment:
-   &lt;textarea cols="20" name="comment"&gt; &lt;/textarea&gt; &lt;/label&gt;
-    &lt;input class="imp" type="submit" value="Send"&gt;
-&lt;/form&gt;
-&lt;div id="result2"&gt; &lt;/div&gt;
-  &lt;!--AJAX method type: "GET"  --&gt;
-&lt;label&gt; Enter a Number: &lt;input type="text"  id="num"&gt; &lt;/label&gt;
-  &lt;button type="button"&gt; Show Multiplication Table&lt;/button&gt;
-&lt;div id="result"&gt; &lt;/div&gt;
-    </pre>
-              <h4>
-                CODE JQUERY
-              </h4>
-              <pre class="brush: js;">
-$(document).ready(function() {
- //   AJAX method type: "POST"
-$('form').submit(function (t) {
-    t.preventDefault();
-    var e = $(this).serialize();
-    $.post('display-comment.php', e, function (t) {
-        $('#result2').html(t);
-    });
-});
-
- //   AJAX method type: "GET"
-$('button').click(function () {
-    var t = $('#num').val();
-    $.get('create-table.php', { number: t }, function (t) {
-        $('#result').html(t);
-    });
-}),
-
-});
-        </pre>
-              <h4>
-                CODE php for "display-comment.php" <i>POST</i>
-              </h4>
-              <pre class="brush: php;">
-&lt;?php
-$name = htmlspecialchars($_POST["name"]);
-$comment = htmlspecialchars($_POST["comment"]);
-echo "Hi, $name. Your comment has been received successfully.";
-echo "Here's the comment what you've entered: $comment";
-?&gt;  </pre>            <h4>
-                CODE php for "create-table.php" <i>GET</i>
-              </h4>
-              <pre class="brush: php;">
-&lt;?php
-if(isset($_GET["number"])){
-$number = htmlspecialchars($_GET["number"]);
-if(is_numeric($number) && $number &gt;   0 && $number &lt; 100){
-    echo "&lt;table&gt;  ";
-    for($i=0; $i&lt;11; $i++){
-        echo "&lt;tr&gt;  ";
-            echo "&lt;td&gt;  $number x $i&lt;/td&gt;  ";
-            echo "&lt;td&gt;  =&lt;/td&gt;  ";
-            echo "&lt;td&gt;  " . $number * $i . "&lt;/td&gt;  ";
-        echo "&lt;/tr&gt;  ";
-    }
-    echo "&lt;/table&gt;  ";
-} else{
-    echo "&lt;p&gt;  Please enter a number between 0 and 100.&lt;/p&gt;  ";
-}
-}
-?&gt;      </pre>
-            </div>
-   <hr>
+    </div>
+        <hr>
             <div id="button2">
               <h4>
                 AJAX method .load()
@@ -585,4 +483,3 @@ $("#btn").click(function(event) {
     </script>
   </body>
 </html>
-
