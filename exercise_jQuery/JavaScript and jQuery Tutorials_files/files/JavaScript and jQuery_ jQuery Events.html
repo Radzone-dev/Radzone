@@ -1,33 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="https://radzone-dev.github.io/Radzone/img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="css.css" rel="stylesheet" type="text/css">
     <title>
-      jQuery: jQuery Events
+      jQuery Ajax demo jQuery Events
     </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="author" content="http://radservebeer.free.fr">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Styles/page.css">
+    <link type="text/css" rel="stylesheet" href="Styles/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="Styles/shThemeRDark.css" id="theme">
+    <script type="text/javascript" src="Scripts/shCore.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPhp.js"></script>
+    <style type="text/css">
+    h3{ width:70px; background: #474747; margin: auto; }
+    iframe {width:80%; background: #212121; height:250px; border:none}
+    iframe.c2 {width:80%; background: #212121; height:220px; border:none}
+    </style>
   </head>
   <body>
-    <div class="c1">
-      <img src="logo.png" alt="logo" id="logo">
-    </div>
-    <div class="wholecontent optionset1a">
-      <div class="content optionset1b">
-        <h1>
-          jQuery Tutorial
-        </h1>
-        <h2 class="c1">
-          Part 3 - jQuery Events
-        </h2>
-        <div>
-          <h2>
-            HTML Code
-          </h2>
-          <pre class="samplecode">&lt;!DOCTYPE html&gt;
+    <div class="flex-container">
+      <div class="header">
+        <img class="logo" src="logo.png" alt="logo">
+      </div>
+      <div class="item2">
+        <div class="content">
+          <div class="method">
+            <h1>
+              jQuery Tutorial
+            </h1>
+            <hr>
+            <h2 class="c1">
+              Part 3 - jQuery Events
+            </h2>
+            <div>
+              <h2>
+                HTML Code
+              </h2>
+              <div class="pre">
+                <pre class="brush: html;collapse: false">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;
@@ -50,71 +71,82 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            on( "click",) Event
-          </h2>
-          <p>
-            The click event is triggered when the mouse button is pressed and released while over the selected element.
-            Example: <strong>$("h1").on( "click",)</strong>. Press and release the mouse button while over an &lt;h1&gt;
-            element to trigger the event.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                on( "click",) Event
+              </h2>
+              <p>
+                The click event is triggered when the mouse button is pressed and released while over the selected
+                element. Example: <strong><code>$("h1").on( "click",)</code></strong>. Press and release the mouse
+                button while over an<code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "click",function() {
     $(this).css("background-color","red");
   });
 
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample1.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            on( "mousedown",) Event
-          </h2>
-          <p>
-            The mousedown event is triggered when the mouse button is pressed while over the selected element. Example:
-            <strong>$("h1").on( "mousedown",)</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
-            the event.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample1.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                on( "mousedown",) Event
+              </h2>
+              <p>
+                The mousedown event is triggered when the mouse button is pressed while over the selected element.
+                Example: <strong><code>$("h1").on( "mousedown",)</code></strong>. Press the mouse button while over
+                an<code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
   });
 
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample2.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            on( "mousedown",) and on( "mouseup",) Events
-          </h2>
-          <p>
-            The mousedown event is triggered when the mouse button is pressed while over the selected element. Example:
-            <strong>$("h1").on( "mousedown",)</strong>. Press the mouse button while over an &lt;h1&gt; element to trigger
-            the event.
-          </p>
-          <p>
-            The mouseup event is triggered when the mouse button is released while over the selected element. Example:
-            <strong>$("h1").on( "mouseup",)</strong>. Release the mouse button while over an &lt;h1&gt; element to trigger
-            the event.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample2.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                on( "mousedown",) and on( "mouseup",) Events
+              </h2>
+              <p>
+                The mousedown event is triggered when the mouse button is pressed while over the selected element.
+                Example: <strong><code>$("h1").on( "mousedown",)</code></strong>. Press the mouse button while over
+                an<code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <p>
+                The mouseup event is triggered when the mouse button is released while over the selected element.
+                Example: <strong><code>$("h1").on( "mouseup",)</code></strong>. Release the mouse button while over
+                an<code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mousedown",function() {
     $(this).css("background-color","red");
@@ -125,29 +157,33 @@
 
 });
 </pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample3.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            on( "mouseenter",) and on( "mouseleave",) Events
-          </h2>
-          <p>
-            The mouseenter event is triggered when the mouse cursor enters the selected element. Example:
-            <strong>$("h1").on( "mouseenter",)</strong>. Move the mouse cursor over an &lt;h1&gt; element to trigger the
-            event.
-          </p>
-          <p>
-            The mouseleave event is triggered when the mouse cursor leaves the selected element. Example:
-            <strong>$("h1").on( "mouseleave",)</strong>. Move the mouse cursor off of an &lt;h1&gt; element to trigger the
-            event.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample3.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                on( "mouseenter",) and on( "mouseleave",) Events
+              </h2>
+              <p>
+                The mouseenter event is triggered when the mouse cursor enters the selected element. Example:
+                <strong><code>$("h1").on( "mouseenter",)</code></strong>. Move the mouse cursor over
+                an<code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <p>
+                The mouseleave event is triggered when the mouse cursor leaves the selected element. Example:
+                <strong><code>$("h1").on( "mouseleave",)</code></strong>. Move the mouse cursor off of an
+                <code>&lt;h1&gt;</code> element to trigger the event.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
@@ -158,23 +194,27 @@
 
 });
 </pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample4.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            unbind() Method - Sample 1
-          </h2>
-          <p>
-            The unbind method removes the specified event. <strong></strong>Example: <strong>$(this).unbind()</strong>
-            - All events for the currently triggered event will be removed.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample4.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                unbind() Method - Sample 1
+              </h2>
+              <p>
+                The unbind method removes the specified event. Example: <strong><code>$(this).unbind()</code></strong>
+                - All events for the currently triggered event will be removed.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
@@ -186,23 +226,27 @@
 
 });
 </pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample5.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            unbind() Method - Sample 2
-          </h2>
-          <p>
-            The unbind method removes the specified event. <strong></strong>Example: <strong>$("*").unbind()</strong> -
-            All events will be removed.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample5.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                unbind() Method - Sample 2
+              </h2>
+              <p>
+                The unbind method removes the specified event. Example: <strong><code>$("*").unbind()</code></strong> -
+                All events will be removed.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
@@ -214,23 +258,27 @@
 
 });
 </pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample6.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            unbind() Method - Sample 3
-          </h2>
-          <p>
-            The unbind() method removes the specified event. <strong></strong>Example:
-            <strong>$("*").unbind("mouseleave")</strong> - All mouseleave events will be removed.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample6.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                unbind() Method - Sample 3
+              </h2>
+              <p>
+                The unbind() method removes the specified event. Example:
+                <strong><code>$("*").unbind("mouseleave")</code></strong> - All mouseleave events will be removed.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
 
   $("h1").on( "mouseenter",function() {
     $(this).css("background-color","red");
@@ -242,15 +290,27 @@
 
 });
 </pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample7.html" title="sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20Events_files/sample7.html" title="sample" class=
+              "c2">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="item3"></div>
     </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/compressed.js"></script>
+    <script>
+
+      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+      SyntaxHighlighter.config.stripBrs = true;
+      SyntaxHighlighter.all();
+    </script>
   </body>
 </html>

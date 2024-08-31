@@ -2,32 +2,51 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="https://radzone-dev.github.io/Radzone/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="author" content="http://radservebeer.free.fr">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="css.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="Styles/page.css">
+    <link type="text/css" rel="stylesheet" href="Styles/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="Styles/shThemeRDark.css" id="theme">
+    <script type="text/javascript" src="Scripts/shCore.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPhp.js"></script>
     <title>
       jQuery: Variables
     </title>
+    <style type="text/css">
+    h3{ width:70px; background: #474747; margin: auto; }
+    iframe.c3 {width:80%; background: #212121; background: #212121; height:370px; border:none}
+    </style>
   </head>
   <body>
-    <div class="c1">
-      <img src="logo.png" alt="logo" id="logo">
-    </div>
-    <div class="wholecontent optionset1a">
-      <div class="content optionset1b">
-        <h1>
-          jQuery Tutorial
-        </h1>
-        <h2 class="c1">
-          Part 9 - Variables
-        </h2>
-        <div>
-          <h2>
-            HTML Code
-          </h2>
-          <pre class="samplecode">
+    <div class="flex-container">
+      <div class="header">
+        <img class="logo" src="logo.png" alt="logo">
+      </div>
+      <div class="item2">
+        <div class="content">
+          <div class="method">
+            <h1>
+              jQuery Tutorial
+            </h1>
+            <hr>
+            <h2 class="c1">
+              Part 9 - Variables
+            </h2>
+            <div>
+              <h2>
+                HTML Code
+              </h2>
+              <div class="pre">
+                <pre class="brush: html;collapse: false">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -54,64 +73,71 @@
     &lt;script src="my_code.js"&gt;&lt;/script&gt;
   &lt;/body&gt;
 &lt;/html&gt;</pre>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            String Variable - Declare and Initialize with simple text
-          </h2>
-          <p>
-            Declare a variable using the <strong>var</strong> keyword. Initialize using the = symbol. Example:
-            <strong>var hText = "This is just some text."</strong> - Click on the heading to see the text displayed in
-            the &lt;p&gt; elements.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                String Variable - Declare and Initialize with simple text
+              </h2>
+              <p>
+                Declare a variable using the <strong><code>var</code></strong> keyword. Initialize using the = symbol.
+                Example: <strong><code>var hText = "This is just some text."</code></strong> - Click on the heading to
+                see the text displayed in the <code>&lt;p&gt;</code> elements.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var hText = "This is just some text.";
 
   $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample1.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            String Variable - Declare and Initialize with value from text() method
-          </h2>
-          <p>
-            Read text from an element using the text() method. Example: <strong>var hText = $("#head1").text()</strong>
-            - Click on the heading to see the text displayed in the &lt;p&gt; elements.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample1.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                String Variable - Declare and Initialize with value from text() method
+              </h2>
+              <p>
+                Read text from an element using the text() method. Example: <strong><code>var hText =
+                $("#head1").text()</code></strong> - Click on the heading to see the text displayed in the
+                <code>&lt;p&gt;</code> elements.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var hText = $("#head1").text();
 
   $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample2.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            String Variable - Combining Strings
-          </h2>
-          <p>
-            Combine strings using the + symbol. Example: <strong>var text2 = text1 + hText</strong> - Click on the
-            heading to see the text displayed in the &lt;p&gt; elements.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample2.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                String Variable - Combining Strings
+              </h2>
+              <p>
+                Combine strings using the + symbol. Example: <strong><code>var text2 = text1 + hText</code></strong> -
+                Click on the heading to see the text displayed in the <code>&lt;p&gt;</code> elements.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var hText = $("#head1").text();
   var text1 = "The heading text is ";
   var text2 = text1 + hText;
@@ -120,70 +146,78 @@
     $("p").text(text2);
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample3.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            String Variable - Declare and Initialize with Combined Strings
-          </h2>
-          <p>
-            Variables can be initialized with a combined string. Example: <strong>var hText = "The heading text is " +
-            $("#head1").text()</strong> - Click on the heading to see the text displayed in the &lt;p&gt; elements.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample3.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                String Variable - Declare and Initialize with Combined Strings
+              </h2>
+              <p>
+                Variables can be initialized with a combined string. Example: <strong><code>var hText = "The heading
+                text is " + $("#head1").text()</code></strong> - Click on the heading to see the text displayed in the
+                <code>&lt;p&gt;</code> elements.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var hText = "The heading text is " + $("#head1").text();
 
   $("h1").on( "click",function() {
     $("p").text(hText);
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample4.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            Numeric Variable - Declare and Initialize
-          </h2>
-          <p>
-            Declare a variable using the <strong>var</strong> keyword. Initialize using the = symbol. Example:
-            <strong>var lineNum = 0</strong> - Click on the heading to change the background color of the first
-            &lt;p&gt; element.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample4.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                Numeric Variable - Declare and Initialize
+              </h2>
+              <p>
+                Declare a variable using the <strong><code>var</code></strong> keyword. Initialize using the = symbol.
+                Example: <strong><code>var lineNum = 0</code></strong> - Click on the heading to change the background
+                color of the first <code>&lt;p&gt;</code> element.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var lineNum = 0;
 
   $("h1").on( "click",function() {
     $("p").eq(lineNum).css("background-color", "red");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample5.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            Numeric Variable - Math
-          </h2>
-          <p>
-            Math operations can be performed on numeric variables. Example: <strong>lineNum = aNumber - 4;</strong> -
-            Click on the heading to change the background color of the second &lt;p&gt; element.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample5.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                Numeric Variable - Math
+              </h2>
+              <p>
+                Math operations can be performed on numeric variables. Example: <strong><code>lineNum = aNumber -
+                4;</code></strong> - Click on the heading to change the background color of the second
+                <code>&lt;p&gt;</code> element.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var lineNum = 0;
   var aNumber = 5;
   lineNum = aNumber - 4;
@@ -192,24 +226,27 @@
     $("p").eq(lineNum).css("background-color", "red");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample6.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            Incrementing Numeric Variables and the "if" statement
-          </h2>
-          <p>
-            Increment numeric variables by following the variable name with ++. The "if" statement can be used to test
-            if a condition is true. Example: <strong>lineNum++; if (lineNum &gt; 2) {lineNum = 0;}</strong> -
-            Repeatedly click on the heading to cycle thru the background colors of the &lt;p&gt; elements.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample6.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                Incrementing Numeric Variables and the "if" statement
+              </h2>
+              <p>
+                Increment numeric variables by following the variable name with ++. The "if" statement can be used to
+                test if a condition is true. Example: <strong><code>lineNum++; if (lineNum &gt; 2) {lineNum =
+                0;}</code></strong> - Repeatedly click on the heading to cycle thru the background colors of the
+                <code>&lt;p&gt;</code> elements.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var lineNum = 0;
 
   $("h1").on( "click",function() {
@@ -219,24 +256,27 @@
     if (lineNum &gt; 2) {lineNum = 0;}
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample7.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            Array - Declare and Initialize
-          </h2>
-          <p>
-            Declare a variable using the <strong>var</strong> keyword. Initialize using the = symbol. Enclose comma
-            separated strings in square brackets [ ]. Example: <strong>var imageName = ["floatingball.gif",
-            "redball.gif", "eightball.gif"]</strong> - Click on the image to change the picture.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample7.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                Array - Declare and Initialize
+              </h2>
+              <p>
+                Declare a variable using the <strong><code>var</code></strong> keyword. Initialize using the = symbol.
+                Enclose comma separated strings in square brackets [ ]. Example: <strong><code>var imageName =
+                ["floatingball.gif", "redball.gif", "eightball.gif"]</code></strong> - Click on the image to change the
+                picture.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var imageName = ["floatingball.gif", "redball.gif", "eightball.gif"];
   var indexNum = 0;
 
@@ -246,22 +286,24 @@
     if (indexNum &gt; 2) {indexNum = 0;}
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample8.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            Switching Images using fadeIn() and fadeOut() methods
-          </h2>
-          <p>
-            Click on the image to fade-out the old image and fade-in the new one.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample8.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                Switching Images using <code>fadeIn()</code> and <code>fadeOut()</code> methods
+              </h2>
+              <p>
+                Click on the image to fade-out the old image and fade-in the new one.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">$(document).ready(function() {
   var imageName = ["floatingball.gif", "redball.gif", "eightball.gif"];
   var indexNum = 0;
 
@@ -276,15 +318,26 @@
 
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample9.html" title="sample" class="c3">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20Variables_files/sample9.html" title="sample" class="c3">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="item3"></div>
     </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/compressed.js"></script>
+    <script>
+
+      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+      SyntaxHighlighter.config.stripBrs = true;
+      SyntaxHighlighter.all();
+    </script>
   </body>
 </html>

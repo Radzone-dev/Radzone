@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="image/x-icon" href="https://radzone-dev.github.io/Radzone/img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-    <link href="css.css" rel="stylesheet" type="text/css">
     <title>
-      jQuery: jQuery CSS Manipulation
+      jQuery Ajax demo  CSS Manipulation
     </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <meta name="author" content="http://radservebeer.free.fr">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Styles/page.css">
+    <link type="text/css" rel="stylesheet" href="Styles/shCore.css">
+    <link type="text/css" rel="Stylesheet" href="Styles/shThemeRDark.css" id="theme">
+    <script type="text/javascript" src="Scripts/shCore.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushCss.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushXml.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPlain.js"></script>
+    <script type="text/javascript" src="Scripts/shBrushPhp.js"></script>
+    <style type="text/css">
+    h3{ width:70px; background: #474747; margin: auto; }
+    iframe {width:80%; background: #212121; height:250px; border:none}
+    iframe.c2 {width:80%; background: #212121; height:350px; border:none}
+    </style>
   </head>
   <body>
-    <div class="c1">
-      <img src="logo.png" alt="logo" id="logo">
-    </div>
-    <div class="wholecontent optionset1a">
-      <div class="content optionset1b">
-        <h1>
-          jQuery Tutorial
-        </h1>
-        <h2 class="c1">
-          Part 6 - jQuery CSS Manipulation
-        </h2>
-        <div>
-          <h2>
-            HTML Code
-          </h2>
-          <pre class="samplecode">&lt;!DOCTYPE html&gt;
+    <div class="flex-container">
+      <div class="header">
+        <img class="logo" src="logo.png" alt="logo">
+      </div>
+      <div class="item2">
+        <div class="content">
+          <div class="method">
+            <h1>
+              jQuery Tutorial
+            </h1>
+            <hr>
+            <h2 class="c1">
+              Part 6 - jQuery CSS Manipulation
+            </h2>
+            <div>
+              <h2>
+                HTML Code
+              </h2>
+              <div class="pre">
+                <pre class="brush: html;collapse: false">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;
@@ -54,62 +74,72 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            css() margin-left
-          </h2>
-          <p>
-            Sets the margin-left property. Example: <strong>css("margin-left", "50px")</strong> - Move the mouse over
-            the &lt;h1&gt; elements to set the margin-left property.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                css() margin-left
+              </h2>
+              <p>
+                Sets the margin-left property. Example: <strong><code>css("margin-left", "50px")</code></strong> - Move
+                the mouse over the <code>&lt;h1&gt;</code> elements to set the margin-left property.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "mouseenter",function() {
     $(this).css("margin-left", "50px");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample1.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            css() Incrementing margin-left property
-          </h2>
-          <p>
-            Increments the margin-left property. Example: <strong>css("margin-left", "+=50px")</strong> - Move the
-            mouse over the &lt;h1&gt; elements to increment the margin-left property.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample1.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                css() Incrementing margin-left property
+              </h2>
+              <p>
+                Increments the margin-left property. Example: <strong><code>css("margin-left",
+                "+=50px")</code></strong> - Move the mouse over the <code>&lt;h1&gt;</code> elements to increment the
+                margin-left property.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "mouseenter",function() {
     $(this).css("margin-left", "+=50px");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample2.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            css() Multiple properties
-          </h2>
-          <p>
-            Increments the margin-left property and sets the background-color property. Example:
-            <strong>{"margin-left": "+=50px", "background-color": "red"}</strong> - Move the mouse over the &lt;h1&gt;
-            elements to set the properties.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample2.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                css() Multiple properties
+              </h2>
+              <p>
+                Increments the margin-left property and sets the background-color property. Example:
+                <strong><code>{"margin-left": "+=50px", "background-color": "red"}</code></strong> - Move the mouse
+                over the <code>&lt;h1&gt;</code> elements to set the properties.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "mouseenter",function() {
     $(this).css({
       "margin-left": "+=50px",
@@ -117,64 +147,74 @@
     });
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample3.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            addClass() Single class
-          </h2>
-          <p>
-            Adds a class to an HTML element. Example: <strong>addClass("emphasis")</strong> - Click an &lt;h1&gt;
-            element to add the emphasis class.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample3.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                addClass() Single class
+              </h2>
+              <p>
+                Adds a class to an HTML element. Example: <strong><code>addClass("emphasis")</code></strong> - Click an
+                <code>&lt;h1&gt;</code> element to add the emphasis class.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).addClass("emphasis");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample4.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            addClass() Multiple classes
-          </h2>
-          <p>
-            Adds multiple classes to an HTML element. Example: <strong>addClass("emphasis shrink")</strong> - Click an
-            &lt;h1&gt; element to add the emphasis and shrink classes.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample4.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                addClass() Multiple classes
+              </h2>
+              <p>
+                Adds multiple classes to an HTML element. Example: <strong><code>addClass("emphasis
+                shrink")</code></strong> - Click an <code>&lt;h1&gt;</code> element to add the emphasis and shrink
+                classes.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).addClass("emphasis shrink");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample5.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            HTML Code
-          </h2>
-          <pre class="samplecode">&lt;!DOCTYPE html&gt;
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample5.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                HTML Code
+              </h2>
+              <div class="pre">
+                <pre class="brush: html;collapse: false">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;
@@ -201,76 +241,91 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-          <h2>
-            removeClass()
-          </h2>
-          <p>
-            Removes all classes from the specified HTML element. Example: <strong>removeClass()</strong> - Click the
-            first &lt;h1&gt; element to remove all of its classes.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h2>
+                removeClass()
+              </h2>
+              <p>
+                Removes all classes from the specified HTML element. Example:
+                <strong><code>removeClass()</code></strong> - Click the first <code>&lt;h1&gt;</code> element to remove
+                all of its classes.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).removeClass();
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample6.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            removeClass() Single class
-          </h2>
-          <p>
-            Removes a class from the specified HTML element. Example: <strong>removeClass("emphasis")</strong> - Click
-            the first &lt;h1&gt; element to remove its emphasis class.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample6.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                removeClass() Single class
+              </h2>
+              <p>
+                Removes a class from the specified HTML element. Example:
+                <strong><code>removeClass("emphasis")</code></strong> - Click the first <code>&lt;h1&gt;</code> element
+                to remove its emphasis class.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).removeClass("emphasis");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample7.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            removeClass() Multiple classes
-          </h2>
-          <p>
-            Removes multiple classes from the specified HTML element. Example: <strong>removeClass("shrink
-            emphasis")</strong> - Click the first &lt;h1&gt; element to remove its shrink and emphasis classes.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample7.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                removeClass() Multiple classes
+              </h2>
+              <p>
+                Removes multiple classes from the specified HTML element. Example: <strong><code>removeClass("shrink
+                emphasis")</code></strong> - Click the first <code>&lt;h1&gt;</code> element to remove its shrink and
+                emphasis classes.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).removeClass("shrink emphasis");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample8.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            HTML Code
-          </h2>
-          <pre class="samplecode">&lt;!DOCTYPE html&gt;
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample8.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                HTML Code
+              </h2>
+              <div class="pre">
+                <pre class="brush: html;collapse: false">
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
   &lt;head&gt;
     &lt;title&gt;
@@ -297,95 +352,120 @@
   &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-          <h2>
-            removeClass() and addClass()
-          </h2>
-          <p>
-            removeClass() and addClass() can be used together. Example:
-            <strong>$(this).removeClass("emphasis").addClass("shrink");</strong> - Click the first &lt;h1&gt; element
-            to remove its emphasis class and add the shrink class.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h2>
+                removeClass() and addClass()
+              </h2>
+              <p>
+                removeClass() and addClass() can be used together. Example:
+                <strong><code>$(this).removeClass("emphasis").addClass("shrink");</code></strong> - Click the first
+                <code>&lt;h1&gt;</code> element to remove its emphasis class and add the shrink class.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).removeClass("emphasis").addClass("shrink");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample9.html" title="sample"
-          class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            toggleClass() Single class
-          </h2>
-          <p>
-            Alternately removes and adds a class. Example: <strong>toggleClass("emphasis")</strong> - Repeatedly click
-            an &lt;h1&gt; element to toggle the emphasis class.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample9.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                toggleClass() Single class
+              </h2>
+              <p>
+                Alternately removes and adds a class. Example: <strong><code>toggleClass("emphasis")</code></strong> -
+                Repeatedly click an <code>&lt;h1&gt;</code> element to toggle the emphasis class.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).toggleClass("emphasis");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample10.html" title=
-          "sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            toggleClass() Multiple classes
-          </h2>
-          <p>
-            Alternately removes and adds multiple classes. Example: <strong>toggleClass("shrink emphasis")</strong> -
-            Repeatedly click an &lt;h1&gt; element to toggle the shrink and emphasis classes.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample10.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                toggleClass() Multiple classes
+              </h2>
+              <p>
+                Alternately removes and adds multiple classes. Example: <strong><code>toggleClass("shrink
+                emphasis")</code></strong> - Repeatedly click an <code>&lt;h1&gt;</code> element to toggle the shrink
+                and emphasis classes.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).toggleClass("shrink emphasis");
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample11.html" title=
-          "sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
-        </div>
-        <div>
-          <h2>
-            toggleClass()
-          </h2>
-          <p>
-            Alternately removes and adds currently used classes. Example: <strong>toggleClass()</strong> - Repeatedly
-            click the first &lt;h1&gt; element to toggle its emphasis class.
-          </p>
-          <pre class="samplecode">$(document).ready(function() {
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample11.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+              <hr>
+            </div>
+            <div>
+              <h2>
+                toggleClass()
+              </h2>
+              <p>
+                Alternately removes and adds currently used classes. Example:
+                <strong><code>toggleClass()</code></strong> - Repeatedly click the first <code>&lt;h1&gt;</code>
+                element to toggle its emphasis class.
+              </p>
+              <div class="pre">
+                <pre class="brush: js;collapse: false">
+$(document).ready(function() {
   $("h1").on( "click",function() {
     $(this).toggleClass();
   });
 });</pre>
-          <h3>
-            Try it out.
-          </h3><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample12.html" title=
-          "sample" class="c2">
-          <p>
-            iframes are not supported by your browser.
-          </p></iframe>
-          <hr>
+              </div>
+              <h3>
+                Try it .
+              </h3><hr><iframe src="JavaScript%20and%20jQuery_%20jQuery%20CSS%20Manipulation_files/sample12.html" title=
+              "sample" class="">
+              <p>
+                iframes are not supported by your browser.
+              </p></iframe>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="item3"></div>
     </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/compressed.js"></script>
+    <script>
+
+      SyntaxHighlighter.config.clipboardSwf = 'files/Scripts/clipboard.swf';
+      SyntaxHighlighter.config.stripBrs = true;
+      SyntaxHighlighter.all();
+    </script>
   </body>
 </html>
