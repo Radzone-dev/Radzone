@@ -1,5 +1,5 @@
 if(!window.SyntaxHighlighter)var SyntaxHighlighter=function(){var e={defaults:{"class-name":"","first-line":1,"pad-line-numbers":!0,highlight:null,"smart-tabs":!0,"tab-size":4,gutter:!0,toolbar:!0,collapse:!0,"auto-links":!0,light:!1,
-"wrap-lines":!0,"html-script":!1},config:{useScriptTags:!0,clipboardSwf:null,toolbarItemWidth:16,toolbarItemHeight:16,bloggerMode:!1,stripBrs:!1,tagName:"pre",strings:{expandSource:"show source",viewSource:"view source",
+"wrap-lines":!0,"html-script":!1},config:{useScriptTags:!0,clipboardSwf:null,toolbarItemWidth:16,toolbarItemHeight:16,bloggerMode:!1,stripBrs:!1,tagName:"pre",strings:{expandSource:"show source",viewSource:"view source & Copy",
 copyToClipboard:"copy to clipboard",copyToClipboardConfirmation:"The code is in your clipboard now",print:"print",help:"?",alert:"SyntaxHighlighter\n\n",noBrush:"Can't find brush for: ",
 brushNotHtmlScript:"Brush wasn't configured for html-script option: ",aboutDialog:"RADZONE"},debug:!1},vars:{discoveredBrushes:null,spaceWidth:null,printFrame:null,highlighters:{}},brushes:{},regexLib:{
 multiLineCComments:/\/\*[\s\S]*?\*\//gm,singleLineCComments:/\/\/.*$/gm,singleLinePerlComments:/#.*$/gm,doubleQuotedString:/"([^\\"\n]|\\.)*"/g,singleQuotedString:/'([^\\'\n]|\\.)*'/g,multiLineDoubleQuotedString:/"([^\\"]|\\.)*"/g,
