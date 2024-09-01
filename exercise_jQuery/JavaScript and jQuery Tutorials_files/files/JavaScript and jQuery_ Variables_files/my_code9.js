@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var imageName = ["floatingball.gif", "redball.gif", "eightball.gif"];
+  var imageName = ["basketbal.png", "baseball.png", "footbal.png"];
   var indexNum = 0;
 
   $("#picture").on( "click",function() {
