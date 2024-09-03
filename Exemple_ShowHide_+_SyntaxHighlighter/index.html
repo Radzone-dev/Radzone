@@ -16,6 +16,7 @@
     <link type="text/css" rel="stylesheet" href="files/Styles/shCore.css">
     <link type="text/css" rel="Stylesheet" href="files/Styles/shThemeRDark.css" id="theme">
 </head>
+
 <body>
     <h1>
         Exemple Show/Hide avec js + Modal Pure CSS
@@ -79,10 +80,10 @@
                 <strong> onmouseup</strong>:&nbsp;&nbsp;Mouse button is released over an element<br>
             </li>
         </ul>
-        <video id="video2" style="display: none" controlslist="nodownload" poster="files/images/rz.jpg" width="100%" height="100%">
+        <video id="video2" style="display: none" controlslist="nodownload" poster="files/images/rz.jpg">
         <source src="files/media/rz_2.mp4" type="video/mp4">
         </video>
-        <video id="video" style="display: none" controls="" controlslist="nodownload" poster="files/images/Madagascar.jpg" width="100%" height="100%">
+        <video id="video" style="display: none" controls="" controlslist="nodownload" poster="files/images/Madagascar.jpg">
         <source src="files/media/Madagascar.mp4" type="video/mp4">
         </video>
         <ol>
@@ -91,8 +92,8 @@
                     Form
                 </h2>
                 <strong class="strong" onmouseenter="displayElements('form')">Form onmouseenter</strong> Dans la colonne de droite (In the right column)
+                <hr>
             </li>
-            <hr>
             <li>
                 <h2 id="showhide">
                     Show/Hide Pure CSS
@@ -104,8 +105,7 @@
                     <p><img src="files/images/tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"></p>
                     <a class="sh" href="#showhide">Hide</a>
                 </div>
-            </li>
-            <hr>
+                <hr> </li>
             <li>
                 <h2 id="mo">
                     Modal Pure CSS
@@ -129,8 +129,8 @@
                         </div>
                     </div>
                 </div>
+                <hr>
             </li>
-            <hr>
             <li>
                 <h2>
                     Audio
@@ -138,10 +138,10 @@
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed non risus. Suspendisse lectus tortor,<br>
                 <strong class="strong" onmouseout="displayElements('MP3')">MP3 onmouseout</strong>
                 <audio id="MP3" style="display: none;width:100%;height:20px; " controls controlslist="nodownload" preload="auto">
-        <source src="files/media/Music.mp3">
+        <source src="files/media/Music.mp3" type="audio/mpeg">
         </audio><br> Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue. Ut in risus volutpat libero pharetra tempor. Cras vestibulum bibendum augue. Praesent egestas leo in pede
+                <hr>
             </li>
-            <hr>
             <li>
                 <h2>
                     Image
@@ -151,8 +151,8 @@
           Image onmouseup
           </strong><br> convallis id, mcongue eu, quam. Mauris ullamcorper felis vitae erat.
                 <img src="files/images/tree.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="tree"><br> Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+                <hr>
             </li>
-            <hr>
             <li>
                 <div>
                     <h2>
@@ -171,7 +171,9 @@
                 </div>
             </li>
         </ol>
-        <hr><h2>Tout les Codes / All the codes</h2><hr>
+        <hr>
+        <h2>Tout les Codes / All the codes</h2>
+        <hr>
         <!-- fin de div#centre -->
         <p> CODE HTML FULL PAGE <i>(no Lorem ipsum texte)</i></p>
         <div class="pre">
@@ -251,10 +253,10 @@
         &lt;strong&gt;  onmouseup&lt;/strong&gt; :&nbsp;&nbsp;Mouse button is released over an element&lt;br&gt;
     &lt;/li&gt;
 &lt;/ul&gt;
-&lt;video id="video2" style="display: none" controlslist="nodownload" poster="rz.jpg" width="100%" height="100%"&gt;
+&lt;video id="video2" style="display: none" controlslist="nodownload" poster="rz.jpg"&gt;
 &lt;source src="video2.mp4" type="video/mp4"&gt;
 &lt;/video&gt;
-&lt;video id="video" style="display: none" controls="" controlslist="nodownload" poster="Madagascar.jpg" width="100%" height="100%"&gt;
+&lt;video id="video" style="display: none" controls="" controlslist="nodownload" poster="Madagascar.jpg"&gt;
 &lt;source src="video.mp4" type="video/mp4"&gt;
 &lt;/video&gt;
 &lt;ol&gt;
@@ -276,8 +278,8 @@
         &lt;p&gt; &lt;img src="tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
         &lt;a class="sh" href="#showhide"&gt; Hide&lt;/a&gt;
     &lt;/div&gt;
-&lt;/li&gt;
 &lt;hr&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;h2 id="mo"&gt;
     Modal Pure CSS
@@ -301,18 +303,18 @@ Une Modal en pure CSS Aucun JS ! ( Modal Pure CSS no JS ! )
     &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/li&gt;
 &lt;hr&gt;
+&lt;/li&gt;
 &lt;li&gt;
     &lt;h2&gt;
         Audio
     &lt;/h2&gt;
     &lt;strong class="strong" onmouseout="displayElements('MP3')"&gt; MP3 onmouseout&lt;/strong&gt;
     &lt;audio id="MP3" style="display: none;width:100%;height:20px; " controls controlslist="nodownload" preload="auto"&gt;
-&lt;source src="Music.mp3"&gt;
+&lt;source src="Music.mp3" type="audio/mpeg"&gt;
 &lt;/audio&gt;
-&lt;/li&gt;
 &lt;hr&gt;
+&lt;/li&gt;
 &lt;li&gt;
     &lt;h2&gt;
         Image
@@ -321,8 +323,8 @@ Une Modal en pure CSS Aucun JS ! ( Modal Pure CSS no JS ! )
 Image onmouseup
 &lt;/strong&gt; &lt;br&gt;
     &lt;img src="tree.jpg" style="display: none;border: 0;margin: 10px 10px 10px 0px" id="Image" width="100%" height="100%" alt="tree"&gt;
-&lt;/li&gt;
 &lt;hr&gt;
+&lt;/li&gt;
 &lt;li&gt;
 &lt;div&gt;
     &lt;h2&gt;
@@ -346,7 +348,8 @@ Image onmouseup
 &lt;/body&gt;
 &lt;/html&gt;
     </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE CSS FULL PAGE</p>
         <div class="pre">
             <pre class="brush: css;">
@@ -417,6 +420,11 @@ Image onmouseup
      -webkit-transform: scale(1.5); /* Safari 3-8 */
      transform: scale(1.5);
  }
+ video {
+     width: 100%;
+     height:100%;
+ }
+
  #link {
      color: #0985cc;
  }
@@ -609,7 +617,8 @@ Image onmouseup
  }
   /* END SHOW/HIDE Pure CSS */
 </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE JS function Show/Hide elements on file "JavaScript.js" </p>
         <div class="pre">
             <pre class="brush: js;">
@@ -625,7 +634,8 @@ my_element.style.display = "none";
 }
 document.getElementById(the_element).style.display = "";
 } </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE JS function play_video for Onclick img + play Video on file "JavaScript.js"</p>
         <div class="pre">
             <pre class="brush: js;">
@@ -633,7 +643,8 @@ function play_video() {
 document.getElementById("video2").play();
 }
    </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE JS function Show/Hide Possible mouse event on file "JavaScript.js"</p>
         <div class="pre">
             <pre class="brush: js;">
@@ -646,8 +657,9 @@ x.style.display = "none";
 }
 }
    </pre>
-        </div><hr>
-         <p> CODE HTML SHOW\HIDE Pure CSS
+        </div>
+        <hr>
+        <p> CODE HTML SHOW\HIDE Pure CSS
             <i style="font-size: 10px">(Already in the FULL PAGE HTML Code !/Déjà dans le Code FULL PAGE HTML !)</i></p>
         <div class="pre">
             <pre class="brush: html;">
@@ -657,38 +669,40 @@ x.style.display = "none";
        &lt;p&gt; &lt;img src="tree.jpg" style="border: 0;margin: 10px 10px 0px 0px" width="100%" height="100%" alt="tree"&gt; &lt;/p&gt;
        &lt;a class="sh" href="#showhide"&gt; Hide&lt;/a&gt;
       &lt;/div&gt;         </pre>
-        </div><hr>
-         <p> CODE CSS SHOW\HIDE Pure CSS
+        </div>
+        <hr>
+        <p> CODE CSS SHOW\HIDE Pure CSS
             <i style="font-size: 10px">(Already in the CSS FULL PAGE Code !/Déjà dans le Code CSS FULL PAGE !)</i></p>
         <div class="pre">
             <pre class="brush: css;">
- #hide {
-            display: none;
-        }
+#hide {
+        display: none;
+    }
 
-        #hide:target {
-            display: block;
-        }
+    #hide:target {
+        display: block;
+    }
 
-        a.sh {
-            transition: all 1.2s ease-in-out;
-            display: block;
-            padding: 20px;
-            color: #f60;
-            font-weight: bold;
-            margin: 10px auto;
-            width: 100px;
-            background: #252525;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 20px;
-        }
+    a.sh {
+        transition: all 1.2s ease-in-out;
+        display: block;
+        padding: 20px;
+        color: #f60;
+        font-weight: bold;
+        margin: 10px auto;
+        width: 100px;
+        background: #252525;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 20px;
+    }
 
-        a.sh:hover {
-            background: rgba(0, 0, 0, 0.5);
-        }
+    a.sh:hover {
+        background: rgba(0, 0, 0, 0.5);
+    }
   </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE HTML MODAL Pure CSS ONLY
             <i style="font-size: 10px">(Already in the FULL PAGE HTML Code !/Déjà dans le Code FULL PAGE HTML !)</i></p>
         <div class="pre">
@@ -708,7 +722,8 @@ x.style.display = "none";
             &lt;/div&gt;
           &lt;/div&gt;
         </pre>
-        </div><hr>
+        </div>
+        <hr>
         <p> CODE CSS MODAL Pure CSS ONLY
             <i style="font-size: 10px">(Already in the CSS FULL PAGE Code !/Déjà dans le Code CSS FULL PAGE !)</i></p>
         <div class="pre">
